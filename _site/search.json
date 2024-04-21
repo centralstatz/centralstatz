@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CentralStatz",
-    "section": "",
-    "text": "Professional statistical consulting in Central Wisconsin and beyond."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "Contact: alex@centralstatz.com"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CentralStatz",
+    "section": "",
+    "text": "Statistical and data science consulting.\nSite under construction"
   }
 ]
