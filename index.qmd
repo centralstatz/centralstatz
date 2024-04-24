@@ -1,7 +1,9 @@
 ---
-title: "CentralStatz"
+title: "CentralStatz Statistical & Data Sciences LLC"
 ---
 
-Statistical and data science consulting.
+Statistics and data science consulting services based in Wausau, Wisconsin.
+
+Contact: [alex@centralstatz.com](mailto:alex@centralstatz.com)
 
 _Site under construction_

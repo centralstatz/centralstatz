@@ -1,5 +1,3 @@
 ---
 title: "About"
 ---
-
-Contact: [alex@centralstatz.com](mailto:alex@centralstatz.com)
