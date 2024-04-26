@@ -7,7 +7,7 @@ website:
   site-url: https://www.centralstatz.com/
   repo-url: https://github.com/zajichek/centralstatz
   navbar:
-    title: "centr<span><img src='./logo.png' class='toplogo'></span>lstatz"
+    title: "centralst<span><img src='./logo.png' class='toplogo'></span>tz"
     left:
       - href: index.qmd
         text: Home
