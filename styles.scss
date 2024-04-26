@@ -1,0 +1,45 @@
+/*-- scss:defaults --*/
+
+// Set colors
+$bg-color: #FCF6E6 !default;
+$body-bg: $bg-color !default;
+
+// Navbar colors
+$navbar-bg: $bg-color !default;
+
+.toplogo {
+  height: 50px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-size: 0px !important;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', Sans-Serif;
+  font-weight: 50;
+  color: black !important;
+  font-size: 55px !important;
+  text-transform: initial !important;
+}
+
+.divider {
+  width: 100%;
+  margin: 60px 0 60px 0;
+  border-top: 6px solid #000000;
+}
+
+.nav-link {
+  &:hover {
+    text-decoration: underline solid black;
+  }
+}
+
+.navbar-brand:hover {
+  animation: blinker 1.3s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 50%;
+  }
+}

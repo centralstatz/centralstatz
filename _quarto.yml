@@ -2,17 +2,30 @@ project:
   type: website
 
 website:
-  title: "CentralStatz"
+  title: "CentralStatz Statistical & Data Sciences LLC"
+  favicon: "logo.png"
+  site-url: https://www.centralstatz.com/
+  repo-url: https://github.com/zajichek/centralstatz
   navbar:
+    title: "centr<span><img src='./logo.png' class='toplogo'></span>lstatz"
     left:
       - href: index.qmd
         text: Home
+      - href: services.qmd
+        text: Services
+      - href: about.qmd
+        text: Consultants
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alexzajichek
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/centralstatz
+        aria-label: GitHub
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+    theme: [styles.scss, lux]
 
 editor: visual
 
