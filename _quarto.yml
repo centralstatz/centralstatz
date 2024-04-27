@@ -13,6 +13,8 @@ website:
         text: Home
       - href: services.qmd
         text: Services
+      - href: blog.qmd
+        text: Blog
       - href: about.qmd
         text: Consultants
     right:

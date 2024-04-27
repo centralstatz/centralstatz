@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.centralstatz.com/about.html</loc>
-    <lastmod>2024-04-27T03:32:12.398Z</lastmod>
+    <lastmod>2024-04-27T11:55:21.586Z</lastmod>
   </url>
   <url>
     <loc>https://www.centralstatz.com/services.html</loc>
@@ -11,5 +11,9 @@
   <url>
     <loc>https://www.centralstatz.com/index.html</loc>
     <lastmod>2024-04-26T20:50:43.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/blog.html</loc>
+    <lastmod>2024-04-27T11:33:29.035Z</lastmod>
   </url>
 </urlset>
