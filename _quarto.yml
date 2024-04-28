@@ -5,7 +5,7 @@ website:
   title: "CentralStatz Statistical & Data Sciences LLC"
   favicon: "logo.png"
   site-url: https://www.centralstatz.com/
-  repo-url: https://github.com/zajichek/centralstatz
+  repo-url: https://github.com/centralstatz/centralstatz
   navbar:
     title: "centralst<span><img src='./logo.png' class='toplogo'></span>tz"
     left:
