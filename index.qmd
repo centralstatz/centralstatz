@@ -2,13 +2,15 @@
 title: ""
 ---
 
-_Site under construction_
-
 ```{=html}
 <center>
 Statistical and data science consulting services in Central Wisconsin.
 </center>
 ```
+
+<br> 
+
+_Site under construction_
 
 ::: divider
 :::
