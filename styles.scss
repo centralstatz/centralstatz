@@ -8,9 +8,10 @@ $body-bg: $bg-color !default;
 $navbar-bg: $bg-color !default;
 
 .toplogo {
-  height: 30px;
+  height: 25px;
   margin-bottom: 0px;
-  margin-left: 0px;
+  margin-left: -3px;
+  margin-right: -3px;
   font-size: 0px !important;
 }
 
@@ -18,7 +19,7 @@ $navbar-bg: $bg-color !default;
   font-family: 'Courier New', Monospace;
   font-weight: 100;
   color: black !important;
-  font-size: 100% !important;
+  font-size: 125% !important;
   text-transform: initial !important;
 }
 

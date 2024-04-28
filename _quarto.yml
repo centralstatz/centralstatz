@@ -11,15 +11,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: services.qmd
-        text: Services
-      - href: blog.qmd
-        text: Blog
       - href: about.qmd
         text: Consultants
     right:
       - icon: linkedin
-        href: https://www.linkedin.com/in/alexzajichek
+        href: https://www.linkedin.com/company/centralstatz
         aria-label: LinkedIn
       - icon: github
         href: https://github.com/centralstatz

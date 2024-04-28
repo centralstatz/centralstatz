@@ -1,11 +1,11 @@
 ---
 about:
   template: solana
-  image: headshot.png
+  image: headshot.jpg
 ---
 
 ## Alex Zajichek
 
-Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC. He has long sought to bring a statistical consultancy to Central Wisconsin in order to provide a resource to individuals, businesses, organizations, and researchers for all things data. This is ultimately what led him to pursue an MS in Statistics at the University of Iowa in 2015. Currently, Alex is a full-time biostatistician and data scientist for Cleveland Clinic Health System. Feel free to drop him an email to discuss your statistical needs!
+Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC from Wausau, WI.
 
 <center>**[alex@centralstatz.com](mailto:alex@centralstatz.com)**</center>
