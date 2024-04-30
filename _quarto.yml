@@ -4,6 +4,7 @@ project:
 website:
   title: "CentralStatz Statistical & Data Sciences LLC"
   favicon: "logo.png"
+  google-analytics: "G-GQTNSLKV9S"
   site-url: https://www.centralstatz.com/
   repo-url: https://github.com/centralstatz/centralstatz
   navbar:
