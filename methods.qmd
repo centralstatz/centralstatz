@@ -1,0 +1,13 @@
+---
+title: "Methodology"
+---
+
+* Regression modeling
+* Generalized linear models
+* Mixed models
+* Time to event analysis (parametric and semi-parametric (Cox) models)
+* Propensity score weighting and related methods
+* Causal inference
+* Bootstrapping
+* Machine learning
+* Bayesian

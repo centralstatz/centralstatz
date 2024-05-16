@@ -1,3 +1,11 @@
 ---
-title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  filter-ui: true
+  sort-ui: true
+  image-align: left
+  categories: true
+  feed: true
 ---

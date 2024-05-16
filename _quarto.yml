@@ -7,13 +7,18 @@ website:
   google-analytics: "G-GQTNSLKV9S"
   site-url: https://www.centralstatz.com/
   repo-url: https://github.com/centralstatz/centralstatz
+  description: "Statistical and data science consulting services in Central Wisconsin."
+  page-footer: "© 2024 CentralStatz Statistical & Data Sciences LLC"
   navbar:
-    title: "centralst<span><img src='./logo.png' class='toplogo'></span>tz"
+    logo: "logo.png"
+    title: "centralstatz"
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: Consultants
+      - href: blog.qmd
+        text: Blog
     right:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz
@@ -21,7 +26,8 @@ website:
       - icon: github
         href: https://github.com/centralstatz
         aria-label: GitHub
-
+      - icon: rss
+        href: blog.xml
 format:
   html:
     theme: [styles.scss, lux]
