@@ -8,7 +8,7 @@ title: ""
 Statistical and data science consulting in Central Wisconsin
 </h4>
 <br>
-<img src = "map.png" width = "35%" height = "35%">
+<img src = "map.png" width = "45%" height = "45%">
 </center>
 ```
 
@@ -22,7 +22,7 @@ Statistical and data science consulting in Central Wisconsin
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
-        <img src = "stats.png" width = "9%" height = "7%"> <strong><span style = 'font-size: 125%; padding-left: 10px'> statistical design, modeling and inference</span></strong>
+        <img src = "stats.png" width = "10%" height = "10%"> <strong><span style = 'font-size: 100%; padding-left: 10px'> statistical design, modeling and inference</span></strong>
       </button>
     </h2>
     <div id="flush-collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -34,7 +34,7 @@ Statistical and data science consulting in Central Wisconsin
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
-        <img src = "code.png" width = "10%" height = "10%"><strong><span style = 'font-size: 125%; padding-left: 10px'>application and code development</span></strong>
+        <img src = "code.png" width = "10%" height = "10%"><strong><span style = 'font-size: 100%; padding-left: 10px'>application and code development</span></strong>
       </button>
     </h2>
     <div id="flush-collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -59,7 +59,7 @@ Statistical and data science consulting in Central Wisconsin
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-        <img src = "manuscript.png" width = "10%" height = "10%"><strong><span style = 'font-size: 125%; padding-left: 10px'>technical writing and manuscript review</span></strong>
+        <img src = "manuscript.png" width = "10%" height = "10%"><strong><span style = 'font-size: 100%; padding-left: 10px'>technical writing and manuscript review</span></strong>
       </button>
     </h2>
     <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -71,7 +71,7 @@ Statistical and data science consulting in Central Wisconsin
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
-        <img src = "pred.png" width = "10%" height = "10%"><strong><span style = 'font-size: 125%; padding-left: 10px'>predictive analytics and machine learning</span></strong>
+        <img src = "pred.png" width = "10%" height = "10%"><strong><span style = 'font-size: 100%; padding-left: 10px'>predictive analytics and machine learning</span></strong>
       </button>
     </h2>
     <div id="flush-collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -83,7 +83,7 @@ Statistical and data science consulting in Central Wisconsin
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-        <img src = "coaching.png" width = "9%" height = "7%"><strong><span style = 'font-size: 125%; padding-left: 10px'>training, workshops and 1:1 coaching</span></strong>
+        <img src = "coaching.png" width = "10%" height = "10%"><strong><span style = 'font-size: 100%; padding-left: 10px'>training, workshops and 1:1 coaching</span></strong>
       </button>
     </h2>
     <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">

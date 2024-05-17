@@ -9,6 +9,7 @@ website:
   repo-url: https://github.com/centralstatz/centralstatz
   description: "Statistical and data science consulting services in Central Wisconsin."
   page-footer: "© 2024 CentralStatz Statistical & Data Sciences LLC"
+  open-graph: true
   navbar:
     logo: "logo.png"
     title: "centralstatz"

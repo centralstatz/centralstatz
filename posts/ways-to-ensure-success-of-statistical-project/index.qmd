@@ -2,8 +2,8 @@
 title: "5 ways to help ensure success of a statistical project"
 description: "How can we increase the likelihood that things will go as expected?"
 author: "Alex Zajichek"
-date: "5/7/2024"
-image: "image.png"
+date: "5/16/2024"
+image: "feature.png"
 draft: false
 categories:
   - Project Management

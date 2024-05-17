@@ -10,7 +10,7 @@
 <atom:link href="https://www.centralstatz.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Statistical and data science consulting services in Central Wisconsin.</description>
 <generator>quarto-1.4.553</generator>
-<lastBuildDate>Tue, 07 May 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 16 May 2024 05:00:00 GMT</lastBuildDate>
 <item>
   <title>5 ways to help ensure success of a statistical project</title>
   <dc:creator>Alex Zajichek</dc:creator>
@@ -50,8 +50,8 @@
  ]]></description>
   <category>Project Management</category>
   <guid>https://www.centralstatz.com/posts/ways-to-ensure-success-of-statistical-project/</guid>
-  <pubDate>Tue, 07 May 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://www.centralstatz.com/posts/ways-to-ensure-success-of-statistical-project/image.png" medium="image" type="image/png" height="144" width="144"/>
+  <pubDate>Thu, 16 May 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://www.centralstatz.com/posts/ways-to-ensure-success-of-statistical-project/feature.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
