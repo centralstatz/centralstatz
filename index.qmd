@@ -11,11 +11,9 @@ Statistical and data science consulting in Central Wisconsin
 <img src = "map.png" width = "45%" height = "45%">
 </center>
 ```
-
 ```{=html}
 <center><h1>What we do</h1></center>
 ```
-
 ```{=html}
 <div class="accordion accordion-flush" id="accordionFlushExample">
 
@@ -52,7 +50,7 @@ Statistical and data science consulting in Central Wisconsin
         </ul>
         We use <a href = "https://docs.github.com/en/get-started/start-your-journey/about-github-and-git">version control</a> for all of our code development so you can ensure transparency.
         <br><br>
-        <i>Need help with other data science software/tools such as Python? <a href = "">Let us know!</a></i>
+        <i>Need help with other data science software/tools such as Python, SQL, or something else? <a href = "">Let us know!</a></i>
       </div>
   </div>
 
@@ -88,13 +86,12 @@ Statistical and data science consulting in Central Wisconsin
     </h2>
     <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-        We believe the most impactful data analysis happens with strong subject matter intuition. There's no one better suited for this than your own people, but you need the technical foundation. Whether it's evaluating statistical methodology, integrating data science tools/programming languages, or collaborative solution development, we can work with you side by side to accelerate progress. 
+        We believe the most impactful data analysis happens with strong subject matter intuition. There's no one better suited for this than your own people, but you need the technical foundation. Whether it's evaluating statistical methodology, integrating data science tools/programming languages, collaborative solution development, or traditional tutoring, we can work with you side by side to accelerate progress. 
       </div>
   </div>
 
 </div>
 ```
-
 ::: divider
 :::
 
