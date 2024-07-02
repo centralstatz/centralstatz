@@ -24,6 +24,9 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz
         aria-label: LinkedIn
+      - icon: youtube
+        href: https://www.youtube.com/@centralstatz
+        aria-label: YouTube
       - icon: github
         href: https://github.com/centralstatz
         aria-label: GitHub
