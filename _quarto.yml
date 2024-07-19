@@ -20,6 +20,8 @@ website:
         text: Consultants
       - href: blog.qmd
         text: Blog
+      - href: services.qmd
+        text: Services
     right:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz

@@ -10,7 +10,1320 @@
 <atom:link href="https://www.centralstatz.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Statistical and data science consulting services in Central Wisconsin.</description>
 <generator>quarto-1.4.553</generator>
-<lastBuildDate>Wed, 19 Jun 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 19 Jul 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>How do you assess the proportional-odds assumption? Directly.</title>
+  <dc:creator>Alex Zajichek</dc:creator>
+  <link>https://www.centralstatz.com/posts/how-to-assess-the-proportional-odds-assumption/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This dataset comes from the <a href="https://data.world/durhamnc/2011-resident-survey">2011 Annual Resident Survey</a> in Durham, NC.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load packages</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Import the dataset</span></span>
+<span id="cb1-5">dat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_delim</span>(</span>
+<span id="cb1-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://query.data.world/s/zr3uaxpaagbzddttoreosktj2zy7lm?dws=00000"</span>, </span>
+<span id="cb1-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">delim =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">";"</span>,</span>
+<span id="cb1-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"NA"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N/A"</span>)</span>
+<span id="cb1-9">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb1-10">  </span>
+<span id="cb1-11">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Keep a few columns</span></span>
+<span id="cb1-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">transmute</span>(</span>
+<span id="cb1-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">QOL =</span> </span>
+<span id="cb1-14">      q3f_quality_of_life_in_city <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb1-15">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb1-16">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_relevel</span>(</span>
+<span id="cb1-17">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Very Dissatisfied"</span>,</span>
+<span id="cb1-18">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Dissatisfied"</span>,</span>
+<span id="cb1-19">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Neutral"</span>,</span>
+<span id="cb1-20">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Satisfied"</span>,</span>
+<span id="cb1-21">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Very Satisfied"</span></span>
+<span id="cb1-22">      ),</span>
+<span id="cb1-23">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Age =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_remove</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">18_34_years</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"(?i)</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">syears$"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(),</span>
+<span id="cb1-24">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Income =</span> </span>
+<span id="cb1-25">      q38_annual_household_income <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb1-26">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb1-27">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_relevel</span>(</span>
+<span id="cb1-28">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Under $30,000"</span>,</span>
+<span id="cb1-29">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"$30,000 to $59,999"</span>,</span>
+<span id="cb1-30">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"$60,000 to $99,999"</span>,</span>
+<span id="cb1-31">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"$100,000 or more"</span></span>
+<span id="cb1-32">      ),</span>
+<span id="cb1-33">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Sex =</span> q34_respondents_gender</span>
+<span id="cb1-34">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb1-35">  </span>
+<span id="cb1-36">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Remove missing cases</span></span>
+<span id="cb1-37">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">na.omit</span>()</span></code></pre></div>
+</details>
+</div>
+<p>Suppose we are interested in understanding the relationship between resident age and their perceived quality of life in the city, after adjusting for gender and annual household income. We have the following observed distribution (note that we’ve removed missing data for simplicity):</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">dat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb2-2">  </span>
+<span id="cb2-3">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Compute group summaries</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span>(</span>
+<span id="cb2-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">N =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n</span>(),</span>
+<span id="cb2-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.by =</span> </span>
+<span id="cb2-7">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb2-8">        QOL,</span>
+<span id="cb2-9">        Age</span>
+<span id="cb2-10">      )</span>
+<span id="cb2-11">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span>  </span>
+<span id="cb2-12">  </span>
+<span id="cb2-13">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Flip the order</span></span>
+<span id="cb2-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb2-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">QOL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_rev</span>(QOL)</span>
+<span id="cb2-16">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-17">  </span>
+<span id="cb2-18">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make a plot</span></span>
+<span id="cb2-19">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb2-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_col</span>(</span>
+<span id="cb2-21">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb2-22">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> Age,</span>
+<span id="cb2-23">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> N,</span>
+<span id="cb2-24">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> QOL</span>
+<span id="cb2-25">    ),</span>
+<span id="cb2-26">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"black"</span>,</span>
+<span id="cb2-27">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> .<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">75</span></span>
+<span id="cb2-28">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-29">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb2-30">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.background =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb2-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.major.y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray"</span>),</span>
+<span id="cb2-32">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top"</span>,</span>
+<span id="cb2-33">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb2-34">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>),</span>
+<span id="cb2-35">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>),</span>
+<span id="cb2-36">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>),</span>
+<span id="cb2-37">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> .<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb2-38">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-39">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">xlab</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Respondent Age (years)"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-40">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ylab</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Count"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-41">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Quality of life in the city"</span>)</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://www.centralstatz.com/posts/how-to-assess-the-proportional-odds-assumption/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Overall, it looks like older respondents tend to report more pessimistic views of quality of life.</p>
+<section id="forming-a-model" class="level1">
+<h1>Forming a model</h1>
+<p>A typical approach for modeling <a href="https://en.wikipedia.org/wiki/Likert_scale">likert-like</a> data is to use a <a href="https://en.wikipedia.org/wiki/Ordered_logit">proportional-odds logistic regression model</a>. It is an extension of the widely-used binary <a href="https://en.wikipedia.org/wiki/Logistic_regression">logistic regression</a> model, with one key assumption: <em>the ratio of odds between two groups (e.g., ages 35-44 versus 18-34) of being at or above a response level (e.g., satisfied or very satisfied versus neutral, dissatisfied, or very dissatisfied) are <strong>proportional</strong> (i.e., the same) regardless of where we make that comparison in the outcome</em>. So this odds ratio would also be the same if we instead compared, for example, very satisfied versus everything else.</p>
+<section id="what-does-that-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-that-mean">What does that mean?</h2>
+<p>Let’s clarify this by using our model output directly. We’ll fit the model, adjusted for annual household income and gender, using the <code>MASS::polr</code> function. The age group 18-34 will serve as the reference category in which all other age groups will be compared against. <em>Note: By default the package computes odds ratios in the opposite direction to what we what we want, so we invert them.</em></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Fit the model</span></span>
+<span id="cb3-2">mod <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span></span>
+<span id="cb3-3">  MASS<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">polr</span>(</span>
+<span id="cb3-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">formula =</span> QOL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> Age <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> Income <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> Sex,</span>
+<span id="cb3-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> dat,</span>
+<span id="cb3-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Hess =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb3-7">  )</span>
+<span id="cb3-8"></span>
+<span id="cb3-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make a table of odds-ratios</span></span>
+<span id="cb3-10">mod<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>coefficients <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-11">  </span>
+<span id="cb3-12">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Convert to data frame</span></span>
+<span id="cb3-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">enframe</span>(</span>
+<span id="cb3-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Term"</span>,</span>
+<span id="cb3-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Estimate"</span></span>
+<span id="cb3-16">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-17">  </span>
+<span id="cb3-18">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Join to get the CI</span></span>
+<span id="cb3-19">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">inner_join</span>(</span>
+<span id="cb3-20">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> </span>
+<span id="cb3-21">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get the 95% confidence intervals</span></span>
+<span id="cb3-22">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">confint</span>(mod) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-23">      </span>
+<span id="cb3-24">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Convert to tibble, add the coefficient names</span></span>
+<span id="cb3-25">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_tibble</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-26">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_column</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Term =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">names</span>(mod<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>coefficients)),</span>
+<span id="cb3-27">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Term"</span></span>
+<span id="cb3-28">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-29">  </span>
+<span id="cb3-30">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Filter to age factor only</span></span>
+<span id="cb3-31">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_detect</span>(Term, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"^Age"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-32">  </span>
+<span id="cb3-33">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Clean up</span></span>
+<span id="cb3-34">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb3-35">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Term =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_remove</span>(Term, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"^Age"</span>),</span>
+<span id="cb3-36">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">across</span>(</span>
+<span id="cb3-37">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric),</span>
+<span id="cb3-38">      \(x) <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sprintf</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%.2f"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">exp</span>(x))</span>
+<span id="cb3-39">    )</span>
+<span id="cb3-40">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-41">  </span>
+<span id="cb3-42">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Rename</span></span>
+<span id="cb3-43">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rename</span>(</span>
+<span id="cb3-44">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Age (years)</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> Term,</span>
+<span id="cb3-45">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Odds-ratio</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> Estimate,</span>
+<span id="cb3-46">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Lower =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">97.5 %</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>,</span>
+<span id="cb3-47">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Upper =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">2.5 %</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span></span>
+<span id="cb3-48">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-49">  </span>
+<span id="cb3-50">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Change location</span></span>
+<span id="cb3-51">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">relocate</span>(Lower, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.before =</span> Upper) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-52">  </span>
+<span id="cb3-53">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Add the reference row</span></span>
+<span id="cb3-54">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_row</span>(</span>
+<span id="cb3-55">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Age (years)</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"18-34"</span>,</span>
+<span id="cb3-56">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Odds-ratio</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-"</span>,</span>
+<span id="cb3-57">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Lower =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-"</span>,</span>
+<span id="cb3-58">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Upper =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-"</span>,</span>
+<span id="cb3-59">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.before =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-60">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-61">  </span>
+<span id="cb3-62">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make a table</span></span>
+<span id="cb3-63">  knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">format =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"html"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-64">  kableExtra<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable_styling</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-65">  kableExtra<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_header_above</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"95% CI"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>))</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+95% CI
+</div></th>
+</tr>
+<tr class="odd">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age (years)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Odds-ratio</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Upper</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-34</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">35-44</td>
+<td style="text-align: left;">1.24</td>
+<td style="text-align: left;">0.67</td>
+<td style="text-align: left;">2.30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">45-54</td>
+<td style="text-align: left;">1.13</td>
+<td style="text-align: left;">0.64</td>
+<td style="text-align: left;">1.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">55-64</td>
+<td style="text-align: left;">1.74</td>
+<td style="text-align: left;">0.97</td>
+<td style="text-align: left;">3.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">65-74</td>
+<td style="text-align: left;">3.02</td>
+<td style="text-align: left;">1.40</td>
+<td style="text-align: left;">6.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">75+</td>
+<td style="text-align: left;">0.93</td>
+<td style="text-align: left;">0.30</td>
+<td style="text-align: left;">2.88</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<p>Generally, the estimates pan out roughly how we suspected. In particular, the estimated odds of <em>worse</em> perceived quality of life in the city for 65-74 year olds are 3 times that of 18-34 year olds, after adjusting for annual household income and gender (with a 95% <a href="https://en.wikipedia.org/wiki/Confidence_interval">confidence interval</a> of 1.4 to 6.5).</p>
+<p>Again, this interpretation is assumed to hold true if “worse” is defined as <em>very dissatisfied</em> versus everything else, or <em>very dissatisfied</em> through <em>satisfied</em> versus <em>very satisfied</em>, and everything in between.</p>
+</section>
+</section>
+<section id="does-the-assumption-hold" class="level1">
+<h1>Does the assumption hold?</h1>
+<p>The question becomes whether that big assumption of proportional-odds actually holds. We may have reason to think, from the data or gut instinct, that it might not. Well, one simple way to check is by <em>directly</em> assessing what it implies.</p>
+<section id="continue" class="level2">
+<h2 class="anchored" data-anchor-id="continue">Continue…</h2>
+<p>We said earlier that the model assumes the same odds ratios for any mutually exclusive comparison of the ordered response categories. Thus, we can free up this constraint by thinking of constructing a collection of <em>binary</em> logistic regression models: one for each of those ordinal comparisons. Specifically,</p>
+<ul>
+<li><em>Very Dissatisfied</em> versus everything else</li>
+<li><em>Very Dissatisfied</em> or <em>Dissatisfied</em> versus everything else</li>
+<li><em>Very Dissatisfied</em>, <em>Dissatisfied</em>, or <em>Neutral</em> versus <em>Satisfied</em> or <em>Very Satisfied</em></li>
+<li><em>Very Dissatisfied</em> through <em>Satisfied</em> versus <em>Very Satisfied</em></li>
+</ul>
+<p>Then, we simply just look to see if the resulting odds ratios are reasonably similar across all of those models. If so, then we can be somewhat confident that it <em>can</em> be reduced to a single model, and stick with our original proportional-odds estimates.</p>
+<p>My preference is to do this in a plot.</p>
+</section>
+<section id="making-the-plot" class="level2">
+<h2 class="anchored" data-anchor-id="making-the-plot">Making the plot</h2>
+<p>We’ll cycle through the response categories, iteratively define the binary outcomes as described above, and then fit a logistic regression model for each definition. Once we do this, we get the following plot:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set the number of comparisons</span></span>
+<span id="cb4-2">n_comp <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n_distinct</span>(dat<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>QOL) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make each data set</span></span>
+<span id="cb4-5"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>n_comp <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-6">  </span>
+<span id="cb4-7">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># For each set</span></span>
+<span id="cb4-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map_df</span>(</span>
+<span id="cb4-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(.index) {</span>
+<span id="cb4-10">      </span>
+<span id="cb4-11">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Extract the current response set</span></span>
+<span id="cb4-12">      temp_resp <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">levels</span>(dat<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>QOL)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>.index]</span>
+<span id="cb4-13">      </span>
+<span id="cb4-14">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create binary outcome in the data</span></span>
+<span id="cb4-15">      temp_dat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> </span>
+<span id="cb4-16">        dat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-17">        </span>
+<span id="cb4-18">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create target</span></span>
+<span id="cb4-19">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb4-20">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Response =</span> </span>
+<span id="cb4-21">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(</span>
+<span id="cb4-22">              QOL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%in%</span> temp_resp <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb4-23">              <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb4-24">            )</span>
+<span id="cb4-25">        )</span>
+<span id="cb4-26">      </span>
+<span id="cb4-27">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Fit the binary logistic regression model</span></span>
+<span id="cb4-28">      temp_mod <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span></span>
+<span id="cb4-29">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glm</span>(</span>
+<span id="cb4-30">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">formula =</span> Response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> Age <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> Income <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> Sex,</span>
+<span id="cb4-31">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> temp_dat,</span>
+<span id="cb4-32">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"binomial"</span></span>
+<span id="cb4-33">        )</span>
+<span id="cb4-34">      </span>
+<span id="cb4-35">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make a table of odds-ratios</span></span>
+<span id="cb4-36">      temp_mod<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>coefficients <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-37">        </span>
+<span id="cb4-38">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Convert to data frame</span></span>
+<span id="cb4-39">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">enframe</span>(</span>
+<span id="cb4-40">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Term"</span>,</span>
+<span id="cb4-41">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Estimate"</span></span>
+<span id="cb4-42">        ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-43">        </span>
+<span id="cb4-44">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Join to get the CI</span></span>
+<span id="cb4-45">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">inner_join</span>(</span>
+<span id="cb4-46">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> </span>
+<span id="cb4-47">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get the 95% confidence intervals</span></span>
+<span id="cb4-48">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">confint.default</span>(temp_mod) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb4-49">            </span>
+<span id="cb4-50">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Convert to tibble, add the coefficient names</span></span>
+<span id="cb4-51">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_tibble</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb4-52">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_column</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Term =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">names</span>(temp_mod<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>coefficients)),</span>
+<span id="cb4-53">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Term"</span></span>
+<span id="cb4-54">        ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb4-55">        </span>
+<span id="cb4-56">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Filter to age factor only</span></span>
+<span id="cb4-57">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_detect</span>(Term, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"^Age"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-58">        </span>
+<span id="cb4-59">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Clean up</span></span>
+<span id="cb4-60">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb4-61">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Term =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_remove</span>(Term, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"^Age"</span>),</span>
+<span id="cb4-62">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">across</span>(</span>
+<span id="cb4-63">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric),</span>
+<span id="cb4-64">            \(x) <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">exp</span>(x)</span>
+<span id="cb4-65">          )</span>
+<span id="cb4-66">        ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-67">        </span>
+<span id="cb4-68">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Rename</span></span>
+<span id="cb4-69">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rename</span>(</span>
+<span id="cb4-70">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Age =</span> Term,</span>
+<span id="cb4-71">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">OR =</span> Estimate,</span>
+<span id="cb4-72">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Lower =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">2.5 %</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>,</span>
+<span id="cb4-73">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Upper =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">97.5 %</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span></span>
+<span id="cb4-74">        ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-75">        </span>
+<span id="cb4-76">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Add the reference row</span></span>
+<span id="cb4-77">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_row</span>(</span>
+<span id="cb4-78">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Age =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"18-34"</span>,</span>
+<span id="cb4-79">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">OR =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb4-80">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Lower =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb4-81">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Upper =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb4-82">          <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.before =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb4-83">        ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-84">        </span>
+<span id="cb4-85">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Attach outcome level</span></span>
+<span id="cb4-86">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_column</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">QOL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">levels</span>(dat<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>QOL)[.index])</span>
+<span id="cb4-87">      </span>
+<span id="cb4-88">    },</span>
+<span id="cb4-89">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.id =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Order"</span></span>
+<span id="cb4-90">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-91">  </span>
+<span id="cb4-92">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make the factor</span></span>
+<span id="cb4-93">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb4-94">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Order =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.numeric</span>(Order),</span>
+<span id="cb4-95">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">QOL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(QOL) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_reorder</span>(Order)</span>
+<span id="cb4-96">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-97">  </span>
+<span id="cb4-98">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make a plot</span></span>
+<span id="cb4-99">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb4-100">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb4-101">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> QOL,</span>
+<span id="cb4-102">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> OR,</span>
+<span id="cb4-103">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb4-104">    )</span>
+<span id="cb4-105">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-106">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(</span>
+<span id="cb4-107">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb4-108">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Age</span>
+<span id="cb4-109">    ),</span>
+<span id="cb4-110">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span></span>
+<span id="cb4-111">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-112">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>(</span>
+<span id="cb4-113">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb4-114">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Age</span>
+<span id="cb4-115">    ),</span>
+<span id="cb4-116">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
+<span id="cb4-117">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-118">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_ribbon</span>(</span>
+<span id="cb4-119">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb4-120">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ymin =</span> Lower,</span>
+<span id="cb4-121">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ymax =</span> Upper,</span>
+<span id="cb4-122">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> Age</span>
+<span id="cb4-123">    ),</span>
+<span id="cb4-124">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> .<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span></span>
+<span id="cb4-125">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-126">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_hline</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">yintercept =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-127">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">facet_wrap</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(Age, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" years"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-128">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coord_cartesian</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-129">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb4-130">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.background =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb4-131">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.major.y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray"</span>),</span>
+<span id="cb4-132">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span>,</span>
+<span id="cb4-133">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>),</span>
+<span id="cb4-134">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>),</span>
+<span id="cb4-135">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.text.x =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">angle =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">45</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>),</span>
+<span id="cb4-136">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> .<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>),</span>
+<span id="cb4-137">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">strip.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>)</span>
+<span id="cb4-138">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-139">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">xlab</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Response"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-140">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ylab</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Odds-ratio (95% CI) for being at or below response level"</span>)</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://www.centralstatz.com/posts/how-to-assess-the-proportional-odds-assumption/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Unfortunately we’re quite plagued by variability here, especially in the lower-end (i.e., <em>very dissatisfied</em> versus everything else), due to scanty event volumes, but you get the picture. Actually, for 65-74 year olds, the proportional-odds assumption seems to be a reasonable one: it was estimated earlier at 3.02, and we see the point estimates across these binary models vary between 2.5-3.5.</p>
+<p>For other age categories, it may not be so good of an assumption. It looks like 35-44 and 55-64 year olds tend to have a much higher odds of responding <em>very dissatisfied</em> relative to 18-34 year olds, but there is much less of a difference (in all age categories) for the odds of responding <em>very satisfied</em>, suggesting something like older residents may make a point to select the least favorable response but don’t see much difference between being <em>satisfied</em> or <em>very satisfied</em>.</p>
+</section>
+<section id="so-what-do-we-do-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="so-what-do-we-do-in-practice">So what do we do in practice?</h2>
+<p>First, the same proportional-odds assumptions hold for all covariates in the model, so we would also want to assess this for annual household income and gender. Second, if the assumption is not met, then we need to accommodate that by introducing more flexibility into the model. That may be by being clever with interaction terms, defining sensible groups to create, or by using separate binary models for each possible comparison, as we’ve done here. It’s really a judgement call.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Regression Modeling</category>
+  <guid>https://www.centralstatz.com/posts/how-to-assess-the-proportional-odds-assumption/</guid>
+  <pubDate>Fri, 19 Jul 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://www.centralstatz.com/posts/how-to-assess-the-proportional-odds-assumption/feature.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>A simple example why statistical significance is insufficient for action</title>
   <dc:creator>Alex Zajichek</dc:creator>

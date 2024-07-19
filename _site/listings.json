@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/how-to-assess-the-proportional-odds-assumption/index.html",
       "/posts/simple-example-why-statistical-significance-is-insufficient/index.html",
       "/posts/ways-to-ensure-success-of-statistical-project/index.html"
     ]
