@@ -20,6 +20,7 @@
 
 
 
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9q_0tWT89W4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>This dataset comes from the <a href="https://data.world/durhamnc/2011-resident-survey">2011 Annual Resident Survey</a> in Durham, NC.</p>
 <div class="cell">
 <details class="code-fold">
@@ -1333,6 +1334,7 @@ font-style: inherit;">"Odds-ratio (95% CI) for being at or below response level"
 
 
 
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/IWWONFhgVY4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>When we see the phrase <em>statistically significant</em>, we’re often meant to believe it means that the result matters, but that is not the case. Here is a simple example why.</p>
 <blockquote class="blockquote">
 <p><span style="text-decoration: underline;">Context</span>: <em>Suppose we are trying to hone in on a market segment that yields higher sales so that we can develop better strategies for acquiring customers in that group.</em></p>
@@ -2669,6 +2671,7 @@ font-style: inherit;">"Customers"</span>)</span></code></pre></div>
 
 
 
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/blO16Uuo68E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>Sometimes stats projects don’t go as planned. There are delays, setbacks, surprises, ambiguity, scope creep…the list goes on. All of these things can lead to a seemingly longer list of questions than what was started with: <em>Did we answer the research question? Are we confident in the result? What do we do now?</em> It’s a sense of dissatisfaction.</p>
 <p>Many of these issues stem from the early phases of the project, and (maybe I should collect data on this) they can largely be alleviated when more care is taken at that stage. Actually, the <a href="https://theeffectbook.net/">book I’m currently reading</a> summed it up perfectly, <em>“Well-designed research is research capable of answering the question it’s trying to answer”</em>. Sounds obtuse, but it is undoubtedly true, even for projects outside of what you may define as “research”. This is about proper planning. So here are 5 things that can help increase the likelihood of a successful statistical project:</p>
 <section id="assembleteam" class="level1">

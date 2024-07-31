@@ -13,6 +13,8 @@ format:
     code-tools: true
 ---
 
+{{< video https://www.youtube.com/embed/9q_0tWT89W4 >}}
+
 This dataset comes from the [2011 Annual Resident Survey](https://data.world/durhamnc/2011-resident-survey) in Durham, NC.
 
 ```{r, warning = FALSE, message = FALSE}
