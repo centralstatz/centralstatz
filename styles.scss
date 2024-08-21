@@ -44,6 +44,17 @@ $navbar-bg: $bg-color !default;
   }
 }
 
+.dropdown-header {
+  margin: 13px 0px;
+  font-size: 100% !important;
+}
+
+.nav-item:dropdown {
+  &:hover {
+    text-decoration: 3px underline dotted black;
+  }
+}
+
 // Pricing table
 .wrapper{
     display: grid;

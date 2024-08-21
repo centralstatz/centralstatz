@@ -1,0 +1,16 @@
+---
+title: "Your organization should be using R Shiny"
+author: Alex Zajichek
+date: "2024-08-05"
+---
+
+_In progress_
+
+```{=html}
+<center>
+<h3>Slides</h3>
+<iframe width = 100% height = 475px class="slide-deck" src="slides.html"></iframe>
+</center>
+```
+
+[Link to slideshow](slides.qmd)

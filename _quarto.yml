@@ -20,8 +20,9 @@ website:
         text: Consultants
       - href: blog.qmd
         text: Blog
-      - href: services.qmd
-        text: Services
+      - text: Resources
+      - menu: 
+        - presentations.qmd
     right:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz
@@ -38,5 +39,5 @@ format:
   html:
     theme: [styles.scss, lux]
 
-editor: visual
+editor: source
 
