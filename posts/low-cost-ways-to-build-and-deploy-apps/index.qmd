@@ -10,7 +10,9 @@ categories:
   - Deployment
 ---
 
-In the era of [artifical intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) (AI), organizations are often told they must [buy in or get left behind](https://medium.com/@markkloepfel/artificial-intelligence-adopt-or-get-left-behind-6e7387e695b9). I've attended various presentations like this. The presenters discuss how things are changing, provide some high-level overview of AI, and then convey that the organization must develop a strategy for it. However, the feeling left in the room is usually that of confusion and ambiguity. They understand that they should be _thinking_ about it, but it's totally unclear what (if anything) they should actually _do_. 
+{{< video https://www.youtube.com/embed/vttykZnwIbA >}}
+
+In the era of [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) (AI), organizations are often told they must [buy in or get left behind](https://medium.com/@markkloepfel/artificial-intelligence-adopt-or-get-left-behind-6e7387e695b9). I've attended various presentations like this. The presenters discuss how things are changing, provide some high-level overview of AI, and then convey that the organization must develop a strategy for it. However, the feeling left in the room is usually that of confusion and ambiguity. They understand that they should be _thinking_ about it, but it's totally unclear what (if anything) they should actually _do_. 
 
 First, it's not really clear what is meant by "AI", as it can mean [many things](https://hai.stanford.edu/sites/default/files/2020-09/AI-Definitions-HAI.pdf) (I often don't know what they mean by it either). Second, the implication seems to be pointed toward AI in the context of tools that can be _purchased_ from vendors, therefore adding a financial stressor to decision makers when figuring out how to act. It also conveys a one-sided message: that AI _is_ products that you buy, never really discussing the technical foundation, and thus foregoing the idea of taking these concepts and building incrementally.
 
