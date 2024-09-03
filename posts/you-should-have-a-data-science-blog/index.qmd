@@ -1,0 +1,16 @@
+---
+title: "You should have a data science blog (tutorial)"
+description: "Easy and free are only a couple benefits."
+author: "Alex Zajichek"
+date: "9/1/2024"
+image: "feature.png"
+draft: true
+categories:
+  - Deployment
+  - Learning
+  - Software Development
+format:
+  html:
+    code-fold: true
+    code-tools: true
+---
