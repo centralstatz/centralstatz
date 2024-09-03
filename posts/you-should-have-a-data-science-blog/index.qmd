@@ -1,10 +1,10 @@
 ---
+draft: true
 title: "You should have a data science blog (tutorial)"
 description: "Easy and free are only a couple benefits."
 author: "Alex Zajichek"
 date: "9/1/2024"
 image: "feature.png"
-draft: true
 categories:
   - Deployment
   - Learning
@@ -15,4 +15,4 @@ format:
     code-tools: true
 ---
 
-Hello
+Hello world
