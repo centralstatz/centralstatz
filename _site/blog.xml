@@ -9,7 +9,7 @@
 <link>https://www.centralstatz.com/blog.html</link>
 <atom:link href="https://www.centralstatz.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Statistical and data science consulting services in Central Wisconsin.</description>
-<generator>quarto-1.4.553</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Tue, 20 Aug 2024 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Low cost ways to build and deploy analytical web apps</title>
@@ -788,8 +788,7 @@ background-color: null;
 font-style: inherit;">2</span>))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<div>
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -854,7 +853,6 @@ font-style: inherit;">2</span>))</span></code></pre></div>
 
 </div>
 </div>
-</div>
 <p>Generally, the estimates pan out roughly how we suspected. In particular, the estimated odds of <em>worse</em> perceived quality of life in the city for 65-74 year olds are 3 times that of 18-34 year olds, after adjusting for annual household income and gender (with a 95% <a href="https://en.wikipedia.org/wiki/Confidence_interval">confidence interval</a> of 1.4 to 6.5).</p>
 <p>Again, this interpretation is assumed to hold true if “worse” is defined as <em>very dissatisfied</em> versus everything else, or <em>very dissatisfied</em> through <em>satisfied</em> versus <em>very satisfied</em>, and everything in between.</p>
 </section>
@@ -914,6 +912,7 @@ background-color: null;
 font-style: inherit;">map_df</span>(</span>
 <span id="cb4-9">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(.index) {</span>
 <span id="cb4-10">      </span>
 <span id="cb4-11">      <span class="co" style="color: #5E5E5E;
