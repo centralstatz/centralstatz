@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "CentralStatz Statistical & Data Sciences LLC",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLow cost ways to build and deploy analytical web apps\n\n\n\n\n\n\nWeb applications\n\n\nDeployment\n\n\n\nAn overview of some server options\n\n\n\n\n\nAug 20, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nHow do you assess the proportional-odds assumption? Directly.\n\n\n\n\n\n\nRegression Modeling\n\n\n\nA simple visual check.\n\n\n\n\n\nJul 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nA simple example why statistical significance is insufficient for action\n\n\n\n\n\n\nStatistical Significance\n\n\nDecision Making\n\n\n\nIt ignores the basic question: “How much?”\n\n\n\n\n\nJun 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\n5 ways to help ensure success of a statistical project\n\n\n\n\n\n\nProject Management\n\n\n\nHow can we increase the likelihood that things will go as expected?\n\n\n\n\n\nMay 16, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nYou should have a data science blog\n\n\n\n\n\n\nDeployment\n\n\nLearning\n\n\nSoftware Development\n\n\n\nEasy and free are only a couple benefits.\n\n\n\n\n\nSep 25, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nLow cost ways to build and deploy analytical web apps\n\n\n\n\n\n\nWeb applications\n\n\nDeployment\n\n\n\nAn overview of some server options\n\n\n\n\n\nAug 20, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nHow do you assess the proportional-odds assumption? Directly.\n\n\n\n\n\n\nRegression Modeling\n\n\n\nA simple visual check.\n\n\n\n\n\nJul 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nA simple example why statistical significance is insufficient for action\n\n\n\n\n\n\nStatistical Significance\n\n\nDecision Making\n\n\n\nIt ignores the basic question: “How much?”\n\n\n\n\n\nJun 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\n5 ways to help ensure success of a statistical project\n\n\n\n\n\n\nProject Management\n\n\n\nHow can we increase the likelihood that things will go as expected?\n\n\n\n\n\nMay 16, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "presentations/your-organization-should-be-using-r-shiny/index.html",
@@ -82,6 +82,69 @@
     "title": "A simple example why statistical significance is insufficient for action",
     "section": "Some takeaways",
     "text": "Some takeaways\n\nStatistical significance only pertains to the existence of a relationship (under the implied assumptions), not the size of it.\nYou must pay attention to the magnitude of the relationship to gain any meaningful insight.\nThe magnitudes should be translated to the real-world implications of using the information for different decisions or courses of action. In the example above, the market age distribution looks like this:\n\n\n\nCode\nsim_dat |&gt;\n  \n  # Make a paneled scatterplot\n  ggplot() +\n  geom_histogram(\n    aes(\n      x = Age\n    ),\n    fill = \"gray\",\n    color = \"black\",\n    alpha = .5\n  ) +\n  theme(\n    panel.background = element_blank(),\n    legend.position = \"none\",\n    strip.text = element_blank(),\n    axis.text = element_text(size = 14),\n    axis.title = element_text(size = 16)\n  ) +\n  xlab(\"Customer Age (years)\") +\n  ylab(\"Customers\")\n\n\n\n\n\n\n\n\n\nAlthough older customers yield higher sales, it may cost more marketing dollars to acquire any given individual from such a small segment, ultimately making the juice not worth the squeeze. Feeding estimates into cost-benefit or what-if scenarios can greatly increase confidence in how a proposed course of action would actually play out, instead of implementing things on the basis of mere existence (i.e., statistical significance)."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html",
+    "href": "posts/you-should-have-a-data-science-blog/index.html",
+    "title": "You should have a data science blog",
+    "section": "",
+    "text": "One thing I would highly recommend to anyone with an interest in statistics/data science, whether you’re a student just starting out or a professional increasing your skills, is to create a blog. In this blog post, we’ll cover some of the benefits of doing so and touch on our preferred workflow to get one up and running (for free)."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#software-developmentdeployment",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#software-developmentdeployment",
+    "title": "You should have a data science blog",
+    "section": "1. Software development/deployment",
+    "text": "1. Software development/deployment\nYou might think that the logistics/maintenance of a blog sounds cumbersome. You just want to stick to the content. However, learning how to create, develop, maintain, and deploy the blog, regardless of its content, provides in itself exposure to essential skills for data science: software development and deployment. Simply knowing the math or the R/Python commands to run a model is one thing, but if you want to deliver effective analytical solutions, those results probably need to be delivered to the end user in a useful way. Building a blog (website) forces you to learn about things such as version control, CI/CD, web hosting, DNS records, web development…the list goes on, which are all components of creating a data science product. Marrying these things to the content creation itself provides you an arsenal of tools that can be exploited in all sorts of contexts."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#solidify-concepts",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#solidify-concepts",
+    "title": "You should have a data science blog",
+    "section": "2. Solidify concepts",
+    "text": "2. Solidify concepts\nThere are a lot of topics to keep track of when you’re learning statistics/data science, and one very effective way to solidify your understanding is to write it out coherently. For example, you may be learning about linear regression but there may be nuances surrounding it that are fuzzy, such as why a \\(\\beta\\) parameter is interpreted the way that it is. So, you may opt to write a blog post that goes through this derivation in an applied example with a coherent, structured narrative–by the end, you’ll generally grasp the thing you set out for. You just need to start with an outline of thing you want to understand and then learn it as you write. This is exactly the type of thing I do as well when I want to fully vet my understanding of something, such as in this post. Not only does this help with becoming a better writer, which is a great skill in and of itself, but it forces you to articulate a topic thoroughly, as if someone else is going to read it (which they hopefully will!). More importantly, it allows you to have permanent, easily accessible place to put your work."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#reference-repository",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#reference-repository",
+    "title": "You should have a data science blog",
+    "section": "3. Reference repository",
+    "text": "3. Reference repository\nOn a related note of conceptual understanding: your blog posts are now just public web pages on the internet. That means you can use your collection of articles simply as an accessible repository for you to refer back to when you need them. If you took the time to write an article to help yourself solidify a concept (#2), then it was probably (a) tricky enough that over time you may lose your intuition on it occasionally, and (b) important enough that it was worth writing out. So, having a place where you’ve written out your thought process about a topic, in your own words, is an invaluable resource for you to refer back to. I can’t tell you the number of times I’ve referred back to articles I’ve written to remember little things. The beauty of it is that when my curiosity comes at a random part of the day, I know exactly where to look, and I can whip out my phone, remember the thing, and then stop thinking about it."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#portfolio-to-showcase",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#portfolio-to-showcase",
+    "title": "You should have a data science blog",
+    "section": "4. Portfolio to showcase",
+    "text": "4. Portfolio to showcase\nThe fact that you even have a website is impressive. It shows that you can figure out how to do things, but more importantly, that you have the drive/initiative to create projects related to your craft. The skills in creating and maintaining the website are undoubtedly transferable to the work you’d do in data science. Add in interesting content you are producing in the blog posts themselves, such as code tutorials, analyses, method exploration, whatever it may be, then you have something that can prove your capabilities, and set you apart from other candidates. The convenience and security of having that all accessible through a simple web URL that you can quickly share with someone is a real advantage, as if someone asks you for work samples or something like that, you can confidently respond knowing the work was already done."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#engaging-in-public-discourse",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#engaging-in-public-discourse",
+    "title": "You should have a data science blog",
+    "section": "5. Engaging in public discourse",
+    "text": "5. Engaging in public discourse\nHaving your own blog means you can write about whatever you’d like, however you want to say it, providing an avenue to contribute your own unique thoughts and perspectives. You may read a book or another article on some data science (or other) topic, and have strong thoughts, questions, or opinions about what was said. Or you just want to dig a little deeper into a certain aspect of it. Or reframe it in a way that is more understandable for yourself. Write it out and share it! Others may find your take interesting (or not, who cares). It only adds thought diversity, and makes you more connected to your field, as a peer."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#install-software",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#install-software",
+    "title": "You should have a data science blog",
+    "section": "1. Install software",
+    "text": "1. Install software\nI prefer to use RStudio as my IDE for developing my websites, so you’ll also need to install R. Then, you can install Quarto and you’ll have what you need."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#store-code-on-github",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#store-code-on-github",
+    "title": "You should have a data science blog",
+    "section": "2. Store code on GitHub",
+    "text": "2. Store code on GitHub\nThe source code for the blog should be version controlled and stored in a remote repository. I prefer GitHub. It’s not actually necessary to do this, but creates a much cleaner workflow and promotes better software development practices, as it retains all history to your code changes. As you develop your website locally, you’ll commit and push changes as you get to good stopping points, and GitHub will serve as your website’s source of truth."
+  },
+  {
+    "objectID": "posts/you-should-have-a-data-science-blog/index.html#host-your-site-on-netlify",
+    "href": "posts/you-should-have-a-data-science-blog/index.html#host-your-site-on-netlify",
+    "title": "You should have a data science blog",
+    "section": "3. Host your site on Netlify",
+    "text": "3. Host your site on Netlify\nYour code is on GitHub, but you need a server that will actually host the live application. That is where Netlify comes in, where you can host your website for free. To make it very easy, you can configure Netlify to update your website everytime code changes are made to GitHub (#2), automatically. So when I develop my website (like this very blog post), I just commit and push my changes to GitHub (from RStudio) and that will automatically trigger Netlify to grab changes from the repository and update the live website. By default, your website URL will be something like website.netlify.app, but Netlify also has a great domain management system where you can point your website to a custom URL that you own (which you’ll likely have to pay for). Nevertheless, if you don’t mind the default URL, it is completely free."
   },
   {
     "objectID": "services.html",
