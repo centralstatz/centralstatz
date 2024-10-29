@@ -2,7 +2,7 @@
 title: "Can you have a model without data?"
 description: "Yes, by being a Bayesian."
 author: "Alex Zajichek"
-date: "10/25/2024"
+date: "10/29/2024"
 image: "feature.png"
 categories:
   - Bayesian
