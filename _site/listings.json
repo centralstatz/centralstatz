@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/can-you-have-a-model-without-data/index.html",
       "/posts/you-should-have-a-data-science-blog/index.html",
       "/posts/low-cost-ways-to-build-and-deploy-apps/index.html",
       "/posts/how-to-assess-the-proportional-odds-assumption/index.html",
