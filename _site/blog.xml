@@ -978,6 +978,7 @@ font-style: inherit;">"% of fitted values match."</span>))</span></code></pre></
 
 
 
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bUerkVsCwtA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>In <a href="https://en.wikipedia.org/wiki/Frequentist_inference">frequentist</a> statistics, the paradigm in which much of statistical practice is done, has a specific requirement: we need data <em>before</em> we can attribute estimates to (i.e., “fit”) our model. Yes, we might pre-specify it’s form, and be quite confident in what that looks like, but ultimately before we get an answer, we need the data.</p>
 <p>For example, suppose we are interested in the proportion of individuals with heart disease. We can specify an assumed model:</p>
 <p><img src="https://latex.codecogs.com/png.latex?X%20%5Csim%20Bernoulli(p)"></p>

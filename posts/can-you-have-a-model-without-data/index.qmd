@@ -12,6 +12,8 @@ format:
     code-tools: true
 ---
 
+{{< video https://www.youtube.com/embed/bUerkVsCwtA >}}
+
 In [frequentist](https://en.wikipedia.org/wiki/Frequentist_inference) statistics, the paradigm in which much of statistical practice is done, has a specific requirement: we need data _before_ we can attribute estimates to (i.e., "fit") our model. Yes, we might pre-specify it's form, and be quite confident in what that looks like, but ultimately before we get an answer, we need the data.
 
 For example, suppose we are interested in the proportion of individuals with heart disease. We can specify an assumed model:
