@@ -957,6 +957,8 @@ font-style: inherit;">"% of fitted values match."</span>))</span></code></pre></
 <section id="why-is-this-useful" class="level2">
 <h2 class="anchored" data-anchor-id="why-is-this-useful">Why is this useful?</h2>
 <p>First, it’s obviously important to understand how modeling software is getting to the results it gives you, so that you can correctly interpret it, among other things. Second, from a pragmatic point of view, the ability to write out the full regression equation allows you embed your model into any application (even Excel if you wanted), instead of requiring the <code>predict</code> function to be run, which in turn would require <code>R</code> to be a part of the application’s server. In this case, it’s unnecessary for that to be a requirement, since we can simply reconcile our model into an easily understandable equation. Luckily, there are also <a href="https://www.rdocumentation.org/packages/rms/versions/6.8-2/topics/Function">some functions</a> that can extract these formulas for you for this exact purpose so you don’t <em>have</em> to go through the cumbersome calculations above.</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lbubbyx3v42m" data-config="{}"></div>
+  
 
 
 <!-- -->
@@ -2120,6 +2122,8 @@ font-style: inherit;">::</span>percent</span>
 <p>As done before, the red lines indicate the amount of the posterior distribution between 40% and 50%.</p>
 <p>First, we actually have an estimate before there is any data collected (when <img src="https://latex.codecogs.com/png.latex?n=0">). As we add a few observations, it only changes a little, but our estimates still retain our prior information about <img src="https://latex.codecogs.com/png.latex?p">. Then as more data is collected, we see the posterior distribution become much more precise in where it estimates <img src="https://latex.codecogs.com/png.latex?p"> to be.</p>
 <p>This smooth integration of, and transition from, the prior knowledge we incorporate into the model to the information augmented by the data we collect is one reason why I think Bayesian thinking is better suited for scientific modeling. A more natural accumulation of knowledge, erasing the boundaries between what we already know (which should be considered a form of “data” itself) and hard data collected on a spreadsheet. It changes the way you approach the problem: instead of focusing right away on the data, which will be exhausted once it’s used, you focus on conceptualizing the living, breathing <em>model</em> of the world that generated it, and thus allow <em>data</em> to only contribute to that model as seen fit.</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lbzdwct5222m" data-config="{}"></div>
+  
 
 
 <!-- -->
@@ -2186,6 +2190,8 @@ font-style: inherit;">::</span>percent</span>
 <section id="get-started" class="level1">
 <h1>Get started</h1>
 <p>My advice is to get your website workflow up and running first: create the local (default) application, push the code to GitHub, configure Netlify to host the website, and, if you choose, set up your custom domain (again, this last part costs money). Then you can start to make tweaks to your website and make sure everything operates as expected for general maintenance. From there, you can then focus on customizing your website in any way you want, and more importantly, developing the actual content for your blog.</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73hlfqyk2t" data-config="{}"></div>
+  
 
 
 <!-- -->
@@ -2326,6 +2332,8 @@ rsconnect::deployApp("ReadmissionRiskPool")</code></pre>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
 <p>There are many different ways (and this list probably doesn’t come close to covering the possible ones (e.g., <a href="https://azure.microsoft.com/en-us/products/app-service">Azure App Service</a>)) to start building and sharing data science products for no cost. So, what are you waiting for? Give them a try!</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73mgu5ns2t" data-config="{}"></div>
+  
 
 
 </section>
@@ -3637,6 +3645,8 @@ font-style: inherit;">"Odds-ratio (95% CI) for being at or below response level"
 <section id="so-what-do-we-do-in-practice" class="level2">
 <h2 class="anchored" data-anchor-id="so-what-do-we-do-in-practice">So what do we do in practice?</h2>
 <p>First, the same proportional-odds assumptions hold for all covariates in the model, so we would also want to assess this for annual household income and gender. Second, if the assumption is not met, then we need to accommodate that by introducing more flexibility into the model. That may be by being clever with interaction terms, defining sensible groups to create, or by using separate binary models for each possible comparison, as we’ve done here. It’s really a judgement call.</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73sgvuqk2t" data-config="{}"></div>
+  
 
 
 <!-- -->
@@ -4974,6 +4984,8 @@ font-style: inherit;">"Customers"</span>)</span></code></pre></div>
 </div>
 </div>
 <p>Although older customers yield higher sales, it may cost more marketing dollars to acquire any given individual from such a small segment, ultimately making the juice not worth the squeeze. Feeding estimates into cost-benefit or what-if scenarios can greatly increase confidence in how a proposed course of action would actually play out, instead of implementing things on the basis of mere existence (i.e., statistical significance).</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73zfajos2t" data-config="{}"></div>
+  
 
 
 <!-- -->
@@ -5020,6 +5032,8 @@ font-style: inherit;">"Customers"</span>)</span></code></pre></div>
 <section id="answer-the-question-did-it-work" class="level1">
 <h1>5. Answer the question, “did it work?”</h1>
 <p>Oftentimes when you look at a statistic like a p-value, it leaves an empty feeling like you haven’t been convinced. That’s because it does not yet directly translate to the real-world impact the new insight is supposed to address. Maybe it’s useful during data analysis, but we should be thinking beyond the inferences made from the sample at hand to what we need to see to convince us that the results really matter. If the information we’ve garnered is actually useful, then we should expect improvements to play out where the rubber meets the road once it is utilized. The most direct way to do this: test it.</p>
+    <div class="bluesky-comments" data-uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc747wvce22t" data-config="{}"></div>
+  
 
 
 </section>

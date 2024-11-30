@@ -57,3 +57,5 @@ Your code is on GitHub, but you need a server that will actually host the live a
 # Get started
 
 My advice is to get your website workflow up and running first: create the local (default) application, push the code to GitHub, configure Netlify to host the website, and, if you choose, set up your custom domain (again, this last part costs money). Then you can start to make tweaks to your website and make sure everything operates as expected for general maintenance. From there, you can then focus on customizing your website in any way you want, and more importantly, developing the actual content for your blog.
+
+{{< bluesky-comments uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73hlfqyk2t" >}}

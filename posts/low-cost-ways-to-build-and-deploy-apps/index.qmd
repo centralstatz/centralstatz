@@ -171,3 +171,5 @@ The real cool thing about this setup is that you can take it wherever you want t
 # Conclusion
 
 There are many different ways (and this list probably doesn't come close to covering the possible ones (e.g., [Azure App Service](https://azure.microsoft.com/en-us/products/app-service))) to start building and sharing data science products for no cost. So, what are you waiting for? Give them a try!
+
+{{< bluesky-comments uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73mgu5ns2t" >}}

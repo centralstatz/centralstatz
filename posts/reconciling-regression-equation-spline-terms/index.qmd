@@ -265,3 +265,5 @@ Now we have an equation that takes an age value as input (in years) and outputs 
 ## Why is this useful?
 
 First, it's obviously important to understand how modeling software is getting to the results it gives you, so that you can correctly interpret it, among other things. Second, from a pragmatic point of view, the ability to write out the full regression equation allows you embed your model into any application (even Excel if you wanted), instead of requiring the `predict` function to be run, which in turn would require `R` to be a part of the application's server. In this case, it's unnecessary for that to be a requirement, since we can simply reconcile our model into an easily understandable equation. Luckily, there are also [some functions](https://www.rdocumentation.org/packages/rms/versions/6.8-2/topics/Function) that can extract these formulas for you for this exact purpose so you don't _have_ to go through the cumbersome calculations above.
+
+{{< bluesky-comments uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lbubbyx3v42m" >}}

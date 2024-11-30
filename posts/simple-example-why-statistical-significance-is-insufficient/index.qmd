@@ -361,3 +361,5 @@ sim_dat |>
 ```
 
 Although older customers yield higher sales, it may cost more marketing dollars to acquire any given individual from such a small segment, ultimately making the juice not worth the squeeze. Feeding estimates into cost-benefit or what-if scenarios can greatly increase confidence in how a proposed course of action would actually play out, instead of implementing things on the basis of mere existence (i.e., statistical significance).
+
+{{< bluesky-comments uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73zfajos2t" >}}

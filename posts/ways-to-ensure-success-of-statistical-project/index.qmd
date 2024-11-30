@@ -38,3 +38,5 @@ It may sound trivial, but it’s worth thinking about (and even explicitly defin
 # 5. Answer the question, “did it work?”
 
 Oftentimes when you look at a statistic like a p-value, it leaves an empty feeling like you haven’t been convinced. That’s because it does not yet directly translate to the real-world impact the new insight is supposed to address. Maybe it’s useful during data analysis, but we should be thinking beyond the inferences made from the sample at hand to what we need to see to convince us that the results really matter. If the information we’ve garnered is actually useful, then we should expect improvements to play out where the rubber meets the road once it is utilized. The most direct way to do this: test it.
+
+{{< bluesky-comments uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc747wvce22t" >}}

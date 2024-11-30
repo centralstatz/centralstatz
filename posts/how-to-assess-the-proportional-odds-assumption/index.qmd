@@ -357,3 +357,5 @@ For other age categories, it may not be so good of an assumption. It looks like 
 ## So what do we do in practice?
 
 First, the same proportional-odds assumptions hold for all covariates in the model, so we would also want to assess this for annual household income and gender. Second, if the assumption is not met, then we need to accommodate that by introducing more flexibility into the model. That may be by being clever with interaction terms, defining sensible groups to create, or by using separate binary models for each possible comparison, as we've done here. It's really a judgement call.
+
+{{< bluesky-comments uri="at://did:plc:sh3av73hihgu72vx7k44kgv7/app.bsky.feed.post/3lc73sgvuqk2t" >}}
