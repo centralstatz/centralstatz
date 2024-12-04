@@ -20,6 +20,7 @@
 
 
 
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/HXTjssAYCdw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>Suppose we want to model blood pressure as a function of age (dataset details found <a href="https://archive.ics.uci.edu/dataset/45/heart+disease">here</a>):</p>
 <div class="cell">
 <details class="code-fold">
