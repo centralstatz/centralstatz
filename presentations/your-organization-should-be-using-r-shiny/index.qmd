@@ -1,7 +1,7 @@
 ---
-title: "Your organization should be using R Shiny"
+title: "The value of open-source: Leveraging free, code-first tools to iterate toward advanced analytics"
 author: Alex Zajichek
-date: "2024-08-05"
+date: "2025-02-27"
 ---
 
 _In progress_

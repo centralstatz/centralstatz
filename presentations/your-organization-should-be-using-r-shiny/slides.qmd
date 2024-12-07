@@ -1,13 +1,12 @@
 ---
-title: "Your organization should be using R Shiny (and other open-source software)"
-subtitle: "Low-cost tools for moving towards advanced analytics"
+title: "The value of open-source"
+subtitle: "Leveraging free, code-first tools to iterate toward advanced analytics"
 author: "Alex Zajichek"
-date: "2024-08-06"
+date: "2025-02-27"
 format:
   revealjs: 
-    theme: moon
-    logo: logo.png
-    footer: "<a href = https://www.centralstatz.com/>www.centralstatz.com</a>"
+    theme: serif
+    footer: "<em>AI Innovations at Work Conference 2025</em>"
     slide-number: true
     incremental: true
 ---
