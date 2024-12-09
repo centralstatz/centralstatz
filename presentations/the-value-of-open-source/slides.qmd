@@ -18,18 +18,27 @@ format:
 - Today we're going to talk about open source tools
 - Why you might consider using them to help you move towards more advanced analytics
 - Since we're at an AI conference, we need to talk about it. So we're going to first think about what AI is in the first place
-- These views get conflated, often devolving into how we can use the existing tool for our purpose (specifically ChatGPT)
+- The way AI is conveyed/presented is vague and ambiguous. We understand it's something to do something about, but very unclear what that something is. 
 :::
 
 ## Two Sides of A Coin
 
 ::: {.notes}
-- The way I view it, there are two sides of the coin
+- The way I view it, there are two sides of the coin that are generally not differentiated
 - Go out to the marketplace and see what's out there to help you accomplish something
 - I put "purchase" there intentionally
 - A productivity tool, like any other sort of tool. We don't particularly think about how it works.
 
 - The other side is about what actually goes into building those AI tools themselves
+- Data infra: How you collect, store data
+- Thinking: How you report and utilize information and frame problems analytically to be answered with data
+- Reasoning: How you deduce and infer and take action based on that information
+- Tools: Tools that are used to facilitate these processes
+
+- Boils down to how data can help make informed decisions
+
+- Ultimately, these are building blocks that create advanced AI/data science tools on the left
+
 :::
 
 <br>
@@ -43,6 +52,7 @@ format:
 - Pre-built products like [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), etc.
 - Use (purchase) to conform to our tasks
 - Perceived as _productivity tools_
+- Dominates the conversation
 
 :::
 
@@ -50,7 +60,7 @@ format:
 
 ### AI as data science
 
-- Data infrastructure and analytical thinking
+- Data infrastructure, analytical thinking, statistical reasoning, tools for facilitation
 - How we use data to inform decision making
 - The building blocks of AI itself
 
@@ -65,25 +75,74 @@ format:
 <br>
 
 ::: {.notes}
-- So many conflicting definitions of AI, and how it relates to data science
+- What I've noticed in presentations, etc. is these aren't really distinguished in the conversation. Focus on tools, talk about needing better data strategy which devolves into how we can use the existing tool for our purpose (specifically ChatGPT).
+
+- So many conflicting definitions of AI, and how it relates to data science. If you search Google you get so many differing pictures of it (no clear answer)
 - I intentionally chose this picture because it's just as confusing as stating the definition of AI. 
 - There's so much varying overlap that it doesn't actually tell you anything.
-- I'm glad regression analysis is actually in there where it is. Very old technique. Going into my first ML class excited to "allow machines to learn and improve without being explicitly programmed". Regression was the first thing I learned about in my machine learning course.
+- I'm glad regression analysis is actually in there where it is. Very old technique. Going into my first ML class (after having plenty of statistics training) excited to "allow machines to learn and improve without being explicitly programmed". Regression was the first thing I learned about in my machine learning course. Regression is a core part of the ML field.
+
 :::
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-- A lot of focus on the first, often bypassing thoughtfulness in the second
-- Gartner (2018): 87% of business at low analytics maturity (REF)
-- _"AI for the sake of AI is a losing proposition"_ (REF). Be intentional!
+<br>
+
+- Tend to focus on the first, bypassing the second; conflating views
+
+<br>
+
+- Leads to ambiguity and confusion (figure)
 
 :::
 
 ::: {.column width="50%"}
 
-![](AIDiagram.png)
+[![Figure: The confusing nature of AI-related fields](AIDiagram.png)](https://www.researchgate.net/figure/Venn-diagram-of-artificial-intelligence-and-data-science-Artificial-intelligence-AI-is_fig1_380790362)
+:::
+
+::::
+
+---
+
+## The horse before the cart
+
+::: {.notes} 
+- So can we take a step back and strategically think about what we can do?
+- Before spending tons of money on black box tools in hopes they work...
+- Where does the value lie? 
+
+- This is now a somewhat old statistic, but even if we assume improvements, still a large portion of business at early stage in their data journey
+
+- This is not to say AI tools don't have their place. But we should be thinking strategically about what our needs really are vs. jumping on the AI hype train and spending tons of money because we think we need to.
+- You know your business. Where the value is. A whole world of stuff out there to be utilized...
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Current state
+
+- Gartner (2018): 87% of business at low analytics maturity (REF)
+
+[![Figure: Gartner Analytics Maturity Model](AnalyticsMaturity.png)](https://www.jirav.com/blog/data-analytics-maturity-models)
+
+:::
+
+::: {.column width="50%"}
+
+### Back to basics
+
+- Data infrastructure
+- How are we currently using our data?
+- What tools do we have?
+- What skills do we/don't we have?
+- Do we really need AI? Or just a better skill for completing a task? (Excel example)
+- _"AI for the sake of AI is a losing proposition"_ (REF). Be intentional!
+
 :::
 
 ::::
@@ -92,10 +151,7 @@ format:
 
 ---
 
-## Data science strategy
-
-
-
+# The case for open-source
 
 ---
 
