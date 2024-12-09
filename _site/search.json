@@ -7,8 +7,8 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow to reconcile the regression equation from spline terms\n\n\n\n\n\n\nRegression Modeling\n\n\n\nUsing the {rms::rcs} function\n\n\n\n\n\nNov 25, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nCan you have a model without data?\n\n\n\n\n\n\nBayesian\n\n\n\nYes, by being a Bayesian.\n\n\n\n\n\nOct 29, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nYou should have a data science blog\n\n\n\n\n\n\nDeployment\n\n\nLearning\n\n\nSoftware Development\n\n\n\nEasy and free are only a couple benefits.\n\n\n\n\n\nSep 25, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nLow cost ways to build and deploy analytical web apps\n\n\n\n\n\n\nWeb applications\n\n\nDeployment\n\n\n\nAn overview of some server options\n\n\n\n\n\nAug 20, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nHow do you assess the proportional-odds assumption? Directly.\n\n\n\n\n\n\nRegression Modeling\n\n\n\nA simple visual check.\n\n\n\n\n\nJul 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nA simple example why statistical significance is insufficient for action\n\n\n\n\n\n\nStatistical Significance\n\n\nDecision Making\n\n\n\nIt ignores the basic question: “How much?”\n\n\n\n\n\nJun 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\n5 ways to help ensure success of a statistical project\n\n\n\n\n\n\nProject Management\n\n\n\nHow can we increase the likelihood that things will go as expected?\n\n\n\n\n\nMay 16, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "presentations/your-organization-should-be-using-r-shiny/index.html",
-    "href": "presentations/your-organization-should-be-using-r-shiny/index.html",
+    "objectID": "presentations/the-value-of-open-source/index.html",
+    "href": "presentations/the-value-of-open-source/index.html",
     "title": "The value of open-source: Leveraging free, code-first tools to iterate toward advanced analytics",
     "section": "",
     "text": "In progress\n\nSlides\n\n\nLink to slideshow"
@@ -236,6 +236,34 @@
     "title": "CentralStatz Statistical & Data Sciences LLC",
     "section": "",
     "text": "Statistical and data science consulting in Central Wisconsin\n\n\n\n\n\n\n\n\nLoading…"
+  },
+  {
+    "objectID": "presentations/the-value-of-open-source/slides.html#two-sides-of-a-coin",
+    "href": "presentations/the-value-of-open-source/slides.html#two-sides-of-a-coin",
+    "title": "The value of open-source",
+    "section": "Two Sides of A Coin",
+    "text": "Two Sides of A Coin\n\n\nThe way I view it, there are two sides of the coin\nGo out to the marketplace and see what’s out there to help you accomplish something\nI put “purchase” there intentionally\nA productivity tool, like any other sort of tool. We don’t particularly think about how it works.\nThe other side is about what actually goes into building those AI tools themselves\n\n\n\n\n\nAI as tools\n\nPre-built products like ChatGPT, Gemini, etc.\nUse (purchase) to conform to our tasks\nPerceived as productivity tools\n\n\nAI as data science\n\nData infrastructure and analytical thinking\nHow we use data to inform decision making\nThe building blocks of AI itself"
+  },
+  {
+    "objectID": "presentations/the-value-of-open-source/slides.html#blurred-lines",
+    "href": "presentations/the-value-of-open-source/slides.html#blurred-lines",
+    "title": "The value of open-source",
+    "section": "Blurred lines",
+    "text": "Blurred lines\n\n\n\nSo many conflicting definitions of AI, and how it relates to data science\nI intentionally chose this picture because it’s just as confusing as stating the definition of AI.\nThere’s so much varying overlap that it doesn’t actually tell you anything.\nI’m glad regression analysis is actually in there where it is. Very old technique. Going into my first ML class excited to “allow machines to learn and improve without being explicitly programmed”. Regression was the first thing I learned about in my machine learning course.\n\n\n\n\n\nA lot of focus on the first, often bypassing thoughtfulness in the second\nGartner (2018): 87% of business at low analytics maturity (REF)\n“AI for the sake of AI is a losing proposition” (REF). Be intentional!"
+  },
+  {
+    "objectID": "presentations/the-value-of-open-source/slides.html#data-science-strategy",
+    "href": "presentations/the-value-of-open-source/slides.html#data-science-strategy",
+    "title": "The value of open-source",
+    "section": "Data science strategy",
+    "text": "Data science strategy"
+  },
+  {
+    "objectID": "presentations/the-value-of-open-source/slides.html#a-look-at-riskcalc.org",
+    "href": "presentations/the-value-of-open-source/slides.html#a-look-at-riskcalc.org",
+    "title": "The value of open-source",
+    "section": "A look at riskcalc.org",
+    "text": "A look at riskcalc.org"
   },
   {
     "objectID": "presentations.html",
