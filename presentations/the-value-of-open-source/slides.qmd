@@ -1,9 +1,10 @@
 ---
-title: "The value of open-source"
+title: "The Value of Open-Source"
 subtitle: "Leveraging free, code-first tools to iterate toward advanced analytics"
 author: "Alex Zajichek"
 institute: "Research Data Scientist, Cleveland Clinic"
-date: "February 27, 2025"
+date: "2025-02-27"
+date-format: long
 format:
   revealjs: 
     theme: [serif, custom.scss]
@@ -12,13 +13,14 @@ format:
     incremental: true
 ---
 
-# What is AI, anyway?
+# What is AI, Anyway?
 
 ::: {.notes}
 - Today we're going to talk about open source tools
 - Why you might consider using them to help you move towards more advanced analytics
 - Since we're at an AI conference, we need to talk about it. So we're going to first think about what AI is in the first place
 - The way AI is conveyed/presented is vague and ambiguous. We understand it's something to do something about, but very unclear what that something is. 
+- We don't get into specifics and meet people where they are
 :::
 
 ## Two Sides of A Coin
@@ -47,7 +49,7 @@ format:
 
 ::: {.column width="50%"}
 
-### AI as tools
+### AI as Tools
 
 - Pre-built products like [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), etc.
 - Use (purchase) to conform to our tasks
@@ -58,10 +60,10 @@ format:
 
 ::: {.column width="50%"}
 
-### AI as data science
+### AI as Data Science
 
 - Data infrastructure, analytical thinking, statistical reasoning, tools for facilitation
-- How we use data to inform decision making
+- How we use data to help _inform_ decision making
 - The building blocks of AI itself
 
 ::: 
@@ -70,7 +72,7 @@ format:
 
 ---
 
-## Blurred lines
+## Blurred Lines
 
 <br>
 
@@ -81,6 +83,8 @@ format:
 - I intentionally chose this picture because it's just as confusing as stating the definition of AI. 
 - There's so much varying overlap that it doesn't actually tell you anything.
 - I'm glad regression analysis is actually in there where it is. Very old technique. Going into my first ML class (after having plenty of statistics training) excited to "allow machines to learn and improve without being explicitly programmed". Regression was the first thing I learned about in my machine learning course. Regression is a core part of the ML field.
+- From that point forward I start noticing so many redunancies between these fields, and realized it's all basically the same thing in kind, just to varying degree
+- So it all points to: building from a solid data strategy and infrastructure will lead toward these more advanced capabilities.
 
 :::
 
@@ -107,7 +111,7 @@ format:
 
 ---
 
-## The horse before the cart
+## The Horse Before the Cart
 
 ::: {.notes} 
 - So can we take a step back and strategically think about what we can do?
@@ -116,15 +120,22 @@ format:
 
 - This is now a somewhat old statistic, but even if we assume improvements, still a large portion of business at early stage in their data journey
 
+- Low hanging fruit going back to basics. 
 - This is not to say AI tools don't have their place. But we should be thinking strategically about what our needs really are vs. jumping on the AI hype train and spending tons of money because we think we need to.
 - You know your business. Where the value is. A whole world of stuff out there to be utilized...
+- Think about what sort of fundamental skills we can enhance and what tools we can integrate to facilitate fundamental analytical thinking.
+- Having solid foundational analytics strategy can then let you better evaluate what and when an AI productivity tool will be useful, rather than just hoping it solves your problem
+
+- Start thinking about these things and the decisions you need to make. Is AI really the solution? 
+
+- This is NOT to say to not use AI tools (on the productivity side) if they have clear and obvious benefit to you
 :::
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-### Current state
+### Current State
 
 - Gartner (2018): 87% of business at low analytics maturity (REF)
 
@@ -134,47 +145,61 @@ format:
 
 ::: {.column width="50%"}
 
-### Back to basics
+### Back to Basics
 
-- Data infrastructure
-- How are we currently using our data?
-- What tools do we have?
-- What skills do we/don't we have?
-- Do we really need AI? Or just a better skill for completing a task? (Excel example)
-- _"AI for the sake of AI is a losing proposition"_ (REF). Be intentional!
+- Are you capturing what's important? (Data infrastructure)
+  + "If I knew X at time Y, I could do Z"
+- How are you using your data? (Reporting/analytical thinking)
+- What are your limitations? (Tools, skills, time, etc.)
+- Are _AI tools_ really the solution?
+  + _"AI for the sake of AI is a losing proposition"_ (REF). Be intentional!
 
 :::
 
 ::::
 
+# The Case for Open-Source
 
+::: {.notes} 
+- I'd argue there's no better way to get on this road towards advanced analytics than with open-source tools
+- Build your foundation with open source software
+:::
 
----
+## What Is Open-Source?
 
-# The case for open-source
+::: {.notes}
 
----
+- It is software that is first and foremost free, but also open, so you know exactly how it works
+- Although open source software can and is built by companies, I think of it as community developed. Namely that the users of the software are building it.
+- So my favorite way to think about what open source is is like a prestine workshop with all the tools you can imagine available. Now it is up to you to build what you want with them to serve your needs. I specifically include "directions" to emphasize that not only you can use the tools, but a plethora of resources to guide you and understand how you do and can use them.
+
+- When I talk about open source, I'm implying code-first. In my opinion it is the best way. Allows you to build exactly what you need. Pre-made, point and click tools always have their limitations and restrictions. Not to mention the cost...
+- Data science in general is as much an art as science. You need to create things in a way that is useful.
+- Gives you the groundwork and foundation to facilitate the way you want to solve problems. Use it how you want, instead of trying to conform your problems to how pre-existing tools work.
+- Given that it's free, no matter who you are you can start. Just install the software. So it gives empowerment and flexibility for an individual to start using it in their own work, maybe locally, and see how it helps them solve potentially small problems. Build this foundation and iterate towards more widespread use.
+:::
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-<center><h2>The AI buzz</h2></center>
+### Background
 
-- AI is many things
-- Ambiguity from _"Buy in or fall behind"_
-- Spend money on expensive products, and expect results
-- Quite the jump
+- In essence, free and open software ([Wikipedia](https://en.wikipedia.org/wiki/Open_source))
+- Think of as community built
+- Like a workshop for your raw materials (with directions)
 
 :::
 
 ::: {.column width="50%"}
 
-<center><h2>Data Science</h2></center>
+### Benefits in Data Science
 
-- Comes down to asking the right questions that lead to actionable solutions
-- Data quality, strategy, tooling, and smart analysis goes a long way
-- You can start doing that without breaking the bank
+- Code-first approach gives flexibility and control
+  + Art + science
+- Use it to _facilitate_ analytical approach
+  + Building blocks to AI
+- Low-cost iteration and experimentation (anyone can do it)
 
 :::
 
