@@ -175,7 +175,8 @@ format:
 
 - When I talk about open source, I'm implying code-first. In my opinion it is the best way. Allows you to build exactly what you need. Pre-made, point and click tools always have their limitations and restrictions. Not to mention the cost...
 - Data science in general is as much an art as science. You need to create things in a way that is useful.
-- Gives you the groundwork and foundation to facilitate the way you want to solve problems. Use it how you want, instead of trying to conform your problems to how pre-existing tools work.
+- Gives you the groundwork and foundation to facilitate the way you want to solve problems. Use it how you want, instead of trying to conform your problems to how pre-existing tools work. 
+- Syntax to communicate your analytical ideas
 - Given that it's free, no matter who you are you can start. Just install the software. So it gives empowerment and flexibility for an individual to start using it in their own work, maybe locally, and see how it helps them solve potentially small problems. Build this foundation and iterate towards more widespread use.
 :::
 
@@ -205,35 +206,243 @@ format:
 
 ::::
 
+<br>
+
+* <strong>We'll look closer at 3 tools today</strong>: [R](https://www.r-project.org/), [Shiny](https://shiny.posit.co/), and [Quarto](https://quarto.org/).
+
 ---
 
-# Open source
+## The R Programming Language
+
+::: {.notes}
+
+- As compared to object oriented, though R also has OOP paradigm
+- Database connectivity, complex data manipulation, advanced statistical modeling, tables, graphs, interactivity, web applications, maps, etc.
+- If you look through the package list, there may be packages readily available for your use case
+
+:::
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-<center><h2>What is R?</h2></center>
+### Background
 
-- R is a statistical programming language
-
+* A free and open-source _functional_ programming language
+* Developed for statistical computing, but has long since expanded to much broader usage
+* Advanced through [packages](https://r-pkgs.org/) developed by the community ([Package list](https://cran.r-project.org/web/packages/available_packages_by_name.html))
+* Commonly used in the [RStudio IDE](https://posit.co/products/open-source/rstudio/)
+   + Install [R](https://www.r-project.org/) _then_ [RStudio](https://posit.co/download/rstudio-desktop/)
 :::
 
 ::: {.column width="50%"}
 
-<center><h2>Other tools</h2></center>
+### Example
 
-- Python
-- Quarto
+```{r}
+#| code-line-numbers: "1|2|3|4|5|6|8"
+#| echo: true
+library(plotly) # Load package
+plot_ly(
+  data = trees, # Access dataset
+  x = ~Height,
+  y = ~Girth,
+  size = ~Volume,
+  color = ~Volume,
+  text = ~paste0("Height: ", Height, "<br>Girth: ", Girth, "<br>Volume: ", Volume), height = 300, width = 500
+)
+```
 
 :::
 
 ::::
 
-<center><h1>Why should I use it?</h1></center>
+---
 
-- Complete customization
-- Best of all: **it is free**
+### Map example
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{.r code-line-numbers="1-4|6-19|21-45"}
+# Load packages
+library(tidyverse)
+library(tidycensus)
+library(mapgl)
+
+# Extract a data set to use
+dat <- 
+  get_acs(
+    geography = "tract",
+    variables = "B19013_001", # Median income,
+    state = "WI",
+    year = 2022,
+    geometry = TRUE
+  ) |>
+  
+  # Make an information column
+  mutate(
+    Info = paste0(str_remove(NAME, ";.+$"), "<br>Median Income ($): ", round(estimate))
+  )
+
+maplibre() |>
+  
+  # Focus the mapping area
+  fit_bounds(dat) |>
+  
+  # Fill with the data values
+  add_fill_layer(
+    id = "mc_acs",
+    source = dat,
+    fill_outline_color = "black",
+    fill_color = 
+      interpolate(
+        column = "estimate",
+        values = range(dat$estimate, na.rm = TRUE),
+        stops = c("#f2d37c", "#08519c"),
+        na_color = "gray"
+      ),
+    fill_opacity = 0.50,
+    popup = "Info"
+  ) |>
+  add_legend(
+    legend_title = "Median income ($)",
+    values = range(dat$estimate, na.rm = TRUE),
+    colors = c("#f2d37c", "#08519c")
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+# Load packages
+library(tidyverse)
+library(tidycensus)
+library(mapgl)
+
+# Extract a data set to use
+dat <- 
+  get_acs(
+    geography = "tract",
+    variables = "B19013_001", # Median income,
+    state = "WI",
+    year = 2022,
+    geometry = TRUE,
+    progress_bar = FALSE
+  ) |>
+  
+  # Make an information column
+  mutate(
+    Info = paste0(str_remove(NAME, ";.+$"), "<br>Median Income ($): ", round(estimate))
+  )
+
+maplibre() |>
+  
+  # Focus the mapping area
+  fit_bounds(dat) |>
+  
+  # Fill with the data values
+  add_fill_layer(
+    id = "mc_acs",
+    source = dat,
+    fill_outline_color = "black",
+    fill_color = 
+      interpolate(
+        column = "estimate",
+        values = range(dat$estimate, na.rm = TRUE),
+        stops = c("#f2d37c", "#08519c"),
+        na_color = "gray"
+      ),
+    fill_opacity = 0.50,
+    popup = "Info"
+  ) |>
+  add_legend(
+    legend_title = "Median income ($)",
+    values = range(dat$estimate, na.rm = TRUE),
+    colors = c("#f2d37c", "#08519c")
+  )
+```
+
+:::
+
+::::
+
+---
+
+## Quarto
+
+::: {.notes}
+
+- These slides and the website it is contained in, all built with Quarto (for free)
+- Used the examples in the previous slides as meta-examples of why Quarto is awesome. 
+- Use these open source tools to easily deliver powerful interactive analytical content.
+- Embed code chunks for reproducible reporting straight in your document
+
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Background
+
+- [Quarto](https://quarto.org/) is a open source technical publishing system
+- Build documents, reports, websites, presentations, dashboards, books, etc.
+- Vehicle for dissemination, promoting automation and reproducibility
+- Integrates well with [R](), [Python](), and many other tools
+  + _This_ presentation (and [website](https://www.centralstatz.com/presentations/the-value-of-open-source/) that it's contained in) are built in [Quarto](https://quarto.org/)
+
+:::
+
+::: {.column width="50%"}
+
+YAML (header/metadata)
+``` yaml
+---
+title: "The Value of Open-Source"
+subtitle: "Leveraging free, code-first tools to iterate toward advanced analytics"
+author: "Alex Zajichek"
+institute: "Research Data Scientist, Cleveland Clinic"
+date: "2025-02-27"
+date-format: long
+format:
+  revealjs: 
+    theme: [serif, custom.scss]
+    footer: "<em>AI Innovations at Work Conference 2025</em>"
+    slide-number: true
+    incremental: true
+---
+```
+
+Markdown (body)
+``` markdown
+### Background
+
+- [Quarto](https://quarto.org/) is a open source technical publishing system
+- Build documents, reports, websites, presentations, dashboards, books, etc.
+- Promotes automation and reproducibility
+```
+
+:::
+
+::::
+
+---
+
+## Shiny 
+
+- Chatbot example
+
+---
+
+## Strategies for learning
+
+- ChatGPT
+- Shiny Assistant
+- Quantfish
 
 ---
 
@@ -246,6 +455,13 @@ format:
 - QHS
 - AM, KJ, BMD
 - Mike Kattan
+
+---
+
+## Conclusion
+
+- Ai tools can be useful...
+- Open source best way to get started and facilitate because of low-cost and flexibility
 
 ---
 
