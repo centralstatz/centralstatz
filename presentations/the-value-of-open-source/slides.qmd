@@ -11,6 +11,7 @@ format:
     footer: "<em>AI Innovations at Work Conference 2025</em>"
     slide-number: true
     incremental: true
+    code-block-height: 250px
 ---
 
 # What is AI, Anyway?
@@ -208,7 +209,7 @@ format:
 
 <br>
 
-* <strong>We'll look closer at 3 tools today</strong>: [R](https://www.r-project.org/), [Shiny](https://shiny.posit.co/), and [Quarto](https://quarto.org/).
+* <strong>We'll look closer at 3 tools today</strong>: [R](https://www.r-project.org/), [Quarto](https://quarto.org/), [Shiny](https://shiny.posit.co/).
 
 ---
 
@@ -372,7 +373,7 @@ maplibre() |>
 
 ---
 
-## Quarto
+## Quarto for Reproducible Documents
 
 ::: {.notes}
 
@@ -380,7 +381,7 @@ maplibre() |>
 - Used the examples in the previous slides as meta-examples of why Quarto is awesome. 
 - Use these open source tools to easily deliver powerful interactive analytical content.
 - Embed code chunks for reproducible reporting straight in your document
-
+- Imagine now this is connected to your database...
 :::
 
 :::: {.columns}
@@ -389,10 +390,10 @@ maplibre() |>
 
 ### Background
 
-- [Quarto](https://quarto.org/) is a open source technical publishing system
-- Build documents, reports, websites, presentations, dashboards, books, etc.
+- [Quarto](https://quarto.org/) is an open source technical publishing system
+- Build custom analytical documents in programmatic way
 - Vehicle for dissemination, promoting automation and reproducibility
-- Integrates well with [R](), [Python](), and many other tools
+- Integrates well with [R](https://www.r-project.org/), [Python](https://www.python.org/), and many other tools
   + _This_ presentation (and [website](https://www.centralstatz.com/presentations/the-value-of-open-source/) that it's contained in) are built in [Quarto](https://quarto.org/)
 
 :::
@@ -432,19 +433,136 @@ Markdown (body)
 
 ---
 
-## Shiny 
+## Shiny for Web Applications
 
-- Chatbot example
+::: {.notes}
+- Good example of separating AI tools from the foundational data strategy stuff: building applications that utilize AI tools
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Background
+
+- [Shiny](https://shiny.posit.co/) is an R _package_ for building custom, interactive web applications
+  + You can do it in [Python too](https://shiny.posit.co/py/)!
+- Allows users to interact with data, analytics, models, etc. however you see fit
+
+::: {style="font-size: 50%;"}
+Example: [Deploying an LLM-powered Shiny app](https://www.youtube.com/watch?v=YB_VyRV5wwQ)
+:::
+{{< video https://www.youtube.com/embed/YB_VyRV5wwQ width="100%">}}
+
+:::
+
+::: {.column width="50%"}
+
+### Example (in R)
+
+```{.r code-line-numbers="1|3-18|19-28|30"}
+library(shiny) # Load package
+
+ui <- 
+  fluidPage(
+    title = "MyApp", 
+    sidebarLayout(
+      sidebarPanel(
+        selectInput(
+          inputId = "color",
+          label = "Choose Color",
+          choices = c("red", "blue", "green")
+        )
+      ),
+      mainPanel(
+        plotOutput("my_plot")
+      )
+    )
+  )
+
+server <- 
+  function(input, output) {
+    
+    output$my_plot <-
+      renderPlot({
+        with(trees, plot(Height, Girth, col = input$color))
+      })
+    
+  }
+
+shinyApp(ui, server)
+```
+
+![](shiny.gif)
+:::
+
+::::
 
 ---
 
-## Strategies for learning
+## Deployment and integration
 
-- ChatGPT
-- Shiny Assistant
+::: {.notes}
+- Can be free too...
+:::
+
+- Use what works
+- Pay as needed
+- Posit Connect Cloud (now in beta)
+- shinyapps.io
+- Shiny Server
+- Quarto Pub
+- Index
+
+---
+
+## How can I learn?
+
+::: {.notes}
+- What we saw here was a very narrow glimpse into what these tools can do. So how can you learn more yourself?
+- First, just install them--they are free!
+- Again, the workshop analogy. You probably need to be curious and want to learn new skills, but in my opinion it's the best way to build a foundation.
+- Start task based: try reproducing some very small little task, like creating a graph programmatically that you'd normally do in Excel
+- You start to figure things out as you go, which allows you to iterate over time and continuing building and expanding the capabilities
+- Start with free stuff, and only incur costs as needed for solutions you are building and need
+- Use AI tools to help you learn!
+:::
+
+::: {.panel-tabset}
+
+### Strategies
+
+### Resources
+
 - Quantfish
+- YouTube
+- Tutorials
+
+### Use AI tools!
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+#### ChatGPT
+
+:::
+
+::: {.column width="50%"}
+
+#### Shiny Assistant
+
+https://gallery.shinyapps.io/assistant/
+
+:::
+
+::::
+
+:::
 
 ---
+
+# Tools in Action: [riskcalc.org](https://riskcalc.org/)
 
 ## A look at [riskcalc.org](https://riskcalc.org/)
 
