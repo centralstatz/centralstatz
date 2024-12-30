@@ -2,7 +2,6 @@
 title: "The Value of Open-Source"
 subtitle: "Leveraging free, code-first tools to iterate toward advanced analytics"
 author: "Alex Zajichek"
-institute: "Research Data Scientist, Cleveland Clinic"
 date: "2025-02-27"
 date-format: long
 format:
@@ -209,7 +208,7 @@ format:
 
 <br>
 
-* <strong>We'll look closer at 3 tools today</strong>: [R](https://www.r-project.org/), [Quarto](https://quarto.org/), [Shiny](https://shiny.posit.co/).
+* <strong>Today's emphasis:</strong>: [R](https://www.r-project.org/), [Quarto](https://quarto.org/), [Shiny](https://shiny.posit.co/).
 
 ---
 
@@ -229,11 +228,10 @@ format:
 
 ### Background
 
-* A free and open-source _functional_ programming language
-* Developed for statistical computing, but has long since expanded to much broader usage
+* A free and open-source functional programming language
+* Developed in the 1990's for statistical computing, but has long since expanded to much broader usage
 * Advanced through [packages](https://r-pkgs.org/) developed by the community ([Package list](https://cran.r-project.org/web/packages/available_packages_by_name.html))
 * Commonly used in the [RStudio IDE](https://posit.co/products/open-source/rstudio/)
-   + Install [R](https://www.r-project.org/) _then_ [RStudio](https://posit.co/download/rstudio-desktop/)
 :::
 
 ::: {.column width="50%"}
@@ -241,11 +239,12 @@ format:
 ### Example
 
 ```{r}
-#| code-line-numbers: "|1|2|3|4|5|6|8"
+#| code-line-numbers: "|1|2|3-10"
 #| echo: true
 library(plotly) # Load package
+my_data <- trees # Assign object (dataset)
 plot_ly(
-  data = trees, # Access dataset
+  data = my_data,
   x = ~Height,
   y = ~Girth,
   size = ~Volume,
@@ -406,7 +405,6 @@ YAML (header/metadata)
 title: "The Value of Open-Source"
 subtitle: "Leveraging free, code-first tools to iterate toward advanced analytics"
 author: "Alex Zajichek"
-institute: "Research Data Scientist, Cleveland Clinic"
 date: "2025-02-27"
 date-format: long
 format:
@@ -423,8 +421,8 @@ Markdown (body)
 ### Background
 
 - [Quarto](https://quarto.org/) is a open source technical publishing system
-- Build documents, reports, websites, presentations, dashboards, books, etc.
-- Promotes automation and reproducibility
+- Build custom analytical documents in programmatic way
+- Vehicle for dissemination, promoting automation and reproducibility
 ```
 
 :::
@@ -532,7 +530,19 @@ shinyApp(ui, server)
 
 ::: {.column width="50%"}
 
-### Potential options
+### Options to get started
+
+::: {style="font-size: 75%;"}
+
+- [Posit Connect Cloud](https://connect.posit.cloud/): Deploy Shiny apps, Quarto docs, and more to the web for free from [GitHub](https://github.com/)
+  + Now in beta with private deployment options (for low cost)
+- [shinyapps.io](https://www.shinyapps.io/): Deploy Shiny apps to the web; free basic plan
+  + Pay for more features like security, domains, and authentication
+- [Quarto Pub](https://quartopub.com/): Freely publish Quarto output to the web for public access
+- [Shiny Server](https://posit.co/products/open-source/shiny-server/): Open source (free) server to deploy Shiny apps and other content
+  + Install on premises or the cloud
+  
+:::
 
 :::
 
@@ -545,6 +555,7 @@ shinyApp(ui, server)
 ::: {.notes}
 - What we saw here was a very narrow glimpse into what these tools can do. So how can you learn more yourself?
 - First, just install them--they are free!
+- Take the code from these slides even and run it yourself
 - Again, the workshop analogy. You probably need to be curious and want to learn new skills, but in my opinion it's the best way to build a foundation.
 - Start task based: try reproducing some very small little task, like creating a graph programmatically that you'd normally do in Excel
 - You start to figure things out as you go, which allows you to iterate over time and continuing building and expanding the capabilities
@@ -554,15 +565,29 @@ shinyApp(ui, server)
 
 ::: {.panel-tabset}
 
-### Strategies
+### Initial strategy
 
-- Combining 
+- First, go install them and mess around
 
-### Resources
+<br>
 
-- Quantfish
-- YouTube
-- Tutorials
+- Make a (small) tangible goal, figure it out, then iterate
+  + Document everything
+
+<br>
+
+- Focus on automation, reporting and reproducibility to start (low hanging fruit)
+  + Build the foundation for analytics maturity
+
+### Free resources
+
+- [_R for Data Science_](https://r4ds.had.co.nz/) by Hadley Wickham
+- [_An Introduction to Statistical Learning_](https://www.statlearning.com/) for statistics and data science foundations
+- A [free R course](https://www.goquantfish.com/courses/gentle-intro-to-R) on [QuantFish](https://www.goquantfish.com/)
+- Endless [YouTube](https://www.youtube.com/) resources for [R](https://www.youtube.com/results?search_query=r+programming+language), [Quarto](https://www.youtube.com/playlist?list=PL9HYL-VRX0oQI8fVioFxMTBrViFnRX_Df), [Shiny](https://www.youtube.com/results?search_query=shiny+r)...and everything else
+- Community boards like [Posit Community](https://forum.posit.co/top?period=monthly), [Stack Overflow](https://stackoverflow.com/), etc.
+- Visit [Posit PBC's](https://posit.co/) website and learning resources
+  + Major developer/maintainer of many tools we talked about today
 
 ### Use AI tools!
 
