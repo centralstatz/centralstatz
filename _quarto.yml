@@ -16,13 +16,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: Consultants
       - href: blog.qmd
         text: Blog
-      - text: Resources
-      - menu: 
-        - presentations.qmd
+      - href: about.qmd
+        text: Consultants
     right:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz
