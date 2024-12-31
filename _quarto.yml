@@ -16,8 +16,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: blog.qmd
-        text: Blog
       - href: about.qmd
         text: Consultants
     right:
@@ -30,8 +28,6 @@ website:
       - icon: github
         href: https://github.com/centralstatz
         aria-label: GitHub
-      - icon: rss
-        href: blog.xml
 format:
   html:
     theme: [styles.scss, lux]
