@@ -3,34 +3,35 @@ project:
 
 website:
   title: "CentralStatz Statistical & Data Sciences LLC"
-  favicon: "logo.png"
+  favicon: "logo_background.png"
   google-analytics: "G-GQTNSLKV9S"
   site-url: https://www.centralstatz.com/
   repo-url: https://github.com/centralstatz/centralstatz
   description: "Statistical and data science consulting services in Central Wisconsin."
-  page-footer: "© 2025 CentralStatz Statistical & Data Sciences LLC"
+  page-footer: 
+    center:
+        - text: "© 2025 CentralStatz Statistical & Data Sciences LLC" 
+        - icon: linkedin
+          href: https://www.linkedin.com/company/centralstatz
+          aria-label: LinkedIn
+        - icon: youtube
+          href: https://www.youtube.com/@centralstatz
+          aria-label: YouTube
+        - icon: github
+          href: https://github.com/centralstatz
+          aria-label: GitHub
   open-graph: true
   navbar:
-    logo: "logo.png"
-    title: "centralstatz"
-    left:
+    logo: " "
+    title: false
+    right:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: Consultants
-    right:
-      - icon: linkedin
-        href: https://www.linkedin.com/company/centralstatz
-        aria-label: LinkedIn
-      - icon: youtube
-        href: https://www.youtube.com/@centralstatz
-        aria-label: YouTube
-      - icon: github
-        href: https://github.com/centralstatz
-        aria-label: GitHub
 format:
   html:
-    theme: [styles.scss, lux]
+    theme: [styles.scss, minty]
 
 editor: source
 
