@@ -11,27 +11,28 @@ website:
   page-footer: 
     center:
         - text: "© 2025 CentralStatz Statistical & Data Sciences LLC" 
-        - icon: linkedin
-          href: https://www.linkedin.com/company/centralstatz
-          aria-label: LinkedIn
-        - icon: youtube
-          href: https://www.youtube.com/@centralstatz
-          aria-label: YouTube
-        - icon: github
-          href: https://github.com/centralstatz
-          aria-label: GitHub
   open-graph: true
   navbar:
-    logo: " "
+    logo: "logo.png"
     title: false
-    right:
+    left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: Consultants
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/company/centralstatz
+        aria-label: LinkedIn
+      - icon: youtube
+        href: https://www.youtube.com/@centralstatz
+        aria-label: YouTube
+      - icon: github
+        href: https://github.com/centralstatz
+        aria-label: GitHub
 format:
   html:
-    theme: [styles.scss, minty]
+    theme: [styles.scss, lux]
 
 editor: source
 

@@ -1,6 +1,210 @@
 ---
 title: ""
+format: 
+  html:
+    page-layout: full
 ---
+
+<center>
+<h3 style = "color:white;">
+<i>"Blending statistical rigor with practical data solutions"</i>
+</h3>
+</center>
+
+<br>
+
+:::: {.columns} 
+
+::: {.column width="50%"}
+
+<br>
+<center><img src="howwedoit.png" width="50%"/></center>
+
+:::
+
+::: {.column width="50%"}
+
+# What we do
+
+* Advanced statistical modeling
+
+* Predictive analytics
+
+* Custom data science applications and software tools
+
+* Dynamic reporting processes
+
+:::
+
+::::
+
+<br>
+
+::: {.column-body style="text-align:center"}
+
+### Guided by what works
+
+We combine a pragmatic problem-solving approach with flexible, open-source data science tools like [R](https://www.r-project.org/about.html), [Python](https://www.python.org/about/), [Shiny](https://shiny.posit.co/) and [Quarto](https://quarto.org/) to tailor analyses and solutions to the heart of the problem, adding complexity and rigorous statistical considerations as needed. These principles apply in research and business contexts.
+
+:::
+
+<br>
+
+::: divider
+:::
+
+::: {.column-body}
+
+<center><h1>Our process</h1></center>
+
+```{=html}
+ <div class="accordion accordion-flush" id="howitworks">
+   <div class="accordion-item">
+     <h2 class="accordion-header">
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="false" aria-controls="step1">
+         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 1 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Initial Consultation </i> </span>
+       </button>
+     </h2>
+     <div id="step1" class="accordion-collapse collapse" data-bs-parent="#howitworks">
+       <div class="accordion-body">
+         We'll have a 30-60 minute meeting to understand your project goals and determine if it's the right fit.
+       </div>
+     </div>
+  </div>
+
+   <div class="accordion-item">
+     <h2 class="accordion-header">
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2" aria-expanded="false" aria-controls="step2">
+         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 2 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Project Plan </i> </span>
+       </button>
+     </h2>
+     <div id="step2" class="accordion-collapse collapse" data-bs-parent="#howitworks">
+       <div class="accordion-body">
+         We'll develop a statement of work detailing agreed upon timelines and key deliverables.
+       </div>
+     </div>
+  </div>
+
+   <div class="accordion-item">
+     <h2 class="accordion-header">
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3" aria-expanded="false" aria-controls="step3">
+         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 3 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Conduct Data Analysis </i> </span>
+       </button>
+     </h2>
+     <div id="step3" class="accordion-collapse collapse" data-bs-parent="#howitworks">
+       <div class="accordion-body">
+         Here's where the magic happens. We'll execute on the planned data analysis or software solution, working iteratively with you to ensure incremental progress toward the end goal.
+       </div>
+     </div>
+  </div>
+
+   <div class="accordion-item">
+     <h2 class="accordion-header">
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4" aria-expanded="false" aria-controls="step4">
+         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 4 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Access Results through an easy-to-use web link </i> </span>
+       </button>
+     </h2>
+     <div id="step4" class="accordion-collapse collapse" data-bs-parent="#howitworks">
+       <div class="accordion-body">
+         We use <a href="https://connect.posit.cloud/">Posit Connect Cloud</a> to host applications, interactive reports, and other analytical content to make access seamless on any device. Project source code is stored on <a href="https://github.com/centralstatz/">GitHub</a> to elicit collaboration and provide transparency and ownership over developed solutions.
+         <br>
+         <br>
+         <center> <a href="https://01912861-8be7-59e2-215a-cdeffdd549f2.share.connect.posit.cloud/">Example application</a> &nbsp; <a href="https://01917bd1-d02f-6086-efe5-2b9fab13a114.share.connect.posit.cloud/">Example report</a> </center>
+         <br>
+         <center><i>See how it works behind the scenes:</i></center>
+         <br>
+         <iframe width=100% height="315"
+src="https://www.youtube.com/embed/vttykZnwIbA">
+</iframe>
+         <br>
+         <span style = 'font-size: 75%'>Need an alternative mode of delivery? No problem! We can work with you to determine the right end-product to meet your needs.</span>
+       </div>
+     </div>
+  </div>
+  
+</div>
+```
+
+:::
+
+::: divider
+:::
+
+:::: {.columns} 
+
+::: {.column style="text-align:center"}
+
+## Pricing
+
+Our base rate is <strong>$150 per hour</strong>, with discounts available depending on the number of hours committed, and for individuals. We can also price at the project-level when it makes sense.
+
+:::
+
+::: {.column}
+
+<center><img src="pricing.png" width="50%"/></center>
+
+:::
+
+::::
+
+::: divider
+:::
+
+<center>
+
+# Ready to get started? 
+
+Fill out the form below for a free consultation! 
+
+</center>
+
+```{=html}
+<center>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-HLkUitIDXD4kguxu-h9NAl8NO0aMwwelgPu-rbiPfn3ECA/viewform?embedded=true" width="100%" height="1500px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</center>
+```
+
+::: divider
+:::
+
+:::: {.columns} 
+
+::: {.column width="50%"}
+
+<center><h1>Contact Us</h1></center>
+
+<center>
+
+Alex Zajichek, Owner
+
+[**alex\@centralstatz.com**](mailto:alex@centralstatz.com)
+
+\(715\) 581-4262
+
+<br>
+
+<i>Located in Wausau, WI, USA</i>
+
+</center>
+
+:::
+
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+#| fig-height: 3
+
+library(leaflet)
+leaflet() |>
+  addTiles() |> 
+  setView(lat = 44.9591, lng = -89.6301, zoom = 9) |>
+  addMarkers(lat = 44.9591, lng = -89.6301, popup = "Wausau, Wisconsin, USA")
+```
+
+:::
+::::
 
 ```{=html}
 <!-- Calendly badge widget begin -->
@@ -8,23 +212,4 @@ title: ""
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/alex-centralstatz/30min', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: undefined }); }</script>
 <!-- Calendly badge widget end -->
-```
-
-```{=html}
-<center>
-<h6>
-Statistical and data science consulting in Central Wisconsin
-</h4>
-<br>
-<img src = "map.png" width = "45%" height = "45%">
-</center>
-```
-
-::: divider
-:::
-
-```{=html}
-<center>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-HLkUitIDXD4kguxu-h9NAl8NO0aMwwelgPu-rbiPfn3ECA/viewform?embedded=true" width="100%" height="1500px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</center>
 ```

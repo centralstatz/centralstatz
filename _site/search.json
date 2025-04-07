@@ -7,11 +7,11 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow to reconcile the regression equation from spline terms\n\n\n\n\n\n\nRegression Modeling\n\n\n\nUsing the {rms::rcs} function\n\n\n\n\n\nNov 25, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nCan you have a model without data?\n\n\n\n\n\n\nBayesian\n\n\n\nYes, by being a Bayesian.\n\n\n\n\n\nOct 29, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nYou should have a data science blog\n\n\n\n\n\n\nDeployment\n\n\nLearning\n\n\nSoftware Development\n\n\n\nEasy and free are only a couple benefits.\n\n\n\n\n\nSep 25, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nLow cost ways to build and deploy analytical web apps\n\n\n\n\n\n\nWeb applications\n\n\nDeployment\n\n\n\nAn overview of some server options\n\n\n\n\n\nAug 20, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nHow do you assess the proportional-odds assumption? Directly.\n\n\n\n\n\n\nRegression Modeling\n\n\n\nA simple visual check.\n\n\n\n\n\nJul 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nA simple example why statistical significance is insufficient for action\n\n\n\n\n\n\nStatistical Significance\n\n\nDecision Making\n\n\n\nIt ignores the basic question: “How much?”\n\n\n\n\n\nJun 19, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\n5 ways to help ensure success of a statistical project\n\n\n\n\n\n\nProject Management\n\n\n\nHow can we increase the likelihood that things will go as expected?\n\n\n\n\n\nMay 16, 2024\n\n\nAlex Zajichek\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CentralStatz Statistical & Data Sciences LLC",
-    "section": "",
-    "text": "Statistical and data science consulting in Central Wisconsin\n\n\n\n\n\n\n\n\nLoading…"
+    "objectID": "index.html#pricing",
+    "href": "index.html#pricing",
+    "title": "What we do",
+    "section": "Pricing",
+    "text": "Pricing\nOur base rate is $150 per hour, with discounts available depending on the number of hours committed, and for individuals. We can also price at the project-level when it makes sense."
   },
   {
     "objectID": "posts/how-to-assess-the-proportional-odds-assumption/index.html",
@@ -221,13 +221,13 @@
     "href": "about.html",
     "title": "CentralStatz Statistical & Data Sciences LLC",
     "section": "",
-    "text": "Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC from Wausau, WI. He has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and contexts. His primary focus is on delivering genuine value through the use of statistics and empowering others to do the same. Want to chat? Shoot him an email!\n\nalex@centralstatz.com"
+    "text": "Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC from Wausau, WI. He has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and contexts. His primary focus is on delivering genuine value through the use of statistics and empowering others to do the same. Want to chat? Shoot him an email!\n\nalex@centralstatz.com\n\n\nCheck out his statistics blog: zajichekstats.com"
   },
   {
     "objectID": "about.html#alex-zajichek",
     "href": "about.html#alex-zajichek",
     "title": "CentralStatz Statistical & Data Sciences LLC",
     "section": "",
-    "text": "Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC from Wausau, WI. He has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and contexts. His primary focus is on delivering genuine value through the use of statistics and empowering others to do the same. Want to chat? Shoot him an email!\n\nalex@centralstatz.com"
+    "text": "Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC from Wausau, WI. He has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and contexts. His primary focus is on delivering genuine value through the use of statistics and empowering others to do the same. Want to chat? Shoot him an email!\n\nalex@centralstatz.com\n\n\nCheck out his statistics blog: zajichekstats.com"
   }
 ]

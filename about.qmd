@@ -9,3 +9,7 @@ about:
 Alex is statistician and owner at CentralStatz Statistical & Data Sciences LLC from Wausau, WI. He has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and contexts. His primary focus is on delivering genuine value through the use of statistics and empowering others to do the same. Want to chat? Shoot him an email!
 
 <center>[**alex\@centralstatz.com**](mailto:alex@centralstatz.com)</center>
+
+<br>
+
+Check out his statistics blog: [zajichekstats.com](https://www.zajichekstats.com/)
