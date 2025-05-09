@@ -5,38 +5,47 @@ format:
     page-layout: full
 ---
 
-<center>
-<h3 style = "color:white;">
-<i>"Blending statistical rigor with practical data solutions"</i>
-</h3>
-</center>
+::: {.hero}
 
-<br>
+# Blend Statistical Rigor With Practical Data Solutions
 
-:::: {.columns} 
+<strong>Statistical and data science consulting for individuals and businesses.</strong>
 
-::: {.column width="50%"}
+[Schedule a Consultation](#schedule){.btn .btn-primary} [See our subscription plans](#advisoryservices){.btn .btn-primary}
+
+:::
+
+::: divider
+:::
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-6}
 
 <br>
 <center><img src="howwedoit.png" width="50%"/></center>
 
 :::
 
-::: {.column width="50%"}
+::: {.g-col-12 .g-col-md-6}
 
 # What we do
 
 * Advanced statistical modeling
 
-* Predictive analytics
+* Predictive analytics and machine learning
+
+* Data processing, cleaning, and manipulation
 
 * Custom data science applications and software tools
 
 * Dynamic reporting processes
 
+* ...and more!
+
 :::
 
-::::
+:::
 
 <br>
 
@@ -44,116 +53,200 @@ format:
 
 ### Guided by what works
 
-We combine a pragmatic problem-solving approach with flexible, open-source data science tools like [R](https://www.r-project.org/about.html), [Python](https://www.python.org/about/), [Shiny](https://shiny.posit.co/) and [Quarto](https://quarto.org/) to tailor analyses and solutions to the heart of the problem, adding complexity and rigorous statistical considerations as needed. These principles apply in research and business contexts.
+We combine a pragmatic problem-solving approach with flexible, open-source data science tools like [R](https://www.r-project.org/about.html), [Python](https://www.python.org/about/), [Shiny](https://shiny.posit.co/) and [Quarto](https://quarto.org/) to tailor analyses and solutions to the heart of the problem, adding complexity and rigorous statistical considerations as needed.
+
+:::
+
+::: divider
+:::
+
+::: {.column-body style="text-align:center"}
+
+# How we work
+
+We use [Posit Connect Cloud](https://connect.posit.cloud/) to host applications, interactive reports, and other analytical content to make access seamless on any device (all you need is a web link). 
+
+Project source code is stored on [GitHub](https://github.com/centralstatz/) to elicit collaboration and provide transparency and ownership over developed solutions.
+
+[Example Application](https://01912861-8be7-59e2-215a-cdeffdd549f2.share.connect.posit.cloud/)
+&nbsp;
+[Example Report](https://01917bd1-d02f-6086-efe5-2b9fab13a114.share.connect.posit.cloud/)
+
+<br> 
+
+_See how it works behind the scenes_ `r emo::ji("backhand index pointing down")`
+
+{{< video https://www.youtube.com/embed/vttykZnwIbA >}}
+
+<br>
+
+::: {style="font-size:90%"}
+
+Need an alternative mode of delivery? Want to host on [shinyapps.io](https://www.shinyapps.io/)? No problem! We can work with you to determine the right end-product to meet your needs.
+
+:::
+
+:::
+
+::: divider
+:::
+
+::: {style="text-align:center"}
+
+# Data Advisory Services {#advisoryservices}
+
+#### <i style="text-transform:none">Fractional analytics support</i>
+
+::: {style="font-size:larger; color: white"}
+
+Let us be a strategic partner in data science, statistics, and advanced analytics!
+
+:::
+:::
+
+Whether you're pondering how to make best use of a dataset, need help determining the right methodology or approach, or just need a second set of eyes — having immediate access to an experienced statistician and data scientist for you and your team can save time, cost, and headaches. 
+
+::: {.wrapper}
+
+::: {.pricing-table}
+
+::: {.head}
+
+::: {.title}
+
+Business
+
+<p style="font-size:10px; color: white; margin-top:-20px">For businesses, institutions and organizations</p>
+
+:::
+
+:::
+
+::: {.content}
+
+::: {.price}
+
+$500<span style="font-size:10px; margin-top:0px">/mo</span>
+
+:::
+
+* Unlimited email discussion and consultation
+* Up to 1 hour of light analysis or document/code review per month
+* A 1 hour strategy meeting per month
+* Discounted rates on additional work or projects
+
+:::
+
+[Sign Up](https://docs.google.com/forms/d/e/1FAIpQLSct1t5tNYly1Wj774l8rLhkNI4d2QvtbnEg76-l4e94kwn9mg/viewform?usp=header){.btn}
+
+:::
+
+::: {.pricing-table}
+
+::: {.head}
+
+::: {.title}
+
+Individual
+
+<p style="font-size:10px; color: white; margin-top:-20px">For students, researchers, and independent professionals</p>
+
+:::
+
+:::
+
+::: {.content}
+
+::: {.price}
+
+$100<span style="font-size:10px; margin-top:0px">/mo</span>
+
+:::
+
+* Unlimited email discussion and consultation
+* Up to 30 minutes of light analysis or document/code review per month
+* A 30 minute advisory session per month
+* Discounted rates on additional work or projects
+
+:::
+
+[Sign Up](https://docs.google.com/forms/d/e/1FAIpQLSct1t5tNYly1Wj774l8rLhkNI4d2QvtbnEg76-l4e94kwn9mg/viewform?usp=header){.btn}
+
+:::
+
+:::
+
+::: {.column-body}
+
+```{=html}
+ <div class="accordion accordion-flush" id="why>
+   <div class="accordion-item">
+     <h1 class="accordion-header">
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="false" aria-controls="step1">
+         <center>Why a subscription model?</center>
+       </button>
+     </h1>
+     <div id="step1" class="accordion-collapse collapse" data-bs-parent="#why">
+       <div class="accordion-body">
+         <ul>
+         <br>
+          <li><span style="font-size:larger; color:white;">Data science teams are expensive</span>, and many small or midsize businesses don't have resources (or a need) to employ one full time.</li>
+          <br>
+          <li>Having <span style="font-size:larger; color:white;">unlimited access</span> to a statistician or data scientist at a low-risk, <span style="font-size:larger; color:white;">predictable monthly fee</span> can give you assurance and reduce headaches in those times it is needed, leading to <span style="font-size:larger; color:white;">quicker turn around</span>.</li>
+          <br>
+          <li>Staying plugged in through <span style="font-size:larger; color:white;">asynchronous communication</span> means we can keep a <span style="font-size:larger; color:white;">consistent pulse</span> on your goals, which <span style="font-size:larger; color:white;">accelerates alignment</span> on bigger projects.</li>
+          <br>
+          <li>An ongoing relationship elicits <span style="font-size:larger; color:white;">active partnership</span>, giving the ability to be <span style="font-size:larger; color:white;">proactive and future-oriented</span>, rather than just trying to band-aid immediate solutions.</li>
+          <br>
+          <li>Did we mention the <span style="font-size:larger; color:white;">discounted rates</span>?</li>
+         </ul>
+       </div>
+     </div>
+  </div>
+```
 
 :::
 
 <br>
 
-::: divider
-:::
-
-::: {.column-body}
-
-<center><h1>Our process</h1></center>
-
-```{=html}
- <div class="accordion accordion-flush" id="howitworks">
-   <div class="accordion-item">
-     <h2 class="accordion-header">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="false" aria-controls="step1">
-         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 1 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Initial Consultation </i> </span>
-       </button>
-     </h2>
-     <div id="step1" class="accordion-collapse collapse" data-bs-parent="#howitworks">
-       <div class="accordion-body">
-         We'll have a 30-60 minute meeting to understand your project goals and determine if it's the right fit.
-       </div>
-     </div>
-  </div>
-
-   <div class="accordion-item">
-     <h2 class="accordion-header">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2" aria-expanded="false" aria-controls="step2">
-         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 2 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Project Plan </i> </span>
-       </button>
-     </h2>
-     <div id="step2" class="accordion-collapse collapse" data-bs-parent="#howitworks">
-       <div class="accordion-body">
-         We'll develop a statement of work detailing agreed upon timelines and key deliverables.
-       </div>
-     </div>
-  </div>
-
-   <div class="accordion-item">
-     <h2 class="accordion-header">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3" aria-expanded="false" aria-controls="step3">
-         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 3 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Conduct Data Analysis </i> </span>
-       </button>
-     </h2>
-     <div id="step3" class="accordion-collapse collapse" data-bs-parent="#howitworks">
-       <div class="accordion-body">
-         Here's where the magic happens. We'll execute on the planned data analysis or software solution, working iteratively with you to ensure incremental progress toward the end goal.
-       </div>
-     </div>
-  </div>
-
-   <div class="accordion-item">
-     <h2 class="accordion-header">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4" aria-expanded="false" aria-controls="step4">
-         <span style = 'font-size: 250%; background-color: #a09c21; color: white; padding: 5px;border-radius: 15px;'> 4 </span>  <span style = 'font-size: 150%; padding-left: 10px'><i> Access Results through an easy-to-use web link </i> </span>
-       </button>
-     </h2>
-     <div id="step4" class="accordion-collapse collapse" data-bs-parent="#howitworks">
-       <div class="accordion-body">
-         We use <a href="https://connect.posit.cloud/">Posit Connect Cloud</a> to host applications, interactive reports, and other analytical content to make access seamless on any device. Project source code is stored on <a href="https://github.com/centralstatz/">GitHub</a> to elicit collaboration and provide transparency and ownership over developed solutions.
-         <br>
-         <br>
-         <center> <a href="https://01912861-8be7-59e2-215a-cdeffdd549f2.share.connect.posit.cloud/">Example application</a> &nbsp; <a href="https://01917bd1-d02f-6086-efe5-2b9fab13a114.share.connect.posit.cloud/">Example report</a> </center>
-         <br>
-         <center><i>See how it works behind the scenes:</i></center>
-         <br>
-         <iframe width=100% height="315"
-src="https://www.youtube.com/embed/vttykZnwIbA">
-</iframe>
-         <br>
-         <span style = 'font-size: 75%'>Need an alternative mode of delivery? No problem! We can work with you to determine the right end-product to meet your needs.</span>
-       </div>
-     </div>
-  </div>
-  
-</div>
-```
-
+::: {style="text-align:center; font-size:10px;"}
+View our [Terms of Service](TermsOfService_20250509.pdf)
 :::
 
 ::: divider
 :::
 
-:::: {.columns} 
+::: {.grid} 
 
-::: {.column style="text-align:center"}
+::: {.g-col-12 .g-col-md-6}
 
-## Pricing
+::: {style="text-align:center"}
 
-Our base rate is <strong>$150 per hour</strong>, with discounts available depending on the number of hours committed, and for individuals. We can also price at the project-level when it makes sense.
+# Meet Alex
+
+A statistician and data scientist in Central Wisconsin, Alex has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and problem contexts. Most of [his career](https://www.zajichekstats.com/about) has been in the healthcare provider sector, both on the research and operational sides. His primary focus is on delivering genuine value through the use of statistics and open-source data science tools, and empowering others to do the same. Want to chat? [Shoot him an email](mailto:alex@centralstatz.com)!
+
+<br>
+
+<i>Check out his statistics blog</i> `r emo::ji("backhand index pointing right")` [zajichekstats.com](https://www.zajichekstats.com/)</i>
 
 :::
 
-::: {.column}
-
-<center><img src="pricing.png" width="50%"/></center>
-
 :::
 
-::::
+::: {.g-col-12 .g-col-md-6}
+
+<center><img src="headshot.png" width="50%"/></center>
+
+:::
+:::
 
 ::: divider
 :::
 
 <center>
 
-# Ready to get started? 
+# Ready to get started? {#schedule}
 
 Fill out the form below for a free consultation! 
 
@@ -168,13 +261,13 @@ Fill out the form below for a free consultation!
 ::: divider
 :::
 
-:::: {.columns} 
+::: {.grid} 
 
-::: {.column width="50%"}
+::: {.g-col-12 .g-col-md-6}
 
-<center><h1>Contact Us</h1></center>
+::: {style="text-align:center"}
 
-<center>
+# Contact Us {#contact}
 
 Alex Zajichek, Owner
 
@@ -182,15 +275,13 @@ Alex Zajichek, Owner
 
 \(715\) 581-4262
 
-<br>
-
-<i>Located in Wausau, WI, USA</i>
-
-</center>
+_Located in Wausau, WI, USA_
 
 :::
 
-::: {.column width="40%"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
 
 ```{r}
 #| echo: false
@@ -204,7 +295,7 @@ leaflet() |>
 ```
 
 :::
-::::
+:::
 
 ```{=html}
 <!-- Calendly badge widget begin -->

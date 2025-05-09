@@ -1,17 +1,48 @@
 /*-- scss:defaults --*/
 
 // Set colors
-$bg-color: #2d2b32 !default;
-$body-bg: #2d2b32!default;
+$bg-color: #141413 !default;
+$body-bg: #141413!default;
 $body-color: #b6b6b6 ;
 $link-color: #75AADB;
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #FFFFFF !important;
   text-shadow: -3px -3px 0 #a09c21;
 }
 
-img{
+.hero {
+  text-align: center;
+  padding: 2em;
+  background-image: url("hero.png");
+  color: white;
+    border-radius: 5px;
+  background-size: cover;
+}
+
+.hero h1 {
+  text-shadow: -3px -3px 0 #94733f;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  text-decoration: none;
+  color: black;
+  background-color: #007bff;
+  border-radius: 5em;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn:hover {
+  transform:scale(1.2);
+}
+
+img {
     transition: transform .2s;
     border-radius: 15px;
 }
@@ -20,12 +51,12 @@ img:hover{
 }
 
 .accordion-button.collapsed {
-  background: #2d2b32;
+  background: #141413;
   border-bottom: #ccc 2px solid;
   border-top: #ccc 2px solid;
   border-left: #ccc 2px solid;
   border-right: #ccc 2px solid;
-  text-shadow: -1px -1px 0 #a09c21;
+  text-shadow: -1px -1px 0 #94733f;
   color: #fff;
   transition: transform .5s;
   box-shadow: 10px 10px #b6b6b6 
@@ -104,71 +135,66 @@ $navbar-bg: $bg-color !default;
 // Pricing table
 .wrapper{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
     margin: 50px;
     padding: 0px 20px;
 
 }
-.pricing-table{
+.pricing-table {
    box-shadow: 0px 0px 18px #ccc;
    text-align: center;
    padding: 10px 0px;
    border-radius: 5px;
    position: relative;
- 
+   background-color: #A09C21;
 }
 .pricing-table .head {
-    border-bottom:1px solid #eee;
+    border-bottom: 10px solid #2d2b32;
     padding-bottom: 50px;
     transition: all 0.5s ease;
 }
-.pricing-table:hover .head{
-   border-bottom:1px solid black;
+.pricing-table:hover .head {
+   border-bottom:0px solid black;
 }
 
-.pricing-table .head .title{
+.pricing-table .head .title {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
+    color: white;
 }
 
-.pricing-table .content .price{
-    background:linear-gradient(to right, #A09C21 0%, #FFFFFF 100%);
+.pricing-table .content .price {
+    background:linear-gradient(to right, #b6b6b6 0%, #FFFFFF 100%);
     width: 90px;
     height: 90px;
     margin: auto;
     line-height: 90px;
     border-radius: 50%;
     border: 5px solid #A09C21;
-    box-shadow: 0px 0px 10px #EE7500;
+    box-shadow: 0px 0px 10px black;
     margin-top: -50px;
-     transition: all 0.5s ease;
-}
-.pricing-table:hover .content .price{
-    transform: scale(1.2);
-}
-.pricing-table .content .price h1{
+    transition: all 0.5s ease;
     color: black;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
-.pricing-table .content .price br {
-   display: block;
-   margin: 5px;
-   margin-top: -15px;
-   content: " ";
+.pricing-table:hover .content .price {
+    transform: scale(1.3);
 }
-.pricing-table .content ul{
-   list-style-type: none;
+
+.pricing-table .content ul {
    margin-bottom: 20px;
    padding-top: 10px;
+   text-align: left;
 }
 
 .pricing-table .content ul li{
     margin: 20px 0px;
     font-size: 14px;
-    color: #555;
+    color: white;
 }
 
 .pricing-table .content .sign-up{
@@ -182,6 +208,7 @@ $navbar-bg: $bg-color !default;
 
 .pricing-table .btn {
 	color: #fff;
+	background-color: #141413;
 	padding: 14px 40px;
 	display: inline-block;
 	text-align: center;
@@ -202,7 +229,9 @@ $navbar-bg: $bg-color !default;
 }
 
 .pricing-table .btn:hover{
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+	color: black;
+	background-color: white;
 }
 
 .pricing-table .btn.bordered {
@@ -241,7 +270,7 @@ $navbar-bg: $bg-color !default;
     } 
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:750px){
    .wrapper{
         grid-template-columns: 1fr;
     } 

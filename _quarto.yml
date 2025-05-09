@@ -15,11 +15,6 @@ website:
   navbar:
     logo: "logo.png"
     title: false
-    left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: Consultants
     right:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz
