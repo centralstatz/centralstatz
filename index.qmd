@@ -68,7 +68,7 @@ We use [Posit Connect Cloud](https://connect.posit.cloud/) to host applications,
 
 Project source code is stored on [GitHub](https://github.com/centralstatz/) to elicit collaboration and provide transparency and ownership over developed solutions.
 
-[Example Application](https://01912861-8be7-59e2-215a-cdeffdd549f2.share.connect.posit.cloud/)
+[Example Application](https://0196f590-15b7-8b36-3010-eb5a0d8a6d94.share.connect.posit.cloud/)
 &nbsp;
 [Example Report](https://01917bd1-d02f-6086-efe5-2b9fab13a114.share.connect.posit.cloud/)
 
