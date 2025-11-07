@@ -76,7 +76,7 @@ Project source code is stored on [GitHub](https://github.com/centralstatz/) to e
 
 _See how it works behind the scenes_ `r emo::ji("backhand index pointing down")`
 
-{{< video https://www.youtube.com/embed/vttykZnwIbA >}}
+{{< video https://www.youtube.com/embed/YlLcxuAjgJw >}}
 
 <br>
 
