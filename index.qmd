@@ -179,17 +179,17 @@ $100<span style="font-size:10px; margin-top:0px">/mo</span>
 ::: {.column-body}
 
 ```{=html}
- <div class="accordion accordion-flush" id="why>
+ <div class="accordion accordion-flush" id="why">
    <div class="accordion-item">
-     <h1 class="accordion-header">
+     <h2 class="accordion-header">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="false" aria-controls="step1">
          <center>Why a subscription model?</center>
        </button>
-     </h1>
+     </h2>
      <div id="step1" class="accordion-collapse collapse" data-bs-parent="#why">
        <div class="accordion-body">
          <ul>
-         <br>
+          <br>
           <li><span style="font-size:larger; color:white;">Data science teams are expensive</span>, and many small or midsize businesses don't have resources (or a need) to employ one full time.</li>
           <br>
           <li>Having <span style="font-size:larger; color:white;">unlimited access</span> to a statistician or data scientist at a low-risk, <span style="font-size:larger; color:white;">predictable monthly fee</span> can give you assurance and reduce headaches in those times it is needed, leading to <span style="font-size:larger; color:white;">quicker turn around</span>.</li>
@@ -222,7 +222,7 @@ View our [Terms of Service](TermsOfService_20250509.pdf)
 
 ::: {style="text-align:center"}
 
-# Meet Alex
+## Meet Alex
 
 A statistician and data scientist in Central Wisconsin, Alex has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and problem contexts. Most of [his career](https://www.zajichekstats.com/about) has been in the healthcare provider sector, both on the research and operational sides. His primary focus is on delivering genuine value through the use of statistics and open-source data science tools, and empowering others to do the same. Want to chat? [Shoot him an email](mailto:alex@centralstatz.com)!
 
@@ -1132,7 +1132,7 @@ A statistician and data scientist in Central Wisconsin, Alex has over a decade o
 
 <center>
 
-# Ready to get started? {#schedule}
+## Ready to get started? {#schedule}
 
 Fill out the form below for a free consultation! 
 
@@ -1153,7 +1153,7 @@ Fill out the form below for a free consultation!
 
 ::: {style="text-align:center"}
 
-# Contact Us {#contact}
+## Contact Us {#contact}
 
 Alex Zajichek, Owner
 
