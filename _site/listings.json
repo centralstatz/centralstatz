@@ -1,14 +1,9 @@
 [
   {
-    "listing": "/blog.html",
+    "listing": "/case-studies.html",
     "items": [
-      "/posts/reconciling-regression-equation-spline-terms/index.html",
-      "/posts/can-you-have-a-model-without-data/index.html",
-      "/posts/you-should-have-a-data-science-blog/index.html",
-      "/posts/low-cost-ways-to-build-and-deploy-apps/index.html",
-      "/posts/how-to-assess-the-proportional-odds-assumption/index.html",
-      "/posts/simple-example-why-statistical-significance-is-insufficient/index.html",
-      "/posts/ways-to-ensure-success-of-statistical-project/index.html"
+      "/case-studies/llm-powered-app-for-hospital-readmissions/index.html",
+      "/case-studies/streamlining-google-analytics-pdf-report/index.html"
     ]
   }
 ]

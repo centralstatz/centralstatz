@@ -1,0 +1,23 @@
+---
+title: "Deploying a Chatbot to Analyze Hospital Readmissions Data"
+description: "Building a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data."
+author: "Alex Zajichek"
+date: "3/13/2026"
+image: "feature.png"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+---
+
+_In progress_
+
+![](readmit_app.gif)
+
+# 1. Building the Structure
+
+# 2. Strengthening the Logic
+
+_For more details on the technical backend for how this was built, you can read [this blog post](https://www.zajichekstats.com/post/building-an-llm-powered-shiny-app-for-hospital-readmissions/) or watch the video below._
+
+{{< video https://www.youtube.com/embed/YlLcxuAjgJw >}}

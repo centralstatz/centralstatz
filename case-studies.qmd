@@ -1,0 +1,12 @@
+---
+title: "Case Studies"
+listing:
+  contents: 
+    - "case-studies/*/index.qmd"
+  sort: "date desc"
+  type: default
+  image-align: right
+  image-placeholder: "logo_background.png"
+---
+
+_This page is a work in progress_

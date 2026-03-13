@@ -9,22 +9,38 @@ website:
   repo-url: https://github.com/centralstatz/centralstatz
   description: "Statistical and data science consulting services in Central Wisconsin."
   page-footer: 
-    center:
-        - text: "© 2025 CentralStatz Statistical & Data Sciences LLC" 
+    center: |
+        © 2026 CentralStatz Statistical & Data Sciences LLC
+        <div class="footer-icons">
+          <a href="mailto:alex@centralstatz.com" target="_blank"><i class="bi bi-envelope"></i></a>
+          <a href="https://www.linkedin.com/company/centralstatz" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/centralstatz" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.youtube.com/@centralstatz" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
   open-graph: true
   navbar:
     logo: "logo.png"
     title: false
+    left:
+          - text: What We Do
+            href: "/#what-we-do"
+          - text: How We Work
+            href: "/#how-we-work"
+          - text: Case Studies
+            href: "case-studies.qmd"
+          - text: Advisory Service
+            href: "/#advisory-service"
+          - text: About
+            href: "/#about"
+          - text: Contact
+            href: "/#contact"
     right:
       - icon: linkedin
         href: https://www.linkedin.com/company/centralstatz
         aria-label: LinkedIn
-      - icon: youtube
-        href: https://www.youtube.com/@centralstatz
-        aria-label: YouTube
-      - icon: github
-        href: https://github.com/centralstatz
-        aria-label: GitHub
+      - icon: envelope
+        href: mailto:alex@centralstatz.com
+        aria-label: Email
 format:
   html:
     theme: [styles.scss, lux]

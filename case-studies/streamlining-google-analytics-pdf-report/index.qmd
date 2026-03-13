@@ -1,0 +1,17 @@
+---
+title: "Streamlining a Custom Google Analytics Report"
+description: "Generating an on-demand, branded PDF report sourced from Google Analytics."
+author: "Alex Zajichek"
+date: "3/12/2026"
+image: "feature.png"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+---
+
+_In progress_
+
+# 1. Building the Structure
+
+# 2. Strengthening the Logic

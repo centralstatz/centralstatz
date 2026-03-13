@@ -6,9 +6,13 @@ $body-bg: #141413!default;
 $body-color: #b6b6b6 ;
 $link-color: #75AADB;
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   color: #FFFFFF !important;
-  text-shadow: -3px -3px 0 #a09c21;
+  text-shadow: -3px -3px 0 #997b12;
+}
+
+h4 {
+  color: #FFFFFF !important;
 }
 
 .hero {
@@ -21,7 +25,7 @@ h1, h2, h3, h4 {
 }
 
 .hero h1 {
-  text-shadow: -3px -3px 0 #94733f;
+  text-shadow: -3px -3px 0 #997b12;
 }
 
 .btn {
@@ -101,7 +105,7 @@ $navbar-bg: $bg-color !default;
 }
 
 .navbar {
-  border-bottom: 5px solid #997b12;
+  border-bottom: 3px solid #997b12;
   margin: 0 0 0 0;
 }
 
@@ -112,7 +116,7 @@ $navbar-bg: $bg-color !default;
 }
 
 .navbar li.nav-item a.nav-link span {
-  color: #a09c21 !important;
+  color: #997b12 !important;
 }
 
 .nav-link {

@@ -1,47 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.centralstatz.com/blog.html</loc>
-    <lastmod>2024-09-03T16:03:45.466Z</lastmod>
+    <loc>https://www.centralstatz.com/case-studies.html</loc>
+    <lastmod>2026-03-12T17:12:44.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/index.html</loc>
+    <lastmod>2026-03-13T17:28:46.953Z</lastmod>
   </url>
   <url>
     <loc>https://www.centralstatz.com/index.html</loc>
-    <lastmod>2026-02-18T14:05:52.908Z</lastmod>
+    <lastmod>2026-03-13T17:26:33.043Z</lastmod>
   </url>
   <url>
-    <loc>https://www.centralstatz.com/posts/how-to-assess-the-proportional-odds-assumption/index.html</loc>
-    <lastmod>2024-11-30T22:01:04.784Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/posts/reconciling-regression-equation-spline-terms/index.html</loc>
-    <lastmod>2024-12-04T20:31:37.420Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/posts/you-should-have-a-data-science-blog/index.html</loc>
-    <lastmod>2024-11-30T21:54:43.615Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/services.html</loc>
-    <lastmod>2024-09-03T16:03:45.475Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/posts/can-you-have-a-model-without-data/index.html</loc>
-    <lastmod>2024-11-30T21:48:19.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/posts/ways-to-ensure-success-of-statistical-project/index.html</loc>
-    <lastmod>2024-11-30T22:08:56.968Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/posts/simple-example-why-statistical-significance-is-insufficient/index.html</loc>
-    <lastmod>2024-11-30T22:05:39.744Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/posts/low-cost-ways-to-build-and-deploy-apps/index.html</loc>
-    <lastmod>2024-11-30T21:58:27.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.centralstatz.com/about.html</loc>
-    <lastmod>2025-04-07T12:50:41.009Z</lastmod>
+    <loc>https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/index.html</loc>
+    <lastmod>2026-03-13T17:29:23.033Z</lastmod>
   </url>
 </urlset>
