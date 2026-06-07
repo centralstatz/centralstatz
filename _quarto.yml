@@ -7,7 +7,7 @@ website:
   google-analytics: "G-GQTNSLKV9S"
   site-url: https://www.centralstatz.com/
   repo-url: https://github.com/centralstatz/centralstatz
-  description: "Statistical and data science consulting services in Central Wisconsin."
+  description: "Data science, statistics, and analytics advising located in Central Wisconsin."
   page-footer: 
     center: |
         © 2026 CentralStatz Statistical & Data Sciences LLC
@@ -24,12 +24,8 @@ website:
     left:
           - text: What We Do
             href: "/#what-we-do"
-          - text: How We Work
-            href: "/#how-we-work"
-          - text: Case Studies
-            href: "case-studies.qmd"
-          - text: Advisory Service
-            href: "/#advisory-service"
+          - text: Our Philosophy
+            href: "/#our-philosophy"
           - text: About
             href: "/#about"
           - text: Contact

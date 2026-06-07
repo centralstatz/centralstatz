@@ -16,28 +16,35 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Make your reporting reproducible.  Make your metrics defensible.",
+    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
     "section": "",
-    "text": "We strengthen the workflow and statistical reasoning behind your analytics so your results are consistent, transparent, and trusted.\nRequest a strategy call See example work\nEffective analytics systems require both structure and sound reasoning. We approach projects through two complementary stages that reinforce one another.\nWhether you’re pondering how to make best use of a dataset, need help determining the right methodology or approach, or just need a second set of eyes — having immediate access to an experienced statistician and data scientist for you and your team can clear roadblocks, avoid headaches, and keep things moving."
+    "text": "Fragile reporting processes. Scattered workflows. Unclear analytical questions. Results that are difficult to reproduce.\n\n\n\nDon’t fill this out: \n\n\n  Start the conversation\n\n What happens when I submit?"
+  },
+  {
+    "objectID": "index.html#build-the-structure",
+    "href": "index.html#build-the-structure",
+    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
+    "section": "Build the Structure",
+    "text": "Build the Structure\nCreate the foundation needed for analytical work to become transparent, maintainable, and reproducible.\nThis may involve:\n\nautomated reporting pipelines\nstructured analytical datasets\ninteractive applications for exploration\nreusable tools or packages\nversion control and documentation\ninternal analytics infrastructure"
+  },
+  {
+    "objectID": "index.html#strengthen-the-logic",
+    "href": "index.html#strengthen-the-logic",
+    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
+    "section": "Strengthen the Logic",
+    "text": "Strengthen the Logic\nClarify the reasoning behind the analysis so results are not only well-structured, but statistically sound and defensible.\nThis may involve:\n\nreviewing data/metric definitions\nevaluating statistical approaches\nclarifying cohorts and attribution rules\nidentifying sources of bias or instability\ndocumenting analytical assumptions\nconnecting metrics to intended outcomes"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
-    "title": "Make your reporting reproducible.  Make your metrics defensible.",
+    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
     "section": "Meet Alex",
     "text": "Meet Alex"
   },
   {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Make your reporting reproducible.  Make your metrics defensible.",
-    "section": "Start the conversation",
-    "text": "Start the conversation\nUse the form below to request a strategy call, or email alex@centralstatz.com directly."
-  },
-  {
     "objectID": "index.html#contact",
     "href": "index.html#contact",
-    "title": "Make your reporting reproducible.  Make your metrics defensible.",
+    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
     "section": "Contact Us",
     "text": "Contact Us\nAlex Zajichek, Owner\nalex@centralstatz.com\nLocated in Wausau, WI, USA"
   },
