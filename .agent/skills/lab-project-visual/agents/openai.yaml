@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lab Project Visual"
+  short_description: "Select or brief honest project visuals"
+  default_prompt: "Use $lab-project-visual to select, prepare, or brief an evidence-grounded CentralStatz Lab project visual."

@@ -38,6 +38,41 @@ To add a project:
 
 Optional schema fields currently include `date-modified`, `current_hypothesis`, `limitations`, `featured`, and `tags`. External `live_url` or `repository_url` fields may be added when truthful public links exist.
 
+## Agent-assisted project ingestion
+
+The reusable ingestion workflow accepts repository URLs, local paths, live applications, websites, documents, notes, images, direct descriptions, or combinations. Durable repository instructions are in `AGENTS.md`; focused skills are under `.agent/skills/`. Full schema, invocation, evidence, privacy, attribution, visual, and manual-editing guidance is in `docs/lab-project-ingestion.md`.
+
+Use the skills in order: intake, analysis, content, visual, then integration. Begin with a dry run when ownership, publication status, privacy, attribution, or a substantial rewrite is uncertain:
+
+```text
+Use the Lab project-ingestion skills.
+
+Source:
+<URL, local path, files, or description>
+
+Mode:
+dry-run
+
+Additional context:
+<ownership, privacy, desired emphasis, visual, or participation notes>
+```
+
+In dry-run mode the agent proposes content and files without modifying the site. In apply mode it creates or updates the project, validates it, renders Quarto, and reports facts, inferences, unknowns, and excluded private material.
+
+Create a manual draft with:
+
+```sh
+scripts/new-lab-project project-slug "Project Title"
+```
+
+The draft deliberately fails validation until its TODOs are replaced and `draft` is false or removed. Validate all projects with:
+
+```sh
+scripts/validate-lab-projects
+```
+
+New projects should record `ownership`, `source_type`, `visibility`, `visual_type`, and `visual_is_concept`. Prefer real screenshots or outputs. Generated concepts must be labeled, must not imply working functionality, and can use the visual brief template at `.agent/skills/lab-project-visual/assets/visual-brief-template.md`. Replacing a concept later requires changing only the project’s `image` path and provenance fields.
+
 ## Provisional content
 
 The current repository only substantiates two experiments: a hospital-readmissions exploration interface and an on-demand Google Analytics report. Their maturity, validation, public availability, adoption, and operational use are not documented and are therefore not claimed. Update those fields only when supporting information is available.

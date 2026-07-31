@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-description','listing-image','listing-preview_alt','listing-category','listing-status','listing-stage','listing-order','listing-central_question','listing-current_state','listing-latest_update','listing-next_step','listing-limitations','listing-looking_for',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-freeze","listing-page-layout","listing-title","listing-description","listing-author","listing-date","listing-date-modified","listing-image","listing-preview_alt","listing-category","listing-status","listing-stage","listing-featured","listing-order","listing-central_question","listing-current_hypothesis","listing-current_state","listing-latest_update","listing-next_step","listing-limitations","listing-looking_for","listing-tags","listing-path","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-freeze","listing-page-layout","listing-title","listing-description","listing-author","listing-date","listing-date-modified","listing-image","listing-preview_alt","listing-category","listing-status","listing-stage","listing-featured","listing-order","listing-ownership","listing-source_type","listing-visual_type","listing-visual_is_concept","listing-visibility","listing-central_question","listing-current_hypothesis","listing-current_state","listing-latest_update","listing-next_step","listing-limitations","listing-looking_for","listing-tags","listing-path","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-repository_url","listing-project_url","listing-started_at","listing-updated_at"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -126,17 +126,17 @@ window.Quarto = {
 
 <meta property="og:title" content="– CentralStatz Lab">
 <meta property="og:description" content="CentralStatz Lab is an independent analytical systems lab exploring how rigorous statistical thinking, reproducible design, and AI-assisted development can produce better ways to work with data.">
-<meta property="og:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
+<meta property="og:image" content="https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/feature.png">
 <meta property="og:site_name" content="CentralStatz Lab">
-<meta property="og:image:alt" content="Hospital readmissions explorer showing a question and a generated chart">
-<meta property="og:image:height" content="1226">
-<meta property="og:image:width" content="1862">
+<meta property="og:image:alt" content="Preview of a branded Google Analytics PDF report">
+<meta property="og:image:height" content="1398">
+<meta property="og:image:width" content="1098">
 <meta name="twitter:title" content="– CentralStatz Lab">
 <meta name="twitter:description" content="CentralStatz Lab is an independent analytical systems lab exploring how rigorous statistical thinking, reproducible design, and AI-assisted development can produce better ways to work with data.">
-<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
-<meta name="twitter:image:alt" content="Hospital readmissions explorer showing a question and a generated chart">
-<meta name="twitter:image-height" content="1226">
-<meta name="twitter:image-width" content="1862">
+<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/feature.png">
+<meta name="twitter:image:alt" content="Preview of a branded Google Analytics PDF report">
+<meta name="twitter:image-height" content="1398">
+<meta name="twitter:image-width" content="1098">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -258,10 +258,10 @@ Selected experiments are published while they are still becoming. Status, limits
 <div id="listing-active-projects-listing" class="quarto-listing quarto-listing-container-custom">
 <div class="list">
 
-<article class="lab-project-card" data-index="0" data-listing-date-sort="1773378000000" data-listing-file-modified-sort="1785529844705" data-listing-date-modified-sort="1773378000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="355">
+<article class="lab-project-card" data-index="0" data-listing-date-sort="1773378000000" data-listing-file-modified-sort="1785532051445" data-listing-date-modified-sort="1773378000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="355">
   <a class="project-preview" href="./projects/readmissions-interface/index.html" aria-label="Open project notebook for Hospital Readmissions Explorer">
     
-    <img src="./case-studies/llm-powered-app-for-hospital-readmissions/feature.png" alt="Hospital readmissions explorer showing a question and a generated chart" loading="lazy">
+    <img src="./case-studies/llm-powered-app-for-hospital-readmissions/readmit_app.gif" alt="Hospital readmissions explorer with controls, a Wisconsin hospital map, charts, summary counts, and a data table" loading="lazy">
     
     <span class="preview-label">Working interface</span>
   </a>
@@ -316,7 +316,7 @@ Selected experiments are published while they are still becoming. Status, limits
   </div>
 </article>
 
-<article class="lab-project-card" data-index="1" data-listing-date-sort="1773291600000" data-listing-file-modified-sort="1785529844830" data-listing-date-modified-sort="1773291600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
+<article class="lab-project-card" data-index="1" data-listing-date-sort="1773291600000" data-listing-file-modified-sort="1785532051568" data-listing-date-modified-sort="1773291600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
   <a class="project-preview" href="./projects/analytics-reporting/index.html" aria-label="Open project notebook for On-Demand Analytics Report">
     
     <img src="./case-studies/streamlining-google-analytics-pdf-report/feature.png" alt="Preview of a branded Google Analytics PDF report" loading="lazy">
@@ -370,6 +370,64 @@ Selected experiments are published while they are still becoming. Status, limits
     <div class="project-card-footer">
       <p><span>Looking for</span>Recurring-reporting use cases and workflow feedback</p>
       <a class="text-link" href="./projects/analytics-reporting/index.html">Open project notebook <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>
+
+<article class="lab-project-card" data-index="2" data-listing-date-sort="1782968400000" data-listing-file-modified-sort="1785532893450" data-listing-date-modified-sort="1783659600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="570">
+  <a class="project-preview" href="./projects/flux-estimand/index.html" aria-label="Open project notebook for Flux Estimand Framework">
+    
+    <img src="./projects/flux-estimand/feature.png" alt="Concept diagram showing a shared conditioning state branching into counterfactual worlds, modular simulations, and a decision-oriented contrast" loading="lazy">
+    
+    <span class="preview-label">Working interface</span>
+  </a>
+  <div class="project-card-body">
+    <div class="project-meta">
+      <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Exploring</span>
+      <span>Simulation methodology</span>
+    </div>
+    <h3 class="anchored"><a href="./projects/flux-estimand/index.html">Flux Estimand Framework</a></h3>
+    <p class="project-summary">An experimental methodology for structuring Flux simulations around explicit decisions, counterfactual comparisons, and the minimum model needed to estimate their consequences.</p>
+    <div class="stage-track" aria-label="Project stage: Concept">
+      
+      
+      <span class="stage-step  is-complete">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Question</span>
+      </span>
+      
+      <span class="stage-step is-current ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Concept</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Prototype</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Validation</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Pilot</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Production</span>
+      </span>
+      
+    </div>
+    <div class="project-facts">
+      <div><span>Central question</span><p>How can simulation projects be organized around the causal consequences of a decision rather than an open-ended attempt to reproduce an entire domain?</p></div>
+      <div><span>Current state</span><p>A public methodology repository contains conceptual documentation, reusable agent guidance, and a template for downstream estimand projects; it does not contain an executable ModelBundle or its own completed estimand.</p></div>
+      <div><span>Latest update</span><p>The framework was organized around a reusable project template, an authoritative ESTIMAND.md specification, and agent guidance for creating and reviewing downstream projects.</p></div>
+      <div><span>Next experiment</span><p>Apply the framework to a concrete downstream decision problem and evaluate whether it produces a clearer, more defensible simulation specification.</p></div>
+    </div>
+    
+    <p class="project-caveat"><strong>Known limits:</strong> The methodology is experimental. The repository does not demonstrate an implemented estimand, executable simulation, empirical validation, downstream adoption, or improved decision outcomes.</p>
+    
+    <div class="project-card-footer">
+      <p><span>Looking for</span>Methodological feedback from simulation modelers and causal-inference practitioners</p>
+      <a class="text-link" href="./projects/flux-estimand/index.html">Open project notebook <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </article>

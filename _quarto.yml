@@ -4,6 +4,7 @@ project:
     - "*.qmd"
     - "projects/**/*.qmd"
     - "case-studies/**/*.qmd"
+    - "!tests/**"
 
 website:
   title: "CentralStatz Lab"

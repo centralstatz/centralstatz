@@ -7,6 +7,125 @@
     "text": "The question is in the lab.\nThanks for reaching out. Your note goes directly to Alex, who will review it and respond by email.\nReturn to CentralStatz Lab"
   },
   {
+    "objectID": "projects/flux-estimand/index.html",
+    "href": "projects/flux-estimand/index.html",
+    "title": "Flux Estimand Framework",
+    "section": "",
+    "text": "Project notebook · Exploring\n\n\n\n\nA decision-first methodology for specifying the counterfactual comparison a simulation should estimate before deciding how much of the surrounding system to model.\n\n\nView the framework Share methodological feedback"
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#why-this-exists",
+    "href": "projects/flux-estimand/index.html#why-this-exists",
+    "title": "Flux Estimand Framework",
+    "section": "Why this exists",
+    "text": "Why this exists\nSimulation projects often begin with a domain-sized ambition: simulate the system. That framing has no natural stopping point because more entities, mechanisms, and interactions can always be added in the name of realism.\nFlux Estimand begins with a narrower question: What decision is being evaluated, and which counterfactual worlds need to be compared? The goal is to make the scientific and decision target explicit before implementation choices begin to define the project."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#current-hypothesis",
+    "href": "projects/flux-estimand/index.html#current-hypothesis",
+    "title": "Flux Estimand Framework",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nAn explicit estimand can anchor a simulation around its decision, conditioning state, alternative actions or policies, outcomes, contrasts, and assumptions. A model can then be judged by whether it is sufficient for that comparison—not by whether it reproduces an entire domain."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#how-the-framework-works",
+    "href": "projects/flux-estimand/index.html#how-the-framework-works",
+    "title": "Flux Estimand Framework",
+    "section": "How the framework works",
+    "text": "How the framework works\n\nIdentify the decision and the moment at which it is made.\nDefine the shared conditioning state from which counterfactual worlds diverge.\nSpecify the alternative actions or policies.\nDefine target quantities, contrasts, assumptions, and validation needs.\nBuild the simplest ModelBundle capable of estimating those quantities credibly.\nAdd fidelity only when it materially improves the target comparison."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#estimands-and-modelbundles",
+    "href": "projects/flux-estimand/index.html#estimands-and-modelbundles",
+    "title": "Flux Estimand Framework",
+    "section": "Estimands and ModelBundles",
+    "text": "Estimands and ModelBundles\nThe estimand is the stable decision specification. A Flux ModelBundle is one executable implementation of it. Multiple bundles may target the same estimand while using different assumptions, state representations, fidelity levels, or computational strategies.\nThat separation allows the decision question to remain fixed while implementations evolve or are compared."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#relationship-to-flux",
+    "href": "projects/flux-estimand/index.html#relationship-to-flux",
+    "title": "Flux Estimand Framework",
+    "section": "Relationship to Flux",
+    "text": "Relationship to Flux\nFlux Estimand is owned by Alex Zajichek and is being developed as a methodological layer for decision-oriented applications of Flux. Flux remains a separate simulation ecosystem maintained in its own repository; Flux Estimand does not replace or claim ownership of it."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#what-currently-exists",
+    "href": "projects/flux-estimand/index.html#what-currently-exists",
+    "title": "Flux Estimand Framework",
+    "section": "What currently exists",
+    "text": "What currently exists\nThe public repository contains conceptual documentation, guidance for creating and reviewing estimands, and a copyable project structure centered on an authoritative ESTIMAND.md. It is a framework repository—not itself an estimand project—and therefore does not contain a root estimand or executable simulation bundle."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#current-limitations",
+    "href": "projects/flux-estimand/index.html#current-limitations",
+    "title": "Flux Estimand Framework",
+    "section": "Current limitations",
+    "text": "Current limitations\nFlux Estimand is experimental methodology. Simulation can make alternative worlds executable under stated assumptions, but it does not establish that those assumptions are correct, that a state representation is sufficient, or that the resulting comparison is valid. The framework complements causal-inference thinking; it is not a substitute for established study-design and estimation methods."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#next-experiment",
+    "href": "projects/flux-estimand/index.html#next-experiment",
+    "title": "Flux Estimand Framework",
+    "section": "Next experiment",
+    "text": "Next experiment\nThe next useful test is a concrete downstream decision problem. That application can reveal whether the template clarifies the target comparison, prevents unnecessary model scope, separates scientific assumptions from implementation choices, and produces validation requirements that can actually be evaluated."
+  },
+  {
+    "objectID": "projects/flux-estimand/index.html#participate",
+    "href": "projects/flux-estimand/index.html#participate",
+    "title": "Flux Estimand Framework",
+    "section": "Participate",
+    "text": "Participate\nMethodological critique is welcome—especially around conditioning states, counterfactual definitions, model sufficiency, validation targets, and the boundary between estimands and their implementations.\n\nReview Flux Estimand on GitHub\nShare methodological feedback"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "",
+    "text": "Independent analytical systems lab\n\n\n\n\nCentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.\n\n\nExplore active projects Bring a problem\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it interactive\n\n\n03TestExpose it to reality\n\n\n\n↳ The interface is the current expression of the hypothesis—not proof that the hypothesis is right."
+  },
+  {
+    "objectID": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
+    "href": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Faster implementation changes which ideas are feasible.",
+    "text": "Faster implementation changes which ideas are feasible.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone."
+  },
+  {
+    "objectID": "index.html#philosophy",
+    "href": "index.html#philosophy",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Structure Before Sophistication",
+    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nPoor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.\n\n\nClear questionsKnow what the system is meant to answer.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "A statistician’s lab for analytical systems.",
+    "text": "A statistician’s lab for analytical systems.\nCentralStatz was founded by Alex Zajichek, a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through the lab, Alex explores, designs, prototypes, and evaluates systems that make complex analytical questions easier to engage with—and easier to scrutinize."
+  },
+  {
+    "objectID": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
+    "href": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
+    "title": "Deploying a Chatbot to Analyze Hospital Readmissions Data",
+    "section": "",
+    "text": "In progress\n\n\n1. Building the Structure\n\n\n2. Strengthening the Logic\nFor more details on the technical backend for how this was built, you can read this blog post or watch the video below."
+  },
+  {
+    "objectID": "case-studies.html",
+    "href": "case-studies.html",
+    "title": "Case Studies",
+    "section": "",
+    "text": "This page is a work in progress\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeploying a Chatbot to Analyze Hospital Readmissions Data\n\n\nBuilding a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data.\n\n\n\n\n\nMar 13, 2026\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nStreamlining a Custom Google Analytics Report\n\n\nGenerating an on-demand, branded PDF report sourced from Google Analytics.\n\n\n\n\n\nMar 12, 2026\n\n\nAlex Zajichek\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "title": "Streamlining a Custom Google Analytics Report",
+    "section": "",
+    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
+  },
+  {
     "objectID": "projects/analytics-reporting/index.html",
     "href": "projects/analytics-reporting/index.html",
     "title": "On-Demand Analytics Report",
@@ -47,55 +166,6 @@
     "title": "On-Demand Analytics Report",
     "section": "Participate",
     "text": "Participate\nIf your team maintains a recurring report that is difficult to reproduce or update, share the workflow."
-  },
-  {
-    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "title": "Streamlining a Custom Google Analytics Report",
-    "section": "",
-    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
-  },
-  {
-    "objectID": "case-studies.html",
-    "href": "case-studies.html",
-    "title": "Case Studies",
-    "section": "",
-    "text": "This page is a work in progress\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeploying a Chatbot to Analyze Hospital Readmissions Data\n\n\nBuilding a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data.\n\n\n\n\n\nMar 13, 2026\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nStreamlining a Custom Google Analytics Report\n\n\nGenerating an on-demand, branded PDF report sourced from Google Analytics.\n\n\n\n\n\nMar 12, 2026\n\n\nAlex Zajichek\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
-    "href": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
-    "title": "Deploying a Chatbot to Analyze Hospital Readmissions Data",
-    "section": "",
-    "text": "In progress\n\n\n1. Building the Structure\n\n\n2. Strengthening the Logic\nFor more details on the technical backend for how this was built, you can read this blog post or watch the video below."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "",
-    "text": "Independent analytical systems lab\n\n\n\n\nCentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.\n\n\nExplore active projects Bring a problem\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it interactive\n\n\n03TestExpose it to reality\n\n\n\n↳ The interface is the current expression of the hypothesis—not proof that the hypothesis is right."
-  },
-  {
-    "objectID": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
-    "href": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "Faster implementation changes which ideas are feasible.",
-    "text": "Faster implementation changes which ideas are feasible.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone."
-  },
-  {
-    "objectID": "index.html#philosophy",
-    "href": "index.html#philosophy",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "Structure Before Sophistication",
-    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nPoor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.\n\n\nClear questionsKnow what the system is meant to answer.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "A statistician’s lab for analytical systems.",
-    "text": "A statistician’s lab for analytical systems.\nCentralStatz was founded by Alex Zajichek, a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through the lab, Alex explores, designs, prototypes, and evaluates systems that make complex analytical questions easier to engage with—and easier to scrutinize."
   },
   {
     "objectID": "projects/readmissions-interface/index.html",

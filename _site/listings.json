@@ -1,16 +1,17 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/projects/readmissions-interface/index.html",
+      "/projects/analytics-reporting/index.html",
+      "/projects/flux-estimand/index.html"
+    ]
+  },
+  {
     "listing": "/case-studies.html",
     "items": [
       "/case-studies/llm-powered-app-for-hospital-readmissions/index.html",
       "/case-studies/streamlining-google-analytics-pdf-report/index.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/projects/readmissions-interface/index.html",
-      "/projects/analytics-reporting/index.html"
     ]
   }
 ]

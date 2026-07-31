@@ -1,0 +1,18 @@
+---
+description: "Validator failure fixture."
+category: "Testing"
+status: "Active Development"
+stage: "Almost Done"
+order: 1
+image: "missing-preview.png"
+preview_alt: "Missing fixture preview"
+central_question: "Does the validator reject malformed project content?"
+current_state: "This is a deliberately invalid test fixture."
+latest_update: "The failure fixture was added."
+next_step: "Run the validator."
+limitations: "This is not public project content."
+looking_for: "None currently"
+repository_url: "/Users/example/private-project"
+---
+
+# Invalid fixture

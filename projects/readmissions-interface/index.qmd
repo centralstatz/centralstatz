@@ -4,13 +4,18 @@ description: "A conversational interface for exploring public Hospital Readmissi
 author: "Alex Zajichek"
 date: "2026-03-13"
 date-modified: "2026-03-13"
-image: "../../case-studies/llm-powered-app-for-hospital-readmissions/feature.png"
-preview_alt: "Hospital readmissions explorer showing a question and a generated chart"
+image: "../../case-studies/llm-powered-app-for-hospital-readmissions/readmit_app.gif"
+preview_alt: "Hospital readmissions explorer with controls, a Wisconsin hospital map, charts, summary counts, and a data table"
 category: "Healthcare analytics"
 status: "Active development"
 stage: "Prototype"
 featured: true
 order: 1
+ownership: "Project page authored by Alex Zajichek for CentralStatz"
+source_type: "mixed"
+visual_type: "screenshot"
+visual_is_concept: false
+visibility: "public"
 central_question: "Can a conversational interface make a complex public quality dataset easier to explore without hiding the analytical structure?"
 current_hypothesis: "A constrained interface can shorten the path from a question to an inspectable result while keeping the source data and logic visible."
 current_state: "A working web-interface prototype can accept questions and return data-driven responses."

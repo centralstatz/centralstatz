@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lab Project Integration"
+  short_description: "Integrate and validate Lab projects"
+  default_prompt: "Use $lab-project-integration to safely add or update a project and validate the CentralStatz Lab site."

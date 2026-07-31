@@ -1,0 +1,142 @@
+---
+title: "Flux Estimand Framework"
+description: "An experimental methodology for structuring Flux simulations around explicit decisions, counterfactual comparisons, and the minimum model needed to estimate their consequences."
+author: "Alex Zajichek"
+date: "2026-07-02"
+date-modified: "2026-07-10"
+image: "feature.png"
+preview_alt: "Concept diagram showing a shared conditioning state branching into counterfactual worlds, modular simulations, and a decision-oriented contrast"
+category: "Simulation methodology"
+status: "Exploring"
+stage: "Concept"
+featured: true
+order: 3
+ownership: "Owned by Alex Zajichek"
+source_type: "repository"
+visual_type: "generated-concept"
+visual_is_concept: true
+visibility: "public"
+repository_url: "https://github.com/zajichek/flux-estimand"
+project_url: "https://github.com/zajichek/flux-estimand"
+started_at: "2026-07-02"
+updated_at: "2026-07-10"
+central_question: "How can simulation projects be organized around the causal consequences of a decision rather than an open-ended attempt to reproduce an entire domain?"
+current_hypothesis: "An explicit estimand can define the decision, conditioning state, counterfactual alternatives, target quantities, contrasts, and assumptions before implementation, allowing each ModelBundle to include only what that comparison needs."
+current_state: "A public methodology repository contains conceptual documentation, reusable agent guidance, and a template for downstream estimand projects; it does not contain an executable ModelBundle or its own completed estimand."
+latest_update: "The framework was organized around a reusable project template, an authoritative ESTIMAND.md specification, and agent guidance for creating and reviewing downstream projects."
+next_step: "Apply the framework to a concrete downstream decision problem and evaluate whether it produces a clearer, more defensible simulation specification."
+limitations: "The methodology is experimental. The repository does not demonstrate an implemented estimand, executable simulation, empirical validation, downstream adoption, or improved decision outcomes."
+looking_for: "Methodological feedback from simulation modelers and causal-inference practitioners"
+tags: [simulation, estimands, causal reasoning, decision science, model design, Flux]
+format:
+  html:
+    toc: true
+    body-classes: lab-project-page
+---
+
+::: {.project-hero}
+
+<div class="section-kicker">Project notebook · Exploring</div>
+
+# Flux Estimand Framework
+
+<p class="project-deck">A decision-first methodology for specifying the counterfactual comparison a simulation should estimate before deciding how much of the surrounding system to model.</p>
+
+<div class="project-hero-actions">
+  <a class="lab-button lab-button-primary" href="https://github.com/zajichek/flux-estimand">View the framework</a>
+  <a class="lab-button lab-button-secondary" href="mailto:alex@centralstatz.com?subject=Flux%20Estimand%20methodological%20feedback">Share methodological feedback</a>
+</div>
+
+:::
+
+::: {.project-notebook}
+
+::: {.notebook-preview}
+
+![Concept diagram showing a shared conditioning state branching into counterfactual worlds, modular simulations, and a decision-oriented contrast](feature.png)
+
+<span>Generated concept diagram · not an implemented simulation interface</span>
+
+:::
+
+::: {.notebook-grid}
+
+::: {.notebook-main}
+
+## Why this exists
+
+Simulation projects often begin with a domain-sized ambition: simulate the system. That framing has no natural stopping point because more entities, mechanisms, and interactions can always be added in the name of realism.
+
+Flux Estimand begins with a narrower question: **What decision is being evaluated, and which counterfactual worlds need to be compared?** The goal is to make the scientific and decision target explicit before implementation choices begin to define the project.
+
+## Current hypothesis
+
+An explicit estimand can anchor a simulation around its decision, conditioning state, alternative actions or policies, outcomes, contrasts, and assumptions. A model can then be judged by whether it is sufficient for that comparison—not by whether it reproduces an entire domain.
+
+## How the framework works
+
+1. Identify the decision and the moment at which it is made.
+2. Define the shared conditioning state from which counterfactual worlds diverge.
+3. Specify the alternative actions or policies.
+4. Define target quantities, contrasts, assumptions, and validation needs.
+5. Build the simplest `ModelBundle` capable of estimating those quantities credibly.
+6. Add fidelity only when it materially improves the target comparison.
+
+## Estimands and ModelBundles
+
+The estimand is the stable decision specification. A Flux `ModelBundle` is one executable implementation of it. Multiple bundles may target the same estimand while using different assumptions, state representations, fidelity levels, or computational strategies.
+
+That separation allows the decision question to remain fixed while implementations evolve or are compared.
+
+## Relationship to Flux
+
+Flux Estimand is owned by Alex Zajichek and is being developed as a methodological layer for decision-oriented applications of [Flux](https://github.com/jarrod-dalton/flux). Flux remains a separate simulation ecosystem maintained in its own repository; Flux Estimand does not replace or claim ownership of it.
+
+:::
+
+::: {.notebook-aside}
+
+### Project state
+
+**Status**  
+Exploring
+
+**Stage**  
+Concept
+
+**Current artifact**  
+Methodology, documentation, agent guidance, and a reusable downstream project template.
+
+**Known limitations**  
+No completed estimand, executable ModelBundle, empirical validation, downstream adoption, or demonstrated decision benefit is established by this repository.
+
+**Next experiment**  
+Apply the framework to a concrete decision problem and evaluate the resulting specification.
+
+**Useful participation**  
+Methodological feedback from simulation modelers and causal-inference practitioners.
+
+:::
+
+:::
+
+## What currently exists
+
+The public repository contains conceptual documentation, guidance for creating and reviewing estimands, and a copyable project structure centered on an authoritative `ESTIMAND.md`. It is a framework repository—not itself an estimand project—and therefore does not contain a root estimand or executable simulation bundle.
+
+## Current limitations
+
+Flux Estimand is experimental methodology. Simulation can make alternative worlds executable under stated assumptions, but it does not establish that those assumptions are correct, that a state representation is sufficient, or that the resulting comparison is valid. The framework complements causal-inference thinking; it is not a substitute for established study-design and estimation methods.
+
+## Next experiment
+
+The next useful test is a concrete downstream decision problem. That application can reveal whether the template clarifies the target comparison, prevents unnecessary model scope, separates scientific assumptions from implementation choices, and produces validation requirements that can actually be evaluated.
+
+## Participate
+
+Methodological critique is welcome—especially around conditioning states, counterfactual definitions, model sufficiency, validation targets, and the boundary between estimands and their implementations.
+
+- [Review Flux Estimand on GitHub](https://github.com/zajichek/flux-estimand)
+- [Share methodological feedback](mailto:alex@centralstatz.com?subject=Flux%20Estimand%20methodological%20feedback)
+
+:::

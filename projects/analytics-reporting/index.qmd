@@ -11,6 +11,11 @@ status: "Exploring"
 stage: "Concept"
 featured: true
 order: 2
+ownership: "Project page authored by Alex Zajichek for CentralStatz"
+source_type: "mixed"
+visual_type: "project-output"
+visual_is_concept: false
+visibility: "public"
 central_question: "How can a recurring analytics report become a reproducible system instead of a fragile manual task?"
 current_hypothesis: "A parameterized, on-demand reporting workflow can improve consistency while preserving room for interpretation."
 current_state: "An initial branded report artifact exists; the public project notes remain intentionally limited."
