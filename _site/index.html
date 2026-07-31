@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="CentralStatz Lab is an independent analytical systems lab exploring how rigorous statistical thinking, reproducible design, and AI-assisted development can produce better ways to work with data.">
 
-<title>CentralStatz Statistical &amp; Data Sciences LLC</title>
+<title>CentralStatz Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,13 +25,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
 <link href="./logo_background.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -40,20 +38,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7f922e4f3a3c4d26b9720c48a09e2f75.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f590af9c006a427064530d34b74bbd25.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -68,6 +54,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-active-projects-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-image','listing-preview_alt','listing-category','listing-status','listing-stage','listing-order','listing-central_question','listing-current_state','listing-latest_update','listing-next_step','listing-limitations','listing-looking_for',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-freeze","listing-page-layout","listing-title","listing-description","listing-author","listing-date","listing-date-modified","listing-image","listing-preview_alt","listing-category","listing-status","listing-stage","listing-featured","listing-order","listing-central_question","listing-current_hypothesis","listing-current_state","listing-latest_update","listing-next_step","listing-limitations","listing-looking_for","listing-tags","listing-path","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-active-projects-listing'] = new List('listing-active-projects-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GQTNSLKV9S"></script>
 
 <script type="text/javascript">
@@ -77,25 +92,52 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 </script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="– CentralStatz Statistical &amp; Data Sciences LLC">
-<meta property="og:description" content="Data science, statistics, and analytics advising located in Central Wisconsin.">
-<meta property="og:image" content="https://www.centralstatz.com/howwedoit.png">
-<meta property="og:site_name" content="CentralStatz Statistical &amp; Data Sciences LLC">
-<meta property="og:image:alt" content="Analytics workflow illustration">
-<meta property="og:image:height" content="1394">
-<meta property="og:image:width" content="1424">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="– CentralStatz Lab">
+<meta property="og:description" content="CentralStatz Lab is an independent analytical systems lab exploring how rigorous statistical thinking, reproducible design, and AI-assisted development can produce better ways to work with data.">
+<meta property="og:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
+<meta property="og:site_name" content="CentralStatz Lab">
+<meta property="og:image:alt" content="Hospital readmissions explorer showing a question and a generated chart">
+<meta property="og:image:height" content="1226">
+<meta property="og:image:width" content="1862">
+<meta name="twitter:title" content="– CentralStatz Lab">
+<meta name="twitter:description" content="CentralStatz Lab is an independent analytical systems lab exploring how rigorous statistical thinking, reproducible design, and AI-assisted development can produce better ways to work with data.">
+<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
+<meta name="twitter:image:alt" content="Hospital readmissions explorer showing a question and a generated chart">
+<meta name="twitter:image-height" content="1226">
+<meta name="twitter:image-width" content="1862">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -109,39 +151,36 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
     <img src="./logo.png" alt="" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./#what-we-do"> 
-<span class="menu-text">What We Do</span></a>
+    <a class="nav-link" href="./#active-projects"> 
+<span class="menu-text">Lab</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#our-philosophy"> 
-<span class="menu-text">Our Philosophy</span></a>
+    <a class="nav-link" href="./#how-the-lab-works"> 
+<span class="menu-text">Method</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#philosophy"> 
+<span class="menu-text">Philosophy</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#work-with-centralstatz"> 
+<span class="menu-text">Work With CentralStatz</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./#about"> 
 <span class="menu-text">About</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./#contact"> 
 <span class="menu-text">Contact</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/centralstatz"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:alex@centralstatz.com"> <i class="bi bi-envelope" role="img" aria-label="Email">
-</i> 
-<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -161,212 +200,399 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 
 
 
-<section id="whats-the-most-frustrating-analytical-problem-youre-dealing-with-right-now" class="level1 hero">
-<h1>What’s the most frustrating <span class="rotating-word">analytical</span> problem you’re dealing with right now?</h1>
-<p><strong>Fragile reporting processes. Scattered workflows. Unclear analytical questions. Results that are difficult to reproduce.</strong></p>
+<div class="lab-hero">
+<div class="hero-grid">
+<div class="hero-copy">
+<div class="eyebrow">
+<span class="activity-pulse" aria-hidden="true"></span> Independent analytical systems lab
+</div>
+<section id="better-analytical-ideas-made-tangible." class="level1">
+<h1>Better analytical ideas, made tangible.</h1>
+<p class="hero-lead">
+CentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.
+</p>
+<p class="hero-support">
+Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.
+</p>
+<div class="hero-actions">
+<p><a class="lab-button lab-button-primary" href="#active-projects">Explore active projects</a> <a class="lab-button lab-button-secondary" href="#contact">Bring a problem</a></p>
+</div>
+</section>
+</div>
+<div class="hero-instrument" aria-label="How a lab project develops">
+<div class="instrument-topline">
+<span>LAB / 001</span><span>Current operating model</span>
+</div>
+<div class="instrument-question">
+What should analytical work make possible?
+</div>
+<div class="instrument-flow">
+<div>
+<span>01</span><strong>Reason</strong><small>Frame the question</small>
+</div>
+<div>
+<span>02</span><strong>Build</strong><small>Make it interactive</small>
+</div>
+<div>
+<span>03</span><strong>Test</strong><small>Expose it to reality</small>
+</div>
+</div>
+<div class="instrument-note">
+<span aria-hidden="true">↳</span> The interface is the current expression of the hypothesis—not proof that the hypothesis is right.
+</div>
+</div>
+</div>
+</div>
+<div class="lab-section projects-section">
+<div id="active-projects" class="section-heading">
+<div>
+<span class="section-index">01 / Active work</span>
+<h2 class="anchored">
+Working hypotheses, in interface form.
+</h2>
+</div>
+<p>
+Selected experiments are published while they are still becoming. Status, limits, and next questions are part of the work—not footnotes.
+</p>
+</div>
+<div id="listing-active-projects-listing" class="quarto-listing quarto-listing-container-custom">
+<div class="list">
+
+<article class="lab-project-card" data-index="0" data-listing-date-sort="1773378000000" data-listing-file-modified-sort="1785529844705" data-listing-date-modified-sort="1773378000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="355">
+  <a class="project-preview" href="./projects/readmissions-interface/index.html" aria-label="Open project notebook for Hospital Readmissions Explorer">
+    
+    <img src="./case-studies/llm-powered-app-for-hospital-readmissions/feature.png" alt="Hospital readmissions explorer showing a question and a generated chart" loading="lazy">
+    
+    <span class="preview-label">Working interface</span>
+  </a>
+  <div class="project-card-body">
+    <div class="project-meta">
+      <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Active development</span>
+      <span>Healthcare analytics</span>
+    </div>
+    <h3 class="anchored"><a href="./projects/readmissions-interface/index.html">Hospital Readmissions Explorer</a></h3>
+    <p class="project-summary">A conversational interface for exploring public Hospital Readmissions Reduction Program data and making an analytical workflow easier to inspect.</p>
+    <div class="stage-track" aria-label="Project stage: Prototype">
+      
+      
+      <span class="stage-step  is-complete">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Question</span>
+      </span>
+      
+      <span class="stage-step  is-complete">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Concept</span>
+      </span>
+      
+      <span class="stage-step is-current ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Prototype</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Validation</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Pilot</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Production</span>
+      </span>
+      
+    </div>
+    <div class="project-facts">
+      <div><span>Central question</span><p>Can a conversational interface make a complex public quality dataset easier to explore without hiding the analytical structure?</p></div>
+      <div><span>Current state</span><p>A working web-interface prototype can accept questions and return data-driven responses.</p></div>
+      <div><span>Latest update</span><p>A deployment pipeline and custom web interface were assembled for interactive HRRP exploration.</p></div>
+      <div><span>Next experiment</span><p>Clarify guardrails, evaluation criteria, and the questions the interface should and should not answer.</p></div>
+    </div>
+    
+    <p class="project-caveat"><strong>Known limits:</strong> This is an exploratory interface, not clinical decision support. No claims of validation, completeness, or production readiness are made.</p>
+    
+    <div class="project-card-footer">
+      <p><span>Looking for</span>Questions, usability feedback, and healthcare-data perspectives</p>
+      <a class="text-link" href="./projects/readmissions-interface/index.html">Open project notebook <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>
+
+<article class="lab-project-card" data-index="1" data-listing-date-sort="1773291600000" data-listing-file-modified-sort="1785529844830" data-listing-date-modified-sort="1773291600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
+  <a class="project-preview" href="./projects/analytics-reporting/index.html" aria-label="Open project notebook for On-Demand Analytics Report">
+    
+    <img src="./case-studies/streamlining-google-analytics-pdf-report/feature.png" alt="Preview of a branded Google Analytics PDF report" loading="lazy">
+    
+    <span class="preview-label">Working interface</span>
+  </a>
+  <div class="project-card-body">
+    <div class="project-meta">
+      <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Exploring</span>
+      <span>Reporting systems</span>
+    </div>
+    <h3 class="anchored"><a href="./projects/analytics-reporting/index.html">On-Demand Analytics Report</a></h3>
+    <p class="project-summary">A reproducible workflow for generating a branded PDF report from Google Analytics data on demand.</p>
+    <div class="stage-track" aria-label="Project stage: Concept">
+      
+      
+      <span class="stage-step  is-complete">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Question</span>
+      </span>
+      
+      <span class="stage-step is-current ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Concept</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Prototype</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Validation</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Pilot</span>
+      </span>
+      
+      <span class="stage-step  ">
+        <span class="stage-marker" aria-hidden="true"></span><span class="stage-name">Production</span>
+      </span>
+      
+    </div>
+    <div class="project-facts">
+      <div><span>Central question</span><p>How can a recurring analytics report become a reproducible system instead of a fragile manual task?</p></div>
+      <div><span>Current state</span><p>An initial branded report artifact exists; the public project notes remain intentionally limited.</p></div>
+      <div><span>Latest update</span><p>The first report-generation workflow and visual output were assembled.</p></div>
+      <div><span>Next experiment</span><p>Document inputs, review steps, and the boundary between automated output and analyst interpretation.</p></div>
+    </div>
+    
+    <p class="project-caveat"><strong>Known limits:</strong> The repository does not yet document operational use, validation, or a public deployment.</p>
+    
+    <div class="project-card-footer">
+      <p><span>Looking for</span>Recurring-reporting use cases and workflow feedback</p>
+      <a class="text-link" href="./projects/analytics-reporting/index.html">Open project notebook <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+<div class="lab-section process-section">
+<div id="how-the-lab-works" class="section-heading">
+<div>
+<span class="section-index">02 / Method</span>
+<h2 class="anchored">
+Building is part of the reasoning.
+</h2>
+</div>
+<p>
+A prototype creates something concrete enough for users, experts, evidence, and constraints to push against.
+</p>
+</div>
+<ol class="process-track">
+<li>
+<span>01</span>
+<h3 class="anchored">
+Observe
+</h3>
+<p>
+Identify a recurring analytical problem or workflow that should work better.
+</p>
+</li>
+<li>
+<span>02</span>
+<h3 class="anchored">
+Reason
+</h3>
+<p>
+Clarify the question, assumptions, users, evidence, and underlying structure.
+</p>
+</li>
+<li>
+<span>03</span>
+<h3 class="anchored">
+Prototype
+</h3>
+<p>
+Build a working version quickly enough to make the idea tangible.
+</p>
+</li>
+<li>
+<span>04</span>
+<h3 class="anchored">
+Test
+</h3>
+<p>
+Put it in front of users, experts, data, and real constraints.
+</p>
+</li>
+<li>
+<span>05</span>
+<h3 class="anchored">
+Evolve
+</h3>
+<p>
+Improve it, pause it, publish what was learned, or develop it further.
+</p>
+</li>
+</ol>
+</div>
+<div class="lab-section ai-section">
+<div class="ai-layout">
+<div class="ai-statement">
+<p><span class="section-index">03 / AI’s role</span></p>
+<section id="faster-implementation-changes-which-ideas-are-feasible." class="level2">
+<h2 class="anchored" data-anchor-id="faster-implementation-changes-which-ideas-are-feasible.">Faster implementation changes which ideas are feasible.</h2>
+<p>AI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone.</p>
+</section>
+</div>
+<div class="ai-boundary">
+<section id="what-accelerates" class="level3">
+<h3 class="anchored" data-anchor-id="what-accelerates">What accelerates</h3>
+<ul>
+<li>interface and workflow implementation</li>
+<li>exploration of alternative system designs</li>
+<li>creation of testable analytical artifacts</li>
+<li>iteration between reasoning and use</li>
+</ul>
+</section>
+<section id="what-does-not-disappear" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-not-disappear">What does not disappear</h3>
+<ul>
+<li>statistical reasoning and domain expertise</li>
+<li>definitions, assumptions, and data quality</li>
+<li>review, validation, governance, and accountability</li>
+<li>judgment about whether a problem is worth solving</li>
+</ul>
+<p class="boundary-note">
+AI is a force multiplier for rigorous analytical thinking—not a substitute for it.
+</p>
+</section>
+</div>
+</div>
+</div>
+<div class="lab-section philosophy-section">
+<div class="philosophy-mark" aria-hidden="true">
+S / S
+</div>
+<div class="philosophy-copy">
+<p><span class="section-index">04 / Philosophy</span></p>
+<section id="philosophy" class="level2">
+<h2 class="anchored" data-anchor-id="philosophy">Structure Before Sophistication</h2>
+<p>Sophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.</p>
+<p>Poor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.</p>
+<div class="principle-grid">
+<div>
+<strong>Clear questions</strong><span>Know what the system is meant to answer.</span>
+</div>
+<div>
+<strong>Defensible logic</strong><span>Make metrics and assumptions open to review.</span>
+</div>
+<div>
+<strong>Reproducible systems</strong><span>Build work that can be understood and repeated.</span>
+</div>
+<div>
+<strong>Honest boundaries</strong><span>State uncertainty and limits alongside capability.</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="lab-section engage-section">
+<div id="work-with-centralstatz" class="section-heading">
+<div>
+<span class="section-index">05 / Participate</span>
+<h2 class="anchored">
+Help shape what the work becomes.
+</h2>
+</div>
+<p>
+The lab can lead to a better experiment, a useful pilot, an adapted system, an advisory engagement—or simply a clearer question.
+</p>
+</div>
+<div class="engage-grid">
+<p><a href="#active-projects"><span>Test</span><strong>Try a prototype</strong><small>Explore active work and question what it does.</small></a> <a href="mailto:alex@centralstatz.com?subject=Lab%20feedback"><span>Respond</span><strong>Share feedback</strong><small>Bring domain, analytical, or usability perspective.</small></a> <a href="#contact"><span>Propose</span><strong>Bring a problem</strong><small>Describe a workflow or decision that should work better.</small></a> <a href="mailto:alex@centralstatz.com?subject=CentralStatz%20Lab%20collaboration"><span>Collaborate</span><strong>Explore a pilot</strong><small>Adapt an experiment for a team or organization.</small></a></p>
+</div>
+</div>
+<div class="lab-section about-section">
+<div class="about-grid">
+<div class="about-copy">
+<p><span class="section-index">06 / About</span></p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">A statistician’s lab for analytical systems.</h2>
+<p>CentralStatz was founded by <strong>Alex Zajichek</strong>, a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.</p>
+<p>His work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through the lab, Alex explores, designs, prototypes, and evaluates systems that make complex analytical questions easier to engage with—and easier to scrutinize.</p>
+</section>
+</div>
+<div class="about-image">
+<p><img src="ai-headshot.png" alt="Portrait of Alex Zajichek, founder of CentralStatz"></p>
+<p><span>Alex Zajichek · Statistician &amp; data scientist · Wausau, Wisconsin</span></p>
+</div>
+</div>
+</div>
+<div id="contact" class="contact-section">
+<div class="contact-intro">
+<span class="section-index">07 / Open channel</span>
+<h2 class="anchored">
+What analytical problem should work better?
+</h2>
+<p>
+Share the rough version. This is a low-pressure starting point for a conversation, not a commitment.
+</p>
+</div>
 <form name="analytics-question" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="problem-form" action="/thank-you.html">
 <input type="hidden" name="form-name" value="analytics-question">
-<p hidden="">
-<label>Don’t fill this out: <input name="bot-field"></label>
+<p class="visually-hidden">
+<label>Do not fill this out: <input name="bot-field"></label>
 </p>
-<textarea name="problem" placeholder="Tell me about it..." required=""></textarea>
-<input type="text" name="name" placeholder="Name"> <input type="email" name="email" placeholder="Email" required=""> <button type="submit" class="btn btn-primary">Start the conversation</button>
-<p class="submission-info-wrapper">
-<a href="#" id="openSubmissionModal" style="font-size:smaller; margin-top=-10px;"> What happens when I submit? </a>
-</p>
+<label for="problem">The problem, workflow, or idea</label>
+<textarea id="problem" name="problem" placeholder="What is happening now—and what do you wish were possible?" required=""></textarea>
+<div class="form-row">
+<div>
+<label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name">
+</div>
+<div>
+<label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required="">
+</div>
+</div>
+<div class="form-submit">
+<button type="submit" class="lab-button lab-button-primary">
+Start the conversation
+</button>
+<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">
+What happens when I submit?
+</button>
+</div>
 </form>
-</section>
-<div class="identity-strip">
-<p>Analytical partner for teams and organizations</p>
-</div>
-<div class="divider">
-
-</div>
-<div class="what-section">
-<div class="grid what-grid">
-<div class="g-col-12 g-col-md-5">
-<div class="what-image-card">
-<p><img src="howwedoit.png" alt="Analytics workflow illustration"></p>
-</div>
-</div>
-<div class="g-col-12 g-col-md-7">
-<div class="section-kicker text-left">
-What we do
-</div>
-<section id="what-we-do" class="level1">
-<h1>Evaluate. Design. Build.</h1>
-<p class="what-lead">
-We help teams and organizations think through, design, and build analytical systems that bring structure, clarity, and reproducibility to complex data problems.
+<p class="contact-direct">
+Prefer email? <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>
 </p>
-<p>
-Sometimes that means reporting pipelines, analytical applications, statistical workflows, or internal analytics infrastructure. Other times it simply means helping navigate difficult analytical decisions. The common thread?
-</p>
-<div class="what-callout">
-<p><span style="font-size:larger; color:white;">Disciplined</span> design. <span style="font-size:larger; color:white;">Reproducibility.</span> Statistical <span style="font-size:larger; color:white;">clarity.</span></p>
 </div>
-</section>
-</div>
-</div>
-</div>
-<div class="divider">
-
-</div>
-<div class="philosophy-section">
-<div class="section-kicker">
-Our Philosophy
-</div>
-<section id="our-philosophy" class="level1">
-<h1>Structure Before Sophistication</h1>
-<p class="philosophy-lead">
-Most analytical problems don’t begin with dashboards or models. They begin with questions. We help our clients think through the structure behind the problem before building solutions.
-</p>
-<div class="grid philosophy-grid">
-<div class="g-col-12 g-col-md-6">
-<div class="philosophy-card">
-<div class="card-number">
-01
-</div>
-<section id="build-the-structure" class="level2">
-<h2 class="anchored" data-anchor-id="build-the-structure">Build the Structure</h2>
-<p>Create the foundation needed for analytical work to become transparent, maintainable, and reproducible.</p>
-<p>This may involve:</p>
-<ul>
-<li>automated reporting pipelines</li>
-<li>structured analytical datasets</li>
-<li>interactive applications for exploration</li>
-<li>reusable tools or packages</li>
-<li>version control and documentation</li>
-<li>internal analytics infrastructure</li>
-</ul>
-</section>
-</div>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="philosophy-card">
-<div class="card-number">
-02
-</div>
-<section id="strengthen-the-logic" class="level2">
-<h2 class="anchored" data-anchor-id="strengthen-the-logic">Strengthen the Logic</h2>
-<p>Clarify the reasoning behind the analysis so results are not only well-structured, but statistically sound and defensible.</p>
-<p>This may involve:</p>
-<ul>
-<li>reviewing data/metric definitions</li>
-<li>evaluating statistical approaches</li>
-<li>clarifying cohorts and attribution rules</li>
-<li>identifying sources of bias or instability</li>
-<li>documenting analytical assumptions</li>
-<li>connecting metrics to intended outcomes</li>
-</ul>
-</section>
-</div>
-</div>
-</div>
-<section id="why-work-with-us" class="level3 philosophy-callout">
-<h3 class="anchored" data-anchor-id="why-work-with-us">Why Work With Us?</h3>
-<p>Many organizations focus on output first. We focus on the systems and reasoning that make those outputs trustworthy.</p>
-<p>Our approach emphasizes transparency, reproducibility, and long-term maintainability — often using open, auditable technologies that reduce reliance on proprietary platforms.</p>
-</section>
-</section>
-</div>
-<div class="divider">
-
-</div>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<section id="about" class="level2" style="text-align:center">
-<h2 class="anchored" data-anchor-id="about">Meet Alex</h2>
-</section>
-<p>A statistician and data scientist in Central Wisconsin, Alex has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and problem contexts.</p>
-<p>His work is especially grounded in healthcare, where messy systems and fragile metrics make sound analytical structure especially important.</p>
-<p>Through CentralStatz, his focus is on helping organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time.</p>
-</div>
-<div class="g-col-12 g-col-md-6">
-<p><br></p>
-<center>
-<img src="ai-headshot.png" width="75%">
-</center>
-</div>
-</div>
-<div class="divider">
-
-</div>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<section id="contact" class="level2" style="text-align:center">
-<h2 class="anchored" data-anchor-id="contact">Contact Us</h2>
-<p>Alex Zajichek, Owner</p>
-<p><a href="mailto:alex@centralstatz.com"><strong>alex@centralstatz.com</strong></a></p>
-<p><em>Located in Wausau, WI, USA</em></p>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="cell">
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-1adddea6b0ec2675ca90" style="width:100%;height:278px;"></div>
-<script type="application/json" data-for="htmlwidget-1adddea6b0ec2675ca90">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[44.9591,-89.6301,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Wausau, Wisconsin, USA",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[44.9591,-89.6301],9,[]],"limits":{"lat":[44.9591,44.9591],"lng":[-89.6301,-89.6301]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-</div>
-<script>
-  const words = [
-    "data",
-    "analytics",
-    "reporting",
-    "statistics",
-    "modeling",
-    "AI"
-  ];
-
-  let index = 0;
-  const wordElement = document.querySelector(".rotating-word");
-
-  setInterval(() => {
-    wordElement.style.opacity = 0;
-
-    setTimeout(() => {
-      index = (index + 1) % words.length;
-      wordElement.textContent = words[index];
-      wordElement.style.opacity = 1;
-    }, 250);
-  }, 2200);
-</script>
-<div id="submissionModal" class="modal">
+<div id="submissionModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden="">
   <div class="modal-content">
-
-    <span class="close-modal">×</span>
-
-    <h3 class="anchored">What happens when I submit?</h3>
-
-    <p>
-      Your submission goes directly to me (<a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>). I'll review it and reach out via email with any initial advice or perspective I feel I can offer. This is not a commitment or bind to anything. But rather a connection point to begin a conversation about your problem. We'll take that wherever it leads.
-    </p>
-
-    <p><strong>- Alex</strong></p>
-
+    <button type="button" class="close-modal" aria-label="Close dialog">×</button>
+    <h3 id="modalTitle" class="anchored">What happens when I submit?</h3>
+    <p>Your note goes directly to me at <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>. I’ll review it and respond by email with any initial perspective I can offer. It is a connection point—not a commitment or obligation.</p>
+    <p><strong>— Alex</strong></p>
   </div>
 </div>
 <script>
-const modal = document.getElementById("submissionModal");
-const openBtn = document.getElementById("openSubmissionModal");
-const closeBtn = document.querySelector(".close-modal");
-
-openBtn.onclick = function(e) {
-  e.preventDefault();
-  modal.style.display = "flex";
-}
-
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-}
+(() => {
+  const modal = document.getElementById('submissionModal');
+  const openButton = document.getElementById('openSubmissionModal');
+  const closeButton = modal?.querySelector('.close-modal');
+  let previousFocus;
+  if (!modal || !openButton || !closeButton) return;
+  const open = () => { previousFocus = document.activeElement; modal.hidden = false; document.body.classList.add('modal-open'); closeButton.focus(); };
+  const close = () => { modal.hidden = true; document.body.classList.remove('modal-open'); previousFocus?.focus(); };
+  openButton.addEventListener('click', open);
+  closeButton.addEventListener('click', close);
+  modal.addEventListener('click', event => { if (event.target === modal) close(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.hidden) close(); });
+})();
 </script>
+
 
 
 
@@ -774,21 +1000,21 @@ window.onclick = function(e) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>© 2026 CentralStatz Statistical &amp; Data Sciences LLC</p>
+</div>   
     <div class="nav-footer-center">
-© 2026 CentralStatz Statistical &amp; Data Sciences LLC
-<div class="footer-icons">
-<p><a href="mailto:alex@centralstatz.com" target="_blank"><i class="bi bi-envelope"></i></a> <a href="https://www.linkedin.com/company/centralstatz" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/centralstatz" target="_blank"><i class="bi bi-github"></i></a> <a href="https://www.youtube.com/@centralstatz" target="_blank"><i class="bi bi-youtube"></i></a></p>
-</div>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<div class="footer-icons">
+<p><a href="mailto:alex@centralstatz.com" aria-label="Email CentralStatz"><i class="bi bi-envelope"></i></a> <a href="https://www.linkedin.com/company/centralstatz" aria-label="CentralStatz on LinkedIn"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/centralstatz" aria-label="CentralStatz on GitHub"><i class="bi bi-github"></i></a> <a href="https://www.youtube.com/@centralstatz" aria-label="CentralStatz on YouTube"><i class="bi bi-youtube"></i></a></p>
+</div>
+</div>
   </div>
 </footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

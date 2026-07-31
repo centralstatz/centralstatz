@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "thank-you.html",
+    "href": "thank-you.html",
+    "title": "Thank you",
+    "section": "",
+    "text": "The question is in the lab.\nThanks for reaching out. Your note goes directly to Alex, who will review it and respond by email.\nReturn to CentralStatz Lab"
+  },
+  {
+    "objectID": "projects/analytics-reporting/index.html",
+    "href": "projects/analytics-reporting/index.html",
+    "title": "On-Demand Analytics Report",
+    "section": "",
+    "text": "Project notebook · Exploring\n\n\n\n\nAn early exploration of turning a recurring Google Analytics report into a reproducible, branded workflow."
+  },
+  {
+    "objectID": "projects/analytics-reporting/index.html#why-this-exists",
+    "href": "projects/analytics-reporting/index.html#why-this-exists",
+    "title": "On-Demand Analytics Report",
+    "section": "Why this exists",
+    "text": "Why this exists\nRecurring reports often accumulate manual steps, hidden decisions, and formatting work. This project explores a more explicit system: defined inputs, repeatable transformations, a consistent artifact, and clear places for analyst review."
+  },
+  {
+    "objectID": "projects/analytics-reporting/index.html#current-state",
+    "href": "projects/analytics-reporting/index.html#current-state",
+    "title": "On-Demand Analytics Report",
+    "section": "Current state",
+    "text": "Current state\nAn initial report-generation workflow and visual artifact exist. The repository does not yet contain enough evidence to describe operational use, validation, or deployment, so those details remain intentionally provisional."
+  },
+  {
+    "objectID": "projects/analytics-reporting/index.html#current-hypothesis",
+    "href": "projects/analytics-reporting/index.html#current-hypothesis",
+    "title": "On-Demand Analytics Report",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nA parameterized, on-demand workflow can reduce repetitive assembly and improve consistency, while leaving interpretation and quality review with the analyst."
+  },
+  {
+    "objectID": "projects/analytics-reporting/index.html#next-experiment",
+    "href": "projects/analytics-reporting/index.html#next-experiment",
+    "title": "On-Demand Analytics Report",
+    "section": "Next experiment",
+    "text": "Next experiment\nDocument the inputs, review gates, and the boundary between automated output and analyst interpretation."
+  },
+  {
+    "objectID": "projects/analytics-reporting/index.html#participate",
+    "href": "projects/analytics-reporting/index.html#participate",
+    "title": "On-Demand Analytics Report",
+    "section": "Participate",
+    "text": "Participate\nIf your team maintains a recurring report that is difficult to reproduce or update, share the workflow."
+  },
+  {
+    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "title": "Streamlining a Custom Google Analytics Report",
+    "section": "",
+    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
+  },
+  {
     "objectID": "case-studies.html",
     "href": "case-studies.html",
     "title": "Case Studies",
@@ -16,43 +72,85 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
+    "title": "Better analytical ideas, made tangible.",
     "section": "",
-    "text": "Fragile reporting processes. Scattered workflows. Unclear analytical questions. Results that are difficult to reproduce.\n\n\n\nDon’t fill this out: \n\n\n  Start the conversation\n\n What happens when I submit?"
+    "text": "Independent analytical systems lab\n\n\n\n\nCentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.\n\n\nExplore active projects Bring a problem\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it interactive\n\n\n03TestExpose it to reality\n\n\n\n↳ The interface is the current expression of the hypothesis—not proof that the hypothesis is right."
   },
   {
-    "objectID": "index.html#build-the-structure",
-    "href": "index.html#build-the-structure",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Build the Structure",
-    "text": "Build the Structure\nCreate the foundation needed for analytical work to become transparent, maintainable, and reproducible.\nThis may involve:\n\nautomated reporting pipelines\nstructured analytical datasets\ninteractive applications for exploration\nreusable tools or packages\nversion control and documentation\ninternal analytics infrastructure"
+    "objectID": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
+    "href": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Faster implementation changes which ideas are feasible.",
+    "text": "Faster implementation changes which ideas are feasible.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone."
   },
   {
-    "objectID": "index.html#strengthen-the-logic",
-    "href": "index.html#strengthen-the-logic",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Strengthen the Logic",
-    "text": "Strengthen the Logic\nClarify the reasoning behind the analysis so results are not only well-structured, but statistically sound and defensible.\nThis may involve:\n\nreviewing data/metric definitions\nevaluating statistical approaches\nclarifying cohorts and attribution rules\nidentifying sources of bias or instability\ndocumenting analytical assumptions\nconnecting metrics to intended outcomes"
+    "objectID": "index.html#philosophy",
+    "href": "index.html#philosophy",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Structure Before Sophistication",
+    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nPoor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.\n\n\nClear questionsKnow what the system is meant to answer.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Meet Alex",
-    "text": "Meet Alex"
+    "title": "Better analytical ideas, made tangible.",
+    "section": "A statistician’s lab for analytical systems.",
+    "text": "A statistician’s lab for analytical systems.\nCentralStatz was founded by Alex Zajichek, a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through the lab, Alex explores, designs, prototypes, and evaluates systems that make complex analytical questions easier to engage with—and easier to scrutinize."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Contact Us",
-    "text": "Contact Us\nAlex Zajichek, Owner\nalex@centralstatz.com\nLocated in Wausau, WI, USA"
-  },
-  {
-    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "title": "Streamlining a Custom Google Analytics Report",
+    "objectID": "projects/readmissions-interface/index.html",
+    "href": "projects/readmissions-interface/index.html",
+    "title": "Hospital Readmissions Explorer",
     "section": "",
-    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
+    "text": "Project notebook · Active development\n\n\n\n\nA working exploration of how conversational interaction can make public hospital-readmissions data easier to question—and its analytical logic easier to inspect.\n\n\nAsk about this project Back to active work"
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#why-this-exists",
+    "href": "projects/readmissions-interface/index.html#why-this-exists",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Why this exists",
+    "text": "Why this exists\nPublic healthcare datasets contain valuable evidence, but useful exploration often requires knowledge of the source, measures, and analytical tools. This project asks whether a carefully bounded conversational layer can lower that interaction cost without pretending the underlying complexity has disappeared."
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#current-hypothesis",
+    "href": "projects/readmissions-interface/index.html#current-hypothesis",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nA constrained interface can shorten the path from a question to an inspectable result while keeping source data, definitions, and analytical logic visible enough to question."
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#what-the-prototype-demonstrates",
+    "href": "projects/readmissions-interface/index.html#what-the-prototype-demonstrates",
+    "title": "Hospital Readmissions Explorer",
+    "section": "What the prototype demonstrates",
+    "text": "What the prototype demonstrates\n\nA custom web interface for asking questions about Hospital Readmissions Reduction Program data.\nA deployment path connecting a conversational interaction to analytical output.\nA tangible interface that can now be evaluated instead of discussed only as a specification."
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#ais-role",
+    "href": "projects/readmissions-interface/index.html#ais-role",
+    "title": "Hospital Readmissions Explorer",
+    "section": "AI’s role",
+    "text": "AI’s role\nAI-assisted implementation made it faster to connect the interface, analytical workflow, and deployment pieces. It did not define valid measures, determine appropriate interpretations, review the source data, or validate whether a response is fit for a healthcare decision."
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#what-remains-expert-driven",
+    "href": "projects/readmissions-interface/index.html#what-remains-expert-driven",
+    "title": "Hospital Readmissions Explorer",
+    "section": "What remains expert-driven",
+    "text": "What remains expert-driven\nQuestion framing, measure definitions, analytical constraints, evaluation, interpretation, and governance remain human responsibilities. In this context, a plausible answer is not the same as a defensible one."
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#latest-meaningful-update",
+    "href": "projects/readmissions-interface/index.html#latest-meaningful-update",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Latest meaningful update",
+    "text": "Latest meaningful update\nA deployment pipeline and custom web interface were assembled for interactive exploration of HRRP results. The next phase is less about adding surface-level capability and more about testing the structure: which questions are supported, how results expose their basis, and where the interface should decline to answer."
+  },
+  {
+    "objectID": "projects/readmissions-interface/index.html#relevant-notes",
+    "href": "projects/readmissions-interface/index.html#relevant-notes",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Relevant notes",
+    "text": "Relevant notes\n\nTechnical build notes\nVideo walkthrough\nStart a conversation"
   }
 ]

@@ -1,285 +1,245 @@
 ---
 title: ""
-format: 
+description: "CentralStatz Lab is an independent analytical systems lab exploring how rigorous statistical thinking, reproducible design, and AI-assisted development can produce better ways to work with data."
+format:
   html:
     page-layout: full
+listing:
+  id: active-projects-listing
+  contents: "projects/*/index.qmd"
+  template: "_templates/project-card.ejs.md"
+  sort: "order asc"
+  fields: [title, description, image, preview_alt, category, status, stage, order, central_question, current_state, latest_update, next_step, limitations, looking_for]
+  filter-ui: false
+  sort-ui: false
 ---
 
-::: {.hero}
+::: {.lab-hero}
 
-# What's the most frustrating <span class="rotating-word">analytical</span> problem you're dealing with right now?
+::: {.hero-grid}
 
-<strong>Fragile reporting processes. Scattered workflows. Unclear analytical questions. Results that are difficult to reproduce.</strong>
+::: {.hero-copy}
+
+<div class="eyebrow"><span class="activity-pulse" aria-hidden="true"></span> Independent analytical systems lab</div>
+
+# Better analytical ideas, made tangible.
+
+<p class="hero-lead">CentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.</p>
+
+<p class="hero-support">Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.</p>
+
+<div class="hero-actions">
+  <a class="lab-button lab-button-primary" href="#active-projects">Explore active projects</a>
+  <a class="lab-button lab-button-secondary" href="#contact">Bring a problem</a>
+</div>
+
+:::
+
+::: {.hero-instrument aria-label="How a lab project develops"}
+
+<div class="instrument-topline"><span>LAB / 001</span><span>Current operating model</span></div>
+
+<div class="instrument-question">What should analytical work make possible?</div>
+
+<div class="instrument-flow">
+  <div><span>01</span><strong>Reason</strong><small>Frame the question</small></div>
+  <div><span>02</span><strong>Build</strong><small>Make it interactive</small></div>
+  <div><span>03</span><strong>Test</strong><small>Expose it to reality</small></div>
+</div>
+
+<div class="instrument-note"><span aria-hidden="true">↳</span> The interface is the current expression of the hypothesis—not proof that the hypothesis is right.</div>
+
+:::
+
+:::
+
+:::
+
+::: {.lab-section .projects-section}
+
+<div class="section-heading" id="active-projects">
+  <div><span class="section-index">01 / Active work</span><h2>Working hypotheses, in interface form.</h2></div>
+  <p>Selected experiments are published while they are still becoming. Status, limits, and next questions are part of the work—not footnotes.</p>
+</div>
+
+::: {#active-projects-listing}
+:::
+
+:::
+
+::: {.lab-section .process-section}
+
+<div class="section-heading" id="how-the-lab-works">
+  <div><span class="section-index">02 / Method</span><h2>Building is part of the reasoning.</h2></div>
+  <p>A prototype creates something concrete enough for users, experts, evidence, and constraints to push against.</p>
+</div>
+
+<ol class="process-track">
+  <li><span>01</span><h3>Observe</h3><p>Identify a recurring analytical problem or workflow that should work better.</p></li>
+  <li><span>02</span><h3>Reason</h3><p>Clarify the question, assumptions, users, evidence, and underlying structure.</p></li>
+  <li><span>03</span><h3>Prototype</h3><p>Build a working version quickly enough to make the idea tangible.</p></li>
+  <li><span>04</span><h3>Test</h3><p>Put it in front of users, experts, data, and real constraints.</p></li>
+  <li><span>05</span><h3>Evolve</h3><p>Improve it, pause it, publish what was learned, or develop it further.</p></li>
+</ol>
+
+:::
+
+::: {.lab-section .ai-section}
+
+::: {.ai-layout}
+
+::: {.ai-statement}
+
+<span class="section-index">03 / AI’s role</span>
+
+## Faster implementation changes which ideas are feasible.
+
+AI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone.
+
+:::
+
+::: {.ai-boundary}
+
+### What accelerates
+
+- interface and workflow implementation
+- exploration of alternative system designs
+- creation of testable analytical artifacts
+- iteration between reasoning and use
+
+### What does not disappear
+
+- statistical reasoning and domain expertise
+- definitions, assumptions, and data quality
+- review, validation, governance, and accountability
+- judgment about whether a problem is worth solving
+
+<p class="boundary-note">AI is a force multiplier for rigorous analytical thinking—not a substitute for it.</p>
+
+:::
+
+:::
+
+:::
+
+::: {.lab-section .philosophy-section}
+
+<div class="philosophy-mark" aria-hidden="true">S / S</div>
+
+::: {.philosophy-copy}
+
+<span class="section-index">04 / Philosophy</span>
+
+## Structure Before Sophistication {#philosophy}
+
+Sophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.
+
+Poor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.
+
+<div class="principle-grid">
+  <div><strong>Clear questions</strong><span>Know what the system is meant to answer.</span></div>
+  <div><strong>Defensible logic</strong><span>Make metrics and assumptions open to review.</span></div>
+  <div><strong>Reproducible systems</strong><span>Build work that can be understood and repeated.</span></div>
+  <div><strong>Honest boundaries</strong><span>State uncertainty and limits alongside capability.</span></div>
+</div>
+
+:::
+
+:::
+
+::: {.lab-section .engage-section}
+
+<div class="section-heading" id="work-with-centralstatz">
+  <div><span class="section-index">05 / Participate</span><h2>Help shape what the work becomes.</h2></div>
+  <p>The lab can lead to a better experiment, a useful pilot, an adapted system, an advisory engagement—or simply a clearer question.</p>
+</div>
+
+<div class="engage-grid">
+  <a href="#active-projects"><span>Test</span><strong>Try a prototype</strong><small>Explore active work and question what it does.</small></a>
+  <a href="mailto:alex@centralstatz.com?subject=Lab%20feedback"><span>Respond</span><strong>Share feedback</strong><small>Bring domain, analytical, or usability perspective.</small></a>
+  <a href="#contact"><span>Propose</span><strong>Bring a problem</strong><small>Describe a workflow or decision that should work better.</small></a>
+  <a href="mailto:alex@centralstatz.com?subject=CentralStatz%20Lab%20collaboration"><span>Collaborate</span><strong>Explore a pilot</strong><small>Adapt an experiment for a team or organization.</small></a>
+</div>
+
+:::
+
+::: {.lab-section .about-section}
+
+::: {.about-grid}
+
+::: {.about-copy}
+
+<span class="section-index">06 / About</span>
+
+## A statistician’s lab for analytical systems. {#about}
+
+CentralStatz was founded by **Alex Zajichek**, a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.
+
+His work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through the lab, Alex explores, designs, prototypes, and evaluates systems that make complex analytical questions easier to engage with—and easier to scrutinize.
+
+:::
+
+::: {.about-image}
+
+<img src="ai-headshot.png" alt="Portrait of Alex Zajichek, founder of CentralStatz">
+
+<span>Alex Zajichek · Statistician & data scientist · Wausau, Wisconsin</span>
+
+:::
+
+:::
+
+:::
+
+::: {.contact-section #contact}
+
+<div class="contact-intro">
+  <span class="section-index">07 / Open channel</span>
+  <h2>What analytical problem should work better?</h2>
+  <p>Share the rough version. This is a low-pressure starting point for a conversation, not a commitment.</p>
+</div>
 
 <form name="analytics-question" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="problem-form" action="/thank-you.html">
   <input type="hidden" name="form-name" value="analytics-question">
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field"></label>
-  </p>
-  <textarea name="problem" placeholder="Tell me about it..." required></textarea>
-  <input type="text" name="name" placeholder="Name">
-  <input type="email" name="email" placeholder="Email" required>
-  <button type="submit" class="btn btn-primary">Start the conversation</button>
-  <p class="submission-info-wrapper">
-  <a href="#" id="openSubmissionModal" style='font-size:smaller; margin-top=-10px;'>
-    What happens when I submit?
-  </a>
-</p>
+  <p class="visually-hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+  <label for="problem">The problem, workflow, or idea</label>
+<textarea id="problem" name="problem" placeholder="What is happening now—and what do you wish were possible?" required></textarea>
+<div class="form-row">
+<div><label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name"></div>
+<div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+</div>
+<div class="form-submit">
+<button type="submit" class="lab-button lab-button-primary">Start the conversation</button>
+<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">What happens when I submit?</button>
+</div>
 </form>
 
-:::
+<p class="contact-direct">Prefer email? <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a></p>
 
-::: {.identity-strip}
-
-Analytical partner for teams and organizations
-
-:::
-
-::: divider
-:::
-
-::: {.what-section}
-
-::: {.grid .what-grid}
-
-::: {.g-col-12 .g-col-md-5}
-
-::: {.what-image-card}
-<img src="howwedoit.png" alt="Analytics workflow illustration" />
-:::
-
-:::
-
-::: {.g-col-12 .g-col-md-7}
-
-<div class="section-kicker text-left">What we do</div>
-
-# Evaluate. Design. Build. {#what-we-do}
-
-<p class="what-lead">
-We help teams and organizations think through, design, and build analytical systems that bring structure, clarity, and reproducibility to complex data problems.
-</p>
-
-<p>
-Sometimes that means reporting pipelines, analytical applications, statistical workflows, or internal analytics infrastructure. Other times it simply means helping navigate difficult analytical decisions. The common thread?
-</p>
-
-::: {.what-callout}
-<span style="font-size:larger; color:white;">Disciplined</span> design. <span style="font-size:larger; color:white;">Reproducibility.</span> Statistical <span style="font-size:larger; color:white;">clarity.</span>
-:::
-
-:::
-
-:::
-
-:::
-
-::: divider
-:::
-
-::: {.philosophy-section}
-
-<div class="section-kicker">Our Philosophy</div>
-
-# Structure Before Sophistication {#our-philosophy}
-
-<p class="philosophy-lead">
-Most analytical problems don't begin with dashboards or models. 
-They begin with questions. We help our clients think through the structure behind the problem before building solutions.
-</p>
-
-::: {.grid .philosophy-grid}
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {.philosophy-card}
-
-<div class="card-number">01</div>
-
-## Build the Structure
-
-Create the foundation needed for analytical work to become transparent, maintainable, and reproducible.
-
-This may involve:
-
-- automated reporting pipelines
-- structured analytical datasets
-- interactive applications for exploration
-- reusable tools or packages
-- version control and documentation
-- internal analytics infrastructure
-
-:::
-
-:::
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {.philosophy-card}
-
-<div class="card-number">02</div>
-
-## Strengthen the Logic
-
-Clarify the reasoning behind the analysis so results are not only well-structured, but statistically sound and defensible.
-
-This may involve:
-
-- reviewing data/metric definitions
-- evaluating statistical approaches
-- clarifying cohorts and attribution rules
-- identifying sources of bias or instability
-- documenting analytical assumptions
-- connecting metrics to intended outcomes
-
-:::
-
-:::
-
-:::
-
-::: {.philosophy-callout}
-
-### Why Work With Us?
-
-Many organizations focus on output first. We focus on the systems and reasoning that make those outputs trustworthy.
-
-Our approach emphasizes transparency, reproducibility, and long-term maintainability — often using open, auditable technologies that reduce reliance on proprietary platforms.
-
-:::
-
-:::
-
-::: divider
-:::
-
-::: {.grid} 
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {style="text-align:center"}
-
-## Meet Alex {#about}
-
-:::
-
-A statistician and data scientist in Central Wisconsin, Alex has over a decade of experience learning, teaching, and doing data science work with a wide range of tools, methodologies and problem contexts. 
-
-His work is especially grounded in healthcare, where messy systems and fragile metrics make sound analytical structure especially important.
-
-Through CentralStatz, his focus is on helping organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time.
-
-:::
-
-::: {.g-col-12 .g-col-md-6}
-
-<br>
-
-<center><img src="ai-headshot.png" width="75%"/></center>
-
-:::
-:::
-
-::: divider
-:::
-
-::: {.grid} 
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {style="text-align:center"}
-
-## Contact Us {#contact}
-
-Alex Zajichek, Owner
-
-[**alex\@centralstatz.com**](mailto:alex@centralstatz.com)
-
-_Located in Wausau, WI, USA_
-
-:::
-
-:::
-
-::: {.g-col-12 .g-col-md-6}
-
-```{r}
-#| echo: false
-#| fig-height: 3
-
-library(leaflet)
-leaflet() |>
-  addTiles() |> 
-  setView(lat = 44.9591, lng = -89.6301, zoom = 9) |>
-  addMarkers(lat = 44.9591, lng = -89.6301, popup = "Wausau, Wisconsin, USA")
-```
-
-:::
 :::
 
 ```{=html}
-<script>
-  const words = [
-    "data",
-    "analytics",
-    "reporting",
-    "statistics",
-    "modeling",
-    "AI"
-  ];
-
-  let index = 0;
-  const wordElement = document.querySelector(".rotating-word");
-
-  setInterval(() => {
-    wordElement.style.opacity = 0;
-
-    setTimeout(() => {
-      index = (index + 1) % words.length;
-      wordElement.textContent = words[index];
-      wordElement.style.opacity = 1;
-    }, 250);
-  }, 2200);
-</script>
-```
-
-```{=html}
-<div id="submissionModal" class="modal">
+<div id="submissionModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
   <div class="modal-content">
-
-    <span class="close-modal">&times;</span>
-
-    <h3>What happens when I submit?</h3>
-
-    <p>
-      Your submission goes directly to me (<a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>). I'll review it and reach out via email with any initial advice or perspective I feel I can offer. This is not a commitment or bind to anything. But rather a connection point to begin a conversation about your problem. We'll take that wherever it leads.
-    </p>
-
-    <p><strong>- Alex</strong></p>
-
+    <button type="button" class="close-modal" aria-label="Close dialog">&times;</button>
+    <h3 id="modalTitle">What happens when I submit?</h3>
+    <p>Your note goes directly to me at <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>. I’ll review it and respond by email with any initial perspective I can offer. It is a connection point—not a commitment or obligation.</p>
+    <p><strong>— Alex</strong></p>
   </div>
 </div>
-```
-
-```{=html}
 <script>
-const modal = document.getElementById("submissionModal");
-const openBtn = document.getElementById("openSubmissionModal");
-const closeBtn = document.querySelector(".close-modal");
-
-openBtn.onclick = function(e) {
-  e.preventDefault();
-  modal.style.display = "flex";
-}
-
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-}
+(() => {
+  const modal = document.getElementById('submissionModal');
+  const openButton = document.getElementById('openSubmissionModal');
+  const closeButton = modal?.querySelector('.close-modal');
+  let previousFocus;
+  if (!modal || !openButton || !closeButton) return;
+  const open = () => { previousFocus = document.activeElement; modal.hidden = false; document.body.classList.add('modal-open'); closeButton.focus(); };
+  const close = () => { modal.hidden = true; document.body.classList.remove('modal-open'); previousFocus?.focus(); };
+  openButton.addEventListener('click', open);
+  closeButton.addEventListener('click', close);
+  modal.addEventListener('click', event => { if (event.target === modal) close(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.hidden) close(); });
+})();
 </script>
 ```

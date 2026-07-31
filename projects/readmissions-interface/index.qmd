@@ -1,0 +1,114 @@
+---
+title: "Hospital Readmissions Explorer"
+description: "A conversational interface for exploring public Hospital Readmissions Reduction Program data and making an analytical workflow easier to inspect."
+author: "Alex Zajichek"
+date: "2026-03-13"
+date-modified: "2026-03-13"
+image: "../../case-studies/llm-powered-app-for-hospital-readmissions/feature.png"
+preview_alt: "Hospital readmissions explorer showing a question and a generated chart"
+category: "Healthcare analytics"
+status: "Active development"
+stage: "Prototype"
+featured: true
+order: 1
+central_question: "Can a conversational interface make a complex public quality dataset easier to explore without hiding the analytical structure?"
+current_hypothesis: "A constrained interface can shorten the path from a question to an inspectable result while keeping the source data and logic visible."
+current_state: "A working web-interface prototype can accept questions and return data-driven responses."
+latest_update: "A deployment pipeline and custom web interface were assembled for interactive HRRP exploration."
+next_step: "Clarify guardrails, evaluation criteria, and the questions the interface should and should not answer."
+limitations: "This is an exploratory interface, not clinical decision support. No claims of validation, completeness, or production readiness are made."
+looking_for: "Questions, usability feedback, and healthcare-data perspectives"
+tags: [healthcare, public data, conversational interface, reproducibility]
+format:
+  html:
+    toc: true
+    body-classes: lab-project-page
+---
+
+::: {.project-hero}
+
+<div class="section-kicker">Project notebook · Active development</div>
+
+# Hospital Readmissions Explorer
+
+<p class="project-deck">A working exploration of how conversational interaction can make public hospital-readmissions data easier to question—and its analytical logic easier to inspect.</p>
+
+<div class="project-hero-actions">
+  <a class="lab-button lab-button-primary" href="mailto:alex@centralstatz.com?subject=Hospital%20Readmissions%20Explorer">Ask about this project</a>
+  <a class="lab-button lab-button-secondary" href="/#active-projects">Back to active work</a>
+</div>
+
+:::
+
+::: {.project-notebook}
+
+::: {.notebook-preview}
+
+![Hospital readmissions explorer prototype responding to a question with a chart](../../case-studies/llm-powered-app-for-hospital-readmissions/readmit_app.gif)
+
+<span>Current working interface · March 2026</span>
+
+:::
+
+::: {.notebook-grid}
+
+::: {.notebook-main}
+
+## Why this exists
+
+Public healthcare datasets contain valuable evidence, but useful exploration often requires knowledge of the source, measures, and analytical tools. This project asks whether a carefully bounded conversational layer can lower that interaction cost without pretending the underlying complexity has disappeared.
+
+## Current hypothesis
+
+A constrained interface can shorten the path from a question to an inspectable result while keeping source data, definitions, and analytical logic visible enough to question.
+
+## What the prototype demonstrates
+
+- A custom web interface for asking questions about Hospital Readmissions Reduction Program data.
+- A deployment path connecting a conversational interaction to analytical output.
+- A tangible interface that can now be evaluated instead of discussed only as a specification.
+
+## AI’s role
+
+AI-assisted implementation made it faster to connect the interface, analytical workflow, and deployment pieces. It did not define valid measures, determine appropriate interpretations, review the source data, or validate whether a response is fit for a healthcare decision.
+
+## What remains expert-driven
+
+Question framing, measure definitions, analytical constraints, evaluation, interpretation, and governance remain human responsibilities. In this context, a plausible answer is not the same as a defensible one.
+
+:::
+
+::: {.notebook-aside}
+
+### Project state
+
+**Status**  
+Active development
+
+**Stage**  
+Prototype
+
+**Known limitations**  
+Exploratory only. This is not clinical decision support, and no claims of validation, completeness, or production readiness are made.
+
+**Next experiment**  
+Clarify guardrails, evaluation criteria, and the questions the interface should and should not answer.
+
+**Useful participation**  
+Questions, usability feedback, and healthcare-data perspectives.
+
+:::
+
+:::
+
+## Latest meaningful update
+
+A deployment pipeline and custom web interface were assembled for interactive exploration of HRRP results. The next phase is less about adding surface-level capability and more about testing the structure: which questions are supported, how results expose their basis, and where the interface should decline to answer.
+
+## Relevant notes
+
+- [Technical build notes](https://www.zajichekstats.com/post/building-an-llm-powered-shiny-app-for-hospital-readmissions/)
+- [Video walkthrough](https://www.youtube.com/watch?v=YlLcxuAjgJw)
+- [Start a conversation](mailto:alex@centralstatz.com?subject=Hospital%20Readmissions%20Explorer)
+
+:::

@@ -1,0 +1,14 @@
+---
+title: "Thank you"
+description: "Thank you for contacting CentralStatz Lab."
+---
+
+::: {.simple-page}
+
+# The question is in the lab.
+
+Thanks for reaching out. Your note goes directly to Alex, who will review it and respond by email.
+
+[Return to CentralStatz Lab](/)
+
+:::
