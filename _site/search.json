@@ -81,21 +81,21 @@
     "href": "index.html",
     "title": "Better analytical ideas, made tangible.",
     "section": "",
-    "text": "Independent analytical systems lab\n\n\n\n\nCentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.\n\n\nExplore active projects Bring a problem\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it interactive\n\n\n03TestExpose it to reality\n\n\n\n↳ The interface is the current expression of the hypothesis—not proof that the hypothesis is right."
+    "text": "Independent analytical systems lab\n\n\n\n\nCentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.\n\n\nExplore active projects Bring a problem\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it interactive\n\n\n03TestExpose it to reality\n\n\n\n↳ The interface is the current expression of the hypothesis—not proof that the hypothesis is right."
   },
   {
-    "objectID": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
-    "href": "index.html#faster-implementation-changes-which-ideas-are-feasible.",
+    "objectID": "index.html#faster-implementation-changes-more-than-speed.",
+    "href": "index.html#faster-implementation-changes-more-than-speed.",
     "title": "Better analytical ideas, made tangible.",
-    "section": "Faster implementation changes which ideas are feasible.",
-    "text": "Faster implementation changes which ideas are feasible.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone."
+    "section": "Faster implementation changes more than speed.",
+    "text": "Faster implementation changes more than speed.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering: alternative formulations, interactive assumptions, dynamic systems, and workflows that connect models to decisions can be tested before one structure becomes expensive to replace."
   },
   {
     "objectID": "index.html#philosophy",
     "href": "index.html#philosophy",
     "title": "Better analytical ideas, made tangible.",
     "section": "Structure Before Sophistication",
-    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nPoor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.\n\n\nClear questionsKnow what the system is meant to answer.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
+    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nPoor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.\nExpanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.\n\n\nClear questionsLet the actual question—not inherited machinery—set the boundary.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
   },
   {
     "objectID": "index.html#about",

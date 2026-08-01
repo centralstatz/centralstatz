@@ -34,6 +34,8 @@ Every project should communicate:
 
 Treat the interface, screenshot, output, diagram, or visual as the current visible representation of the project’s underlying reasoning—not proof that the reasoning is correct or the work is complete.
 
+Rapid implementation should expand the analytical possibilities a project can responsibly consider, not merely produce a predetermined solution faster. Let the problem determine whether the useful artifact is a simple method, an alternative formulation, an interactive system, or something else. Added technical capability does not make complexity inherently better; “Structure Before Sophistication” remains the test for where additional machinery earns its place.
+
 ## Accuracy and evidence
 
 Inspect source material before writing. Classify consequential statements in working notes as **Supported fact**, **Reasonable inference**, **Unknown**, or **Private or unsuitable for publication**. Publish supported facts and clearly qualified interpretations; never turn unknowns into marketing claims.

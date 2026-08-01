@@ -26,7 +26,7 @@ listing:
 
 <p class="hero-lead">CentralStatz builds interactive prototypes for better ways to think, work, and make decisions with data.</p>
 
-<p class="hero-support">Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes the working hypothesis visible early enough to test.</p>
+<p class="hero-support">Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.</p>
 
 <div class="hero-actions">
   <a class="lab-button lab-button-primary" href="#active-projects">Explore active projects</a>
@@ -76,8 +76,8 @@ listing:
 
 <ol class="process-track">
   <li><span>01</span><h3>Observe</h3><p>Identify a recurring analytical problem or workflow that should work better.</p></li>
-  <li><span>02</span><h3>Reason</h3><p>Clarify the question, assumptions, users, evidence, and underlying structure.</p></li>
-  <li><span>03</span><h3>Prototype</h3><p>Build a working version quickly enough to make the idea tangible.</p></li>
+  <li><span>02</span><h3>Reason</h3><p>Clarify the question, inherited assumptions, users, evidence, and whether a simple structure is sufficient.</p></li>
+  <li><span>03</span><h3>Prototype</h3><p>Make one or more possible structures tangible enough to compare, question, and test.</p></li>
   <li><span>04</span><h3>Test</h3><p>Put it in front of users, experts, data, and real constraints.</p></li>
   <li><span>05</span><h3>Evolve</h3><p>Improve it, pause it, publish what was learned, or develop it further.</p></li>
 </ol>
@@ -92,29 +92,29 @@ listing:
 
 <span class="section-index">03 / AI’s role</span>
 
-## Faster implementation changes which ideas are feasible.
+## Faster implementation changes more than speed.
 
-AI-assisted development can reduce the distance between a well-reasoned concept and a working interface. That means analytical work can begin with something people can test, rather than months of specifications alone.
+AI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering: alternative formulations, interactive assumptions, dynamic systems, and workflows that connect models to decisions can be tested before one structure becomes expensive to replace.
 
 :::
 
 ::: {.ai-boundary}
 
-### What accelerates
+### Acceleration
 
-- interface and workflow implementation
-- exploration of alternative system designs
+- analytical code, interfaces, and supporting workflows
+- comparison of designs before committing
 - creation of testable analytical artifacts
 - iteration between reasoning and use
 
-### What does not disappear
+### Expanded possibility
 
-- statistical reasoning and domain expertise
-- definitions, assumptions, and data quality
-- review, validation, governance, and accountability
-- judgment about whether a problem is worth solving
+- reconsider the shape and scope of the project
+- represent decisions, states, uncertainty, or trajectories when useful
+- compare meaningful analytical formulations
+- let the problem determine the machinery
 
-<p class="boundary-note">AI is a force multiplier for rigorous analytical thinking—not a substitute for it.</p>
+<p class="boundary-note">The goal is not maximum sophistication. It is less compromise for the wrong reasons. Statistical reasoning, domain expertise, validation, and judgment still determine what should be built.</p>
 
 :::
 
@@ -136,8 +136,10 @@ Sophisticated-looking outputs are becoming easier to generate. Framing, definiti
 
 Poor thinking can now be implemented faster, too. Structure is the quality-control layer: the disciplined design that makes an analytical system transparent, reproducible, maintainable, and defensible.
 
+Expanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.
+
 <div class="principle-grid">
-  <div><strong>Clear questions</strong><span>Know what the system is meant to answer.</span></div>
+  <div><strong>Clear questions</strong><span>Let the actual question—not inherited machinery—set the boundary.</span></div>
   <div><strong>Defensible logic</strong><span>Make metrics and assumptions open to review.</span></div>
   <div><strong>Reproducible systems</strong><span>Build work that can be understood and repeated.</span></div>
   <div><strong>Honest boundaries</strong><span>State uncertainty and limits alongside capability.</span></div>

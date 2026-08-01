@@ -4,7 +4,7 @@ CentralStatz Statistical & Data Sciences LLC is a statistical and data science c
 
 ## CentralStatz Lab branch
 
-The `feature/centralstatz-lab` branch is an exploratory redesign that presents CentralStatz as an independent analytical systems lab. It preserves the legal business identity, logo, brand foundation, contact workflow, and “Structure Before Sophistication” philosophy while making active prototypes the center of the experience.
+The `feature/centralstatz-lab` branch is an exploratory redesign that presents CentralStatz as an independent analytical systems lab. It preserves the legal business identity, logo, brand foundation, contact workflow, and “Structure Before Sophistication” philosophy while making active prototypes the center of the experience. The Lab treats faster implementation as an opportunity to reconsider what analytical work can become—not just to produce a predetermined solution sooner—while retaining simple methods whenever they best fit the question.
 
 ## Run the site
 

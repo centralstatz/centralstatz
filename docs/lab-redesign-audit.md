@@ -28,6 +28,12 @@
 
 Projects live under `projects/<slug>/index.qmd`. Quarto front matter stores card metadata (status, stage, central question, current state, update, next step, limitations, and participation request); the page body stores the fuller notebook narrative. A custom EJS listing template renders cards without duplicating project content in the homepage.
 
+## Refined Lab philosophy
+
+The approved visual structure now carries a sharper distinction between implementation acceleration and expanded analytical possibility. Faster implementation can shorten familiar work, but its more consequential use is making alternative formulations and system shapes affordable to compare before one becomes costly to replace. This does not create a preference for complexity: the question, evidence, and decision still determine whether a simple method or additional machinery is warranted.
+
+The existing project schema is sufficient. `central_question`, `current_hypothesis`, project reasoning, and limitations can express this boundary without adding a field that every project would be forced to populate.
+
 ## Expected changes
 
 - `_quarto.yml`, `index.qmd`, and `styles.scss`

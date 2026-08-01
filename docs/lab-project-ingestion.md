@@ -27,6 +27,12 @@ Additional context:
 
 Supported sources may be combined. The agent asks follow-up questions only when missing context materially changes accuracy, ownership, privacy, or permission to publish.
 
+## Analytical boundary
+
+Ingestion should identify not only what implementation can be accelerated, but whether lower implementation cost allows the project to consider a meaningfully different analytical form. Use the existing `central_question`, `current_hypothesis`, reasoning narrative, and limitations to explain that distinction when it is supported; a separate schema field is not required.
+
+Do not imply that every project needs more machinery. A simple method remains preferable when it best matches the question, evidence, and decision. Describe alternative formulations, simulation, interactivity, or dynamic systems only when source evidence makes them relevant, and present prototypes as ways to compare and test structures rather than proof that a more elaborate structure is better.
+
 ## Modes
 
 ### Dry-run
