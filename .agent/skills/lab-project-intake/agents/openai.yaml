@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lab Project Intake"
+  short_description: "Gather safe, publishable project context"
+  default_prompt: "Use $lab-project-intake to begin a CentralStatz Lab project intake in dry-run mode."

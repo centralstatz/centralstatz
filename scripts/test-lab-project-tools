@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "open3"
+require "tmpdir"
+
+root = File.expand_path("..", __dir__)
+validator = File.join(root, "scripts", "validate-lab-projects")
+scaffold = File.join(root, "scripts", "new-lab-project")
+
+def run(*command)
+  Open3.capture3(*command)
+end
+
+stdout, stderr, status = run(validator)
+abort "Expected repository validation to pass:\n#{stdout}#{stderr}" unless status.success?
+
+stdout, stderr, status = run(scaffold, "--dry-run", "fixture-project", "Fixture Project")
+abort "Expected scaffold dry run to pass:\n#{stdout}#{stderr}" unless status.success? && stdout.include?("No files changed")
+
+_stdout, stderr, status = run(scaffold, "readmissions-interface", "Duplicate")
+abort "Expected duplicate slug to fail" if status.success? || !stderr.include?("already exists")
+
+Dir.mktmpdir("lab-project-validator-") do |temporary_root|
+  fixture_dir = File.join(temporary_root, "lab", "projects", "broken-project")
+  FileUtils.mkdir_p(fixture_dir)
+  FileUtils.cp(
+    File.join(root, "tests", "fixtures", "invalid-lab-projects", "broken-project.qmd.fixture"),
+    File.join(fixture_dir, "index.qmd")
+  )
+  _stdout, stderr, status = run(validator, "--root", temporary_root)
+  expected = ["missing required field title", "invalid stage", "image does not exist", "unsafe absolute local path"]
+  missing = expected.reject { |message| stderr.include?(message) }
+  abort "Expected invalid fixture to fail with #{missing.join(', ')}:\n#{stderr}" if status.success? || missing.any?
+end
+
+puts "Lab project tool tests passed (valid schema, scaffold dry run, duplicate slug, missing title, invalid stage, missing image, and unsafe local path)."

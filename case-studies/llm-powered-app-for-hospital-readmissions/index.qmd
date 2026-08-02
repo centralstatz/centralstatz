@@ -1,9 +1,11 @@
 ---
 title: "Deploying a Chatbot to Analyze Hospital Readmissions Data"
+canonical-url: "https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/"
 description: "Building a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data."
 author: "Alex Zajichek"
 date: "3/13/2026"
 image: "feature.png"
+image-alt: "Hospital readmissions exploration interface"
 format:
   html:
     code-fold: true
@@ -12,7 +14,7 @@ format:
 
 _In progress_
 
-![](readmit_app.gif)
+![Hospital readmissions exploration interface showing a map, charts, summary counts, and a data table](readmit_app.gif){fig-alt="Hospital readmissions exploration interface showing a map, charts, summary counts, and a data table"}
 
 # 1. Building the Structure
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lab Project Content"
+  short_description: "Draft precise Lab project content"
+  default_prompt: "Use $lab-project-content to draft schema-valid card metadata and a concise project notebook from analyzed evidence."

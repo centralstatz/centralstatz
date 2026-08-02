@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lab Project Analysis"
+  short_description: "Analyze project evidence and maturity"
+  default_prompt: "Use $lab-project-analysis to classify evidence, maturity, ownership, and publication risks for a Lab project."

@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/lab/index.html",
+    "items": [
+      "/lab/projects/readmissions-interface/index.html",
+      "/lab/projects/analytics-reporting/index.html",
+      "/lab/projects/flux-estimand/index.html"
+    ]
+  },
+  {
     "listing": "/case-studies.html",
     "items": [
       "/case-studies/llm-powered-app-for-hospital-readmissions/index.html",

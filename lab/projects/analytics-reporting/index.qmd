@@ -1,0 +1,69 @@
+---
+title: "On-Demand Analytics Report"
+canonical-url: "https://www.centralstatz.com/lab/projects/analytics-reporting/"
+title-block-style: none
+description: "A reproducible workflow for generating a branded PDF report from Google Analytics data on demand."
+author: "Alex Zajichek"
+date: "2026-03-12"
+date-modified: "2026-03-12"
+image: "../../../case-studies/streamlining-google-analytics-pdf-report/feature.png"
+preview_alt: "Preview of a branded Google Analytics PDF report"
+category: "Reporting systems"
+status: "Exploring"
+stage: "Concept"
+featured: true
+order: 2
+ownership: "Project page authored by Alex Zajichek for CentralStatz"
+source_type: "mixed"
+visual_type: "project-output"
+visual_is_concept: false
+visibility: "public"
+central_question: "How can a recurring analytics report become a reproducible system instead of a fragile manual task?"
+current_hypothesis: "A parameterized, on-demand reporting workflow can improve consistency while preserving room for interpretation."
+current_state: "An initial branded report artifact exists; the public project notes remain intentionally limited."
+latest_update: "The first report-generation workflow and visual output were assembled."
+next_step: "Document inputs, review steps, and the boundary between automated output and analyst interpretation."
+limitations: "The repository does not yet document operational use, validation, or a public deployment."
+looking_for: "Recurring-reporting use cases and workflow feedback"
+tags: [reporting, reproducibility, automation, analytics]
+format:
+  html:
+    toc: true
+    body-classes: lab-project-page
+---
+
+::: {.project-hero}
+
+<div class="section-kicker">Project notebook · Exploring</div>
+
+# On-Demand Analytics Report
+
+<p class="project-deck">An early exploration of turning a recurring Google Analytics report into a reproducible, branded workflow.</p>
+
+:::
+
+::: {.project-notebook}
+
+![Preview of a branded Google Analytics PDF report](../../../case-studies/streamlining-google-analytics-pdf-report/feature.png){.detail-preview fig-alt="Preview of a branded Google Analytics PDF report"}
+
+## Why this exists
+
+Recurring reports often accumulate manual steps, hidden decisions, and formatting work. This project explores a more explicit system: defined inputs, repeatable transformations, a consistent artifact, and clear places for analyst review.
+
+## Current state
+
+An initial report-generation workflow and visual artifact exist. The repository does not yet contain enough evidence to describe operational use, validation, or deployment, so those details remain intentionally provisional.
+
+## Current hypothesis
+
+A parameterized, on-demand workflow can reduce repetitive assembly and improve consistency, while leaving interpretation and quality review with the analyst.
+
+## Next experiment
+
+Document the inputs, review gates, and the boundary between automated output and analyst interpretation.
+
+## Participate
+
+If your team maintains a recurring report that is difficult to reproduce or update, [share the workflow](mailto:alex@centralstatz.com?subject=On-Demand%20Analytics%20Report).
+
+:::

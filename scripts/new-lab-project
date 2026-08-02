@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+
+dry_run = ARGV.delete("--dry-run")
+slug, title = ARGV
+abort "Usage: scripts/new-lab-project [--dry-run] <slug> \"Project Title\"" unless slug && title
+abort "Slug must use lowercase letters, numbers, and single hyphens." unless slug.match?(/\A[a-z0-9]+(?:-[a-z0-9]+)*\z/)
+
+root = File.expand_path("..", __dir__)
+directory = File.join(root, "lab", "projects", slug)
+target = File.join(directory, "index.qmd")
+abort "Project already exists: lab/projects/#{slug}" if File.exist?(directory)
+
+if dry_run
+  puts "Would create lab/projects/#{slug}/index.qmd as a draft. No files changed."
+  exit 0
+end
+
+FileUtils.mkdir_p(directory)
+File.write(target, <<~QMD)
+  ---
+  title: #{title.dump}
+  description: "TODO: Write one evidence-based sentence."
+  category: "TODO"
+  status: "Exploring"
+  stage: "Question"
+  featured: false
+  order: 999
+  ownership: "TODO: Record supported ownership or attribution."
+  source_type: "description"
+  visibility: "unknown"
+  central_question: "TODO: State the question being explored."
+  current_hypothesis: "TODO: State the current hypothesis, or remove this optional field."
+  current_state: "TODO: State only what demonstrably exists."
+  latest_update: "TODO: Record the latest evidenced development."
+  next_step: "TODO: State the next experiment, not a promise."
+  limitations: "TODO: State material uncertainty or boundaries."
+  looking_for: "None currently"
+  tags: []
+  draft: true
+  format:
+    html:
+      toc: true
+      body-classes: lab-project-page
+  ---
+
+  ::: {.project-hero}
+
+  <div class="section-kicker">Project notebook · Exploring</div>
+
+  # #{title}
+
+  <p class="project-deck">TODO: Add a concise, evidence-based project deck.</p>
+
+  :::
+
+  ::: {.project-notebook}
+
+  ## Why this exists
+
+  TODO: Explain the motivating problem without unsupported claims.
+
+  ## Current hypothesis
+
+  TODO: Explain the present design or analytical idea.
+
+  ## Current state
+
+  TODO: Separate what exists from what is planned.
+
+  ## Known limitations
+
+  TODO: State uncertainty and validation boundaries.
+
+  ## Next experiment
+
+  TODO: Describe the next useful test or milestone.
+
+  ## Participate
+
+  TODO: Describe useful participation, or state that none is requested.
+
+  :::
+QMD
+
+puts "Created lab/projects/#{slug}/index.qmd as a draft. Replace every TODO, choose a unique order, add supported provenance/visual metadata, set draft: false, and validate."

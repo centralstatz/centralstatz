@@ -1,5 +1,6 @@
 ---
 title: "Case Studies"
+canonical-url: "https://www.centralstatz.com/case-studies.html"
 listing:
   contents: 
     - "case-studies/*/index.qmd"

@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
@@ -62,13 +62,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
 <link href="../../logo_background.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -78,20 +73,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7f922e4f3a3c4d26b9720c48a09e2f75.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c7580522e2a428336c0d7f71a11321c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -115,6 +98,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <meta property="og:title" content="Deploying a Chatbot to Analyze Hospital Readmissions Data – CentralStatz Statistical &amp; Data Sciences LLC">
@@ -123,6 +107,15 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 <meta property="og:site_name" content="CentralStatz Statistical &amp; Data Sciences LLC">
 <meta property="og:image:height" content="1226">
 <meta property="og:image:width" content="1862">
+<meta property="og:image:alt" content="Hospital readmissions exploration interface">
+<meta name="twitter:title" content="Deploying a Chatbot to Analyze Hospital Readmissions Data – CentralStatz Statistical &amp; Data Sciences LLC">
+<meta name="twitter:description" content="Building a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data.">
+<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
+<meta name="twitter:image-height" content="1226">
+<meta name="twitter:image-width" content="1862">
+<meta name="twitter:image:alt" content="Hospital readmissions exploration interface">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -136,40 +129,33 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
     <img src="../../logo.png" alt="" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../#what-we-do"> 
-<span class="menu-text">What We Do</span></a>
-  </li>  
+    <a class="nav-link" href="../../">
+<span class="menu-text">Home</span></a>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../#our-philosophy"> 
-<span class="menu-text">Our Philosophy</span></a>
-  </li>  
+    <a class="nav-link" href="../../#services">
+<span class="menu-text">Services</span></a>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../#about"> 
+    <a class="nav-link" href="../../lab/">
+<span class="menu-text">Lab</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../#about">
 <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../#contact"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/centralstatz"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:alex@centralstatz.com"> <i class="bi bi-envelope" role="img" aria-label="Email">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../#contact">
+<span class="menu-text">Contact</span></a>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -181,7 +167,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -205,24 +191,29 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
              <p>Alex Zajichek </p>
           </div>
   </div>
-    
+
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
       <p class="date">March 13, 2026</p>
     </div>
   </div>
-  
-    
+
+
   </div>
-  
+
 
 
 </header>
 
 
 <p><em>In progress</em></p>
-<p><img src="readmit_app.gif" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="readmit_app.gif" class="img-fluid figure-img" alt="Hospital readmissions exploration interface showing a map, charts, summary counts, and a data table"></p>
+<figcaption>Hospital readmissions exploration interface showing a map, charts, summary counts, and a data table</figcaption>
+</figure>
+</div>
 <section id="building-the-structure" class="level1">
 <h1>1. Building the Structure</h1>
 </section>
@@ -237,6 +228,21 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 </section>
 
 </main> <!-- /main -->
+<script>
+(() => {
+  const path = window.location.pathname.replace(/index\.html$/, '');
+  const section = path.startsWith('/lab/') ? 'lab' : (path === '/' ? 'home' : null);
+  if (!section) return;
+
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    const target = new URL(link.href, window.location.href).pathname.replace(/index\.html$/, '');
+    const active = section === 'lab' ? target === '/lab/' : target === '/';
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -248,7 +254,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -268,11 +274,11 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -345,7 +351,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
           if (codeDiv.classList.contains(fromCls)) {
             codeDiv.classList.remove(fromCls);
             codeDiv.classList.add(toCls);
-          } 
+          }
         }
         return false;
       }
@@ -399,7 +405,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -474,7 +480,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -502,7 +508,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -526,7 +532,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -566,7 +572,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -689,47 +695,49 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Deploying a Chatbot to Analyze Hospital Readmissions Data"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Building a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data."</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Alex Zajichek"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "3/13/2026"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "feature.png"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>_In progress_</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">canonical-url:</span><span class="co"> "https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Building a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data."</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Alex Zajichek"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "3/13/2026"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "feature.png"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">image-alt:</span><span class="co"> "Hospital readmissions exploration interface"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](readmit_app.gif)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>_In progress_</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Building the Structure</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![Hospital readmissions exploration interface showing a map, charts, summary counts, and a data table](readmit_app.gif)</span>{fig-alt="Hospital readmissions exploration interface showing a map, charts, summary counts, and a data table"}</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Strengthening the Logic</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Building the Structure</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>_For more details on the technical backend for how this was built, you can read [this blog post](https://www.zajichekstats.com/post/building-an-llm-powered-shiny-app-for-hospital-readmissions/) or watch the video below._</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Strengthening the Logic</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://www.youtube.com/embed/YlLcxuAjgJw &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>_For more details on the technical backend for how this was built, you can read [this blog post](https://www.zajichekstats.com/post/building-an-llm-powered-shiny-app-for-hospital-readmissions/) or watch the video below._</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://www.youtube.com/embed/YlLcxuAjgJw &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-© 2026 CentralStatz Statistical &amp; Data Sciences LLC
-<div class="footer-icons">
-<p><a href="mailto:alex@centralstatz.com" target="_blank"><i class="bi bi-envelope"></i></a> <a href="https://www.linkedin.com/company/centralstatz" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/centralstatz" target="_blank"><i class="bi bi-github"></i></a> <a href="https://www.youtube.com/@centralstatz" target="_blank"><i class="bi bi-youtube"></i></a></p>
+<p>© 2026 CentralStatz Statistical &amp; Data Sciences LLC · Wausau, Wisconsin</p>
 </div>
+    <div class="nav-footer-center">
+<p><a href="../../">Home</a> · <a href="../../#services">Services</a> · <a href="../../lab/">Lab</a> · <a href="../../#about">About</a> · <a href="../../#contact">Contact</a></p>
 </div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<div class="footer-icons">
+<p><a href="mailto:alex@centralstatz.com" aria-label="Email CentralStatz"><i class="bi bi-envelope"></i></a> <a href="https://www.linkedin.com/company/centralstatz" aria-label="CentralStatz on LinkedIn"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/centralstatz" aria-label="CentralStatz on GitHub"><i class="bi bi-github"></i></a> <a href="https://www.youtube.com/@centralstatz" aria-label="CentralStatz on YouTube"><i class="bi bi-youtube"></i></a></p>
+</div>
+</div>
   </div>
 </footer>
 
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,5 +1,110 @@
 [
   {
+    "objectID": "thank-you.html",
+    "href": "thank-you.html",
+    "title": "Thank you for reaching out.",
+    "section": "",
+    "text": "Thank you for reaching out.\nThanks for reaching out. Your note goes directly to Alex, who will review it and respond by email.\nReturn to CentralStatz"
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html",
+    "href": "lab/projects/flux-estimand/index.html",
+    "title": "Flux Estimand Framework",
+    "section": "",
+    "text": "Alex Zajichek\n\n2026-07-02"
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#why-this-exists",
+    "href": "lab/projects/flux-estimand/index.html#why-this-exists",
+    "title": "Flux Estimand Framework",
+    "section": "Why this exists",
+    "text": "Why this exists\nSimulation projects often begin with a domain-sized ambition: simulate the system. That framing has no natural stopping point because more entities, mechanisms, and interactions can always be added in the name of realism.\nFlux Estimand begins with a narrower question: What decision is being evaluated, and which counterfactual worlds need to be compared? The goal is to make the scientific and decision target explicit before implementation choices begin to define the project."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#current-hypothesis",
+    "href": "lab/projects/flux-estimand/index.html#current-hypothesis",
+    "title": "Flux Estimand Framework",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nAn explicit estimand can anchor a simulation around its decision, conditioning state, alternative actions or policies, outcomes, contrasts, and assumptions. A model can then be judged by whether it is sufficient for that comparison—not by whether it reproduces an entire domain."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#how-the-framework-works",
+    "href": "lab/projects/flux-estimand/index.html#how-the-framework-works",
+    "title": "Flux Estimand Framework",
+    "section": "How the framework works",
+    "text": "How the framework works\n\nIdentify the decision and the moment at which it is made.\nDefine the shared conditioning state from which counterfactual worlds diverge.\nSpecify the alternative actions or policies.\nDefine target quantities, contrasts, assumptions, and validation needs.\nBuild the simplest ModelBundle capable of estimating those quantities credibly.\nAdd fidelity only when it materially improves the target comparison."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#estimands-and-modelbundles",
+    "href": "lab/projects/flux-estimand/index.html#estimands-and-modelbundles",
+    "title": "Flux Estimand Framework",
+    "section": "Estimands and ModelBundles",
+    "text": "Estimands and ModelBundles\nThe estimand is the stable decision specification. A Flux ModelBundle is one executable implementation of it. Multiple bundles may target the same estimand while using different assumptions, state representations, fidelity levels, or computational strategies.\nThat separation allows the decision question to remain fixed while implementations evolve or are compared."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#relationship-to-flux",
+    "href": "lab/projects/flux-estimand/index.html#relationship-to-flux",
+    "title": "Flux Estimand Framework",
+    "section": "Relationship to Flux",
+    "text": "Relationship to Flux\nFlux Estimand is owned by Alex Zajichek and is being developed as a methodological layer for decision-oriented applications of Flux. Flux remains a separate simulation ecosystem maintained in its own repository; Flux Estimand does not replace or claim ownership of it."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#what-currently-exists",
+    "href": "lab/projects/flux-estimand/index.html#what-currently-exists",
+    "title": "Flux Estimand Framework",
+    "section": "What currently exists",
+    "text": "What currently exists\nThe public repository contains conceptual documentation, guidance for creating and reviewing estimands, and a copyable project structure centered on an authoritative ESTIMAND.md. It is a framework repository—not itself an estimand project—and therefore does not contain a root estimand or executable simulation bundle."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#current-limitations",
+    "href": "lab/projects/flux-estimand/index.html#current-limitations",
+    "title": "Flux Estimand Framework",
+    "section": "Current limitations",
+    "text": "Current limitations\nFlux Estimand is experimental methodology. Simulation can make alternative worlds executable under stated assumptions, but it does not establish that those assumptions are correct, that a state representation is sufficient, or that the resulting comparison is valid. The framework complements causal-inference thinking; it is not a substitute for established study-design and estimation methods."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#next-experiment",
+    "href": "lab/projects/flux-estimand/index.html#next-experiment",
+    "title": "Flux Estimand Framework",
+    "section": "Next experiment",
+    "text": "Next experiment\nThe next useful test is a concrete downstream decision problem. That application can reveal whether the template clarifies the target comparison, prevents unnecessary model scope, separates scientific assumptions from implementation choices, and produces validation requirements that can actually be evaluated."
+  },
+  {
+    "objectID": "lab/projects/flux-estimand/index.html#participate",
+    "href": "lab/projects/flux-estimand/index.html#participate",
+    "title": "Flux Estimand Framework",
+    "section": "Participate",
+    "text": "Participate\nMethodological critique is welcome—especially around conditioning states, counterfactual definitions, model sufficiency, validation targets, and the boundary between estimands and their implementations.\n\nReview Flux Estimand on GitHub\nShare methodological feedback"
+  },
+  {
+    "objectID": "lab/index.html",
+    "href": "lab/index.html",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "",
+    "text": "CentralStatz Lab\n\n\n\n\nA focused space for exploring what analytical work can become when implementation is no longer the primary constraint.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.\n\n\nExplore active projects Work with CentralStatz\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it tangible\n\n\n03TestExpose it to reality\n\n\n\n↳ The artifact expresses the current hypothesis—it does not prove the hypothesis is right."
+  },
+  {
+    "objectID": "lab/index.html#faster-implementation-changes-more-than-speed.",
+    "href": "lab/index.html#faster-implementation-changes-more-than-speed.",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Faster implementation changes more than speed.",
+    "text": "Faster implementation changes more than speed.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace."
+  },
+  {
+    "objectID": "lab/index.html#lab-philosophy",
+    "href": "lab/index.html#lab-philosophy",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Structure Before Sophistication",
+    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nExpanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.\n\n\nClear questionsLet the actual question—not inherited machinery—set the boundary.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
+  },
+  {
+    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "title": "Streamlining a Custom Google Analytics Report",
+    "section": "",
+    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
+  },
+  {
     "objectID": "case-studies.html",
     "href": "case-studies.html",
     "title": "Case Studies",
@@ -11,48 +116,132 @@
     "href": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
     "title": "Deploying a Chatbot to Analyze Hospital Readmissions Data",
     "section": "",
-    "text": "In progress\n\n\n1. Building the Structure\n\n\n2. Strengthening the Logic\nFor more details on the technical backend for how this was built, you can read this blog post or watch the video below."
+    "text": "In progress\n\n\n\nHospital readmissions exploration interface showing a map, charts, summary counts, and a data table\n\n\n\n1. Building the Structure\n\n\n2. Strengthening the Logic\nFor more details on the technical backend for how this was built, you can read this blog post or watch the video below."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
+    "title": "Bring structure to difficult analytical problems.",
     "section": "",
-    "text": "Fragile reporting processes. Scattered workflows. Unclear analytical questions. Results that are difficult to reproduce.\n\n\n\nDon’t fill this out: \n\n\n  Start the conversation\n\n What happens when I submit?"
+    "text": "Analytical partner for teams and organizations\n\n\n\n\nCentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.\n\n\nThe work can begin with advisory leadership, a fragile reporting process, an unclear analytical question, or a system that no longer supports the decisions around it. The starting point is a conversation about the real problem—not a predetermined tool.\n\n\nStart a conversation How CentralStatz helps\n\n\n\n\n\nCentralStatz / ApproachStructure before sophistication\n\n\nBuild what the decision actually requires.\n\n\n\n01StructureFrame the system\n\n\n02LogicDefend the reasoning\n\n\n03BuildImplement where useful\n\n\n\n↳ Good analytical work connects questions, evidence, decisions, and maintainable implementation."
   },
   {
-    "objectID": "index.html#build-the-structure",
-    "href": "index.html#build-the-structure",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Build the Structure",
-    "text": "Build the Structure\nCreate the foundation needed for analytical work to become transparent, maintainable, and reproducible.\nThis may involve:\n\nautomated reporting pipelines\nstructured analytical datasets\ninteractive applications for exploration\nreusable tools or packages\nversion control and documentation\ninternal analytics infrastructure"
+    "objectID": "index.html#philosophy",
+    "href": "index.html#philosophy",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "Structure Before Sophistication",
+    "text": "Structure Before Sophistication\nMost analytical problems do not begin with dashboards or models. They begin with questions. CentralStatz works through the structure behind the problem before building a solution.\nMany organizations focus on output first. The stronger foundation is the system and reasoning that make an output trustworthy: transparent definitions, reproducible processes, defensible metrics, and maintainable implementation.\n\n\nClear questionsDefine what the work is meant to answer and support.\n\n\nDefensible logicMake measures and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood, repeated, and maintained.\n\n\nAppropriate toolsUse sophistication only where the problem earns it."
   },
   {
-    "objectID": "index.html#strengthen-the-logic",
-    "href": "index.html#strengthen-the-logic",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Strengthen the Logic",
-    "text": "Strengthen the Logic\nClarify the reasoning behind the analysis so results are not only well-structured, but statistically sound and defensible.\nThis may involve:\n\nreviewing data/metric definitions\nevaluating statistical approaches\nclarifying cohorts and attribution rules\nidentifying sources of bias or instability\ndocumenting analytical assumptions\nconnecting metrics to intended outcomes"
+    "objectID": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
+    "href": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "A place to investigate what analytical work could become.",
+    "text": "A place to investigate what analytical work could become.\nThe CentralStatz Lab turns carefully reasoned ideas into tangible prototypes, frameworks, and working systems that can be tested, challenged, and refined. It complements advisory work by making Alex’s approach to framing and building analytical systems visible—without making client work experimental by default.\nExplore the Lab →"
   },
   {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Meet Alex",
-    "text": "Meet Alex"
+    "objectID": "index.html#meet-alex-zajichek",
+    "href": "index.html#meet-alex-zajichek",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "Meet Alex Zajichek",
+    "text": "Meet Alex Zajichek\nAlex is a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "What’s the most frustrating analytical problem you’re dealing with right now?",
-    "section": "Contact Us",
-    "text": "Contact Us\nAlex Zajichek, Owner\nalex@centralstatz.com\nLocated in Wausau, WI, USA"
-  },
-  {
-    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "title": "Streamlining a Custom Google Analytics Report",
+    "objectID": "lab/projects/analytics-reporting/index.html",
+    "href": "lab/projects/analytics-reporting/index.html",
+    "title": "On-Demand Analytics Report",
     "section": "",
-    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
+    "text": "Alex Zajichek\n\n2026-03-12"
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#why-this-exists",
+    "href": "lab/projects/analytics-reporting/index.html#why-this-exists",
+    "title": "On-Demand Analytics Report",
+    "section": "Why this exists",
+    "text": "Why this exists\nRecurring reports often accumulate manual steps, hidden decisions, and formatting work. This project explores a more explicit system: defined inputs, repeatable transformations, a consistent artifact, and clear places for analyst review."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#current-state",
+    "href": "lab/projects/analytics-reporting/index.html#current-state",
+    "title": "On-Demand Analytics Report",
+    "section": "Current state",
+    "text": "Current state\nAn initial report-generation workflow and visual artifact exist. The repository does not yet contain enough evidence to describe operational use, validation, or deployment, so those details remain intentionally provisional."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#current-hypothesis",
+    "href": "lab/projects/analytics-reporting/index.html#current-hypothesis",
+    "title": "On-Demand Analytics Report",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nA parameterized, on-demand workflow can reduce repetitive assembly and improve consistency, while leaving interpretation and quality review with the analyst."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#next-experiment",
+    "href": "lab/projects/analytics-reporting/index.html#next-experiment",
+    "title": "On-Demand Analytics Report",
+    "section": "Next experiment",
+    "text": "Next experiment\nDocument the inputs, review gates, and the boundary between automated output and analyst interpretation."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#participate",
+    "href": "lab/projects/analytics-reporting/index.html#participate",
+    "title": "On-Demand Analytics Report",
+    "section": "Participate",
+    "text": "Participate\nIf your team maintains a recurring report that is difficult to reproduce or update, share the workflow."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html",
+    "href": "lab/projects/readmissions-interface/index.html",
+    "title": "Hospital Readmissions Explorer",
+    "section": "",
+    "text": "Alex Zajichek\n\n2026-03-13"
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#why-this-exists",
+    "href": "lab/projects/readmissions-interface/index.html#why-this-exists",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Why this exists",
+    "text": "Why this exists\nPublic healthcare datasets contain valuable evidence, but useful exploration often requires knowledge of the source, measures, and analytical tools. This project asks whether a carefully bounded conversational layer can lower that interaction cost without pretending the underlying complexity has disappeared."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#current-hypothesis",
+    "href": "lab/projects/readmissions-interface/index.html#current-hypothesis",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nA constrained interface can shorten the path from a question to an inspectable result while keeping source data, definitions, and analytical logic visible enough to question."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#what-the-prototype-demonstrates",
+    "href": "lab/projects/readmissions-interface/index.html#what-the-prototype-demonstrates",
+    "title": "Hospital Readmissions Explorer",
+    "section": "What the prototype demonstrates",
+    "text": "What the prototype demonstrates\n\nA custom web interface for asking questions about Hospital Readmissions Reduction Program data.\nA deployment path connecting a conversational interaction to analytical output.\nA tangible interface that can now be evaluated instead of discussed only as a specification."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#ais-role",
+    "href": "lab/projects/readmissions-interface/index.html#ais-role",
+    "title": "Hospital Readmissions Explorer",
+    "section": "AI’s role",
+    "text": "AI’s role\nAI-assisted implementation made it faster to connect the interface, analytical workflow, and deployment pieces. It did not define valid measures, determine appropriate interpretations, review the source data, or validate whether a response is fit for a healthcare decision."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#what-remains-expert-driven",
+    "href": "lab/projects/readmissions-interface/index.html#what-remains-expert-driven",
+    "title": "Hospital Readmissions Explorer",
+    "section": "What remains expert-driven",
+    "text": "What remains expert-driven\nQuestion framing, measure definitions, analytical constraints, evaluation, interpretation, and governance remain human responsibilities. In this context, a plausible answer is not the same as a defensible one."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#latest-meaningful-update",
+    "href": "lab/projects/readmissions-interface/index.html#latest-meaningful-update",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Latest meaningful update",
+    "text": "Latest meaningful update\nA deployment pipeline and custom web interface were assembled for interactive exploration of HRRP results. The next phase is less about adding surface-level capability and more about testing the structure: which questions are supported, how results expose their basis, and where the interface should decline to answer."
+  },
+  {
+    "objectID": "lab/projects/readmissions-interface/index.html#relevant-notes",
+    "href": "lab/projects/readmissions-interface/index.html#relevant-notes",
+    "title": "Hospital Readmissions Explorer",
+    "section": "Relevant notes",
+    "text": "Relevant notes\n\nTechnical build notes\nVideo walkthrough\nStart a conversation"
   }
 ]

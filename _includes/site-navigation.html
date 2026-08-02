@@ -1,0 +1,15 @@
+<script>
+(() => {
+  const path = window.location.pathname.replace(/index\.html$/, '');
+  const section = path.startsWith('/lab/') ? 'lab' : (path === '/' ? 'home' : null);
+  if (!section) return;
+
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    const target = new URL(link.href, window.location.href).pathname.replace(/index\.html$/, '');
+    const active = section === 'lab' ? target === '/lab/' : target === '/';
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+})();
+</script>

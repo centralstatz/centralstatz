@@ -1,9 +1,11 @@
 ---
 title: "Streamlining a Custom Google Analytics Report"
+canonical-url: "https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/"
 description: "Generating an on-demand, branded PDF report sourced from Google Analytics."
 author: "Alex Zajichek"
 date: "3/12/2026"
 image: "feature.png"
+image-alt: "Preview of a branded Google Analytics PDF report"
 format:
   html:
     code-fold: true

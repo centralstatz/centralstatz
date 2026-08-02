@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.centralstatz.com/case-studies.html</loc>
-    <lastmod>2026-03-12T17:12:44.365Z</lastmod>
+    <loc>https://www.centralstatz.com/thank-you.html</loc>
+    <lastmod>2026-08-02T13:39:54.884Z</lastmod>
   </url>
   <url>
-    <loc>https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/index.html</loc>
-    <lastmod>2026-03-13T17:28:46.953Z</lastmod>
+    <loc>https://www.centralstatz.com/lab/projects/flux-estimand/index.html</loc>
+    <lastmod>2026-08-02T13:39:54.773Z</lastmod>
   </url>
   <url>
-    <loc>https://www.centralstatz.com/index.html</loc>
-    <lastmod>2026-06-07T15:36:05.012Z</lastmod>
+    <loc>https://www.centralstatz.com/lab/index.html</loc>
+    <lastmod>2026-08-02T13:39:15.103Z</lastmod>
   </url>
   <url>
     <loc>https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/index.html</loc>
-    <lastmod>2026-03-13T17:29:23.033Z</lastmod>
+    <lastmod>2026-08-02T13:39:15.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/case-studies.html</loc>
+    <lastmod>2026-08-02T13:39:15.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/index.html</loc>
+    <lastmod>2026-08-02T13:39:15.732Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/index.html</loc>
+    <lastmod>2026-08-02T13:39:14.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/lab/projects/analytics-reporting/index.html</loc>
+    <lastmod>2026-08-02T13:39:54.659Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.centralstatz.com/lab/projects/readmissions-interface/index.html</loc>
+    <lastmod>2026-08-02T13:39:54.543Z</lastmod>
   </url>
 </urlset>

@@ -17,22 +17,17 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
 <link href="./logo_background.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -42,20 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7f922e4f3a3c4d26b9720c48a09e2f75.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c7580522e2a428336c0d7f71a11321c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -76,12 +59,12 @@ ul.task-list li input[type="checkbox"] {
     const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
-      return; 
+      return;
     }
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
@@ -108,6 +91,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -140,11 +124,20 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Case Studies – CentralStatz Statistical &amp; Data Sciences LLC">
-<meta property="og:description" content="Data science, statistics, and analytics advising located in Central Wisconsin.">
+<meta property="og:description" content="Analytical advising, systems design, and implementation for teams navigating difficult data problems.">
 <meta property="og:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
 <meta property="og:site_name" content="CentralStatz Statistical &amp; Data Sciences LLC">
+<meta property="og:image:alt" content="Hospital readmissions exploration interface">
 <meta property="og:image:height" content="1226">
 <meta property="og:image:width" content="1862">
+<meta name="twitter:title" content="Case Studies – CentralStatz Statistical &amp; Data Sciences LLC">
+<meta name="twitter:description" content="Analytical advising, systems design, and implementation for teams navigating difficult data problems.">
+<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/feature.png">
+<meta name="twitter:image:alt" content="Hospital readmissions exploration interface">
+<meta name="twitter:image-height" content="1226">
+<meta name="twitter:image-width" content="1862">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.centralstatz.com/case-studies.html">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -158,40 +151,33 @@ window.Quarto = {
     <img src="./logo.png" alt="" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./#what-we-do"> 
-<span class="menu-text">What We Do</span></a>
-  </li>  
+    <a class="nav-link" href="./">
+<span class="menu-text">Home</span></a>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./#our-philosophy"> 
-<span class="menu-text">Our Philosophy</span></a>
-  </li>  
+    <a class="nav-link" href="./#services">
+<span class="menu-text">Services</span></a>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./#about"> 
+    <a class="nav-link" href="./lab/">
+<span class="menu-text">Lab</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./#about">
 <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./#contact"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/centralstatz"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:alex@centralstatz.com"> <i class="bi bi-envelope" role="img" aria-label="Email">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#contact">
+<span class="menu-text">Contact</span></a>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -203,7 +189,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -216,11 +202,11 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -233,10 +219,10 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1773378000000" data-listing-file-modified-sort="1773422926953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="31">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1773378000000" data-listing-file-modified-sort="1785677955732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <div class="thumbnail"><a href="./case-studies/llm-powered-app-for-hospital-readmissions/index.html" class="no-external">
 
-<img loading="lazy" src="./case-studies/llm-powered-app-for-hospital-readmissions/feature.png" class="thumbnail-image">
+<img loading="lazy" src="./case-studies/llm-powered-app-for-hospital-readmissions/feature.png" class="thumbnail-image" alt="Hospital readmissions exploration interface">
 
 </a></div>
 <div class="body">
@@ -258,10 +244,10 @@ Alex Zajichek
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1773291600000" data-listing-file-modified-sort="1773422963033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1773291600000" data-listing-file-modified-sort="1785677955856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <div class="thumbnail"><a href="./case-studies/streamlining-google-analytics-pdf-report/index.html" class="no-external">
 
-<img loading="lazy" src="./case-studies/streamlining-google-analytics-pdf-report/feature.png" class="thumbnail-image">
+<img loading="lazy" src="./case-studies/streamlining-google-analytics-pdf-report/feature.png" class="thumbnail-image" alt="Preview of a branded Google Analytics PDF report">
 
 </a></div>
 <div class="body">
@@ -286,6 +272,21 @@ Alex Zajichek
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<script>
+(() => {
+  const path = window.location.pathname.replace(/index\.html$/, '');
+  const section = path.startsWith('/lab/') ? 'lab' : (path === '/' ? 'home' : null);
+  if (!section) return;
+
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    const target = new URL(link.href, window.location.href).pathname.replace(/index\.html$/, '');
+    const active = section === 'lab' ? target === '/lab/' : target === '/';
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -297,7 +298,7 @@ Alex Zajichek
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -317,11 +318,11 @@ Alex Zajichek
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -397,7 +398,7 @@ Alex Zajichek
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -472,7 +473,7 @@ Alex Zajichek
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -500,7 +501,7 @@ Alex Zajichek
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -524,7 +525,7 @@ Alex Zajichek
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -564,7 +565,7 @@ Alex Zajichek
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -689,21 +690,21 @@ Alex Zajichek
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-© 2026 CentralStatz Statistical &amp; Data Sciences LLC
-<div class="footer-icons">
-<p><a href="mailto:alex@centralstatz.com" target="_blank"><i class="bi bi-envelope"></i></a> <a href="https://www.linkedin.com/company/centralstatz" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/centralstatz" target="_blank"><i class="bi bi-github"></i></a> <a href="https://www.youtube.com/@centralstatz" target="_blank"><i class="bi bi-youtube"></i></a></p>
+<p>© 2026 CentralStatz Statistical &amp; Data Sciences LLC · Wausau, Wisconsin</p>
 </div>
+    <div class="nav-footer-center">
+<p><a href="./">Home</a> · <a href="./#services">Services</a> · <a href="./lab/">Lab</a> · <a href="./#about">About</a> · <a href="./#contact">Contact</a></p>
 </div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<div class="footer-icons">
+<p><a href="mailto:alex@centralstatz.com" aria-label="Email CentralStatz"><i class="bi bi-envelope"></i></a> <a href="https://www.linkedin.com/company/centralstatz" aria-label="CentralStatz on LinkedIn"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/centralstatz" aria-label="CentralStatz on GitHub"><i class="bi bi-github"></i></a> <a href="https://www.youtube.com/@centralstatz" aria-label="CentralStatz on YouTube"><i class="bi bi-youtube"></i></a></p>
+</div>
+</div>
   </div>
 </footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

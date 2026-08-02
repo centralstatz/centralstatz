@@ -1,0 +1,164 @@
+---
+title: ""
+pagetitle: "CentralStatz Lab"
+description: "CentralStatz Lab explores new forms of analytical work through tangible prototypes, interactive systems, and rigorously reasoned experiments."
+canonical-url: "https://www.centralstatz.com/lab/"
+format:
+  html:
+    page-layout: full
+    body-classes: lab-home
+listing:
+  id: active-projects-listing
+  contents: "projects/*/index.qmd"
+  template: "../_templates/project-card.ejs.md"
+  sort: "order asc"
+  fields: [title, description, image, preview_alt, category, status, stage, order, central_question, current_state, latest_update, next_step, limitations, looking_for, visual_type, visual_is_concept]
+  filter-ui: false
+  sort-ui: false
+---
+
+::: {.lab-hero}
+
+::: {.hero-grid}
+
+::: {.hero-copy}
+
+<div class="eyebrow"><span class="activity-pulse" aria-hidden="true"></span> CentralStatz Lab</div>
+
+# Better analytical ideas, made tangible.
+
+<p class="hero-lead">A focused space for exploring what analytical work can become when implementation is no longer the primary constraint.</p>
+
+<p class="hero-support">Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.</p>
+
+<div class="hero-actions">
+  <a class="lab-button lab-button-primary" href="#active-projects">Explore active projects</a>
+  <a class="lab-button lab-button-secondary" href="/#services">Work with CentralStatz</a>
+</div>
+
+:::
+
+::: {.hero-instrument aria-label="How a Lab project develops"}
+
+<div class="instrument-topline"><span>LAB / 001</span><span>Current operating model</span></div>
+<div class="instrument-question">What should analytical work make possible?</div>
+<div class="instrument-flow">
+  <div><span>01</span><strong>Reason</strong><small>Frame the question</small></div>
+  <div><span>02</span><strong>Build</strong><small>Make it tangible</small></div>
+  <div><span>03</span><strong>Test</strong><small>Expose it to reality</small></div>
+</div>
+<div class="instrument-note"><span aria-hidden="true">↳</span> The artifact expresses the current hypothesis—it does not prove the hypothesis is right.</div>
+
+:::
+
+:::
+
+:::
+
+::: {.lab-section .projects-section}
+
+<div class="section-heading" id="active-projects">
+  <div><span class="section-index">01 / Active work</span><h2>Working hypotheses, made inspectable.</h2></div>
+  <p>Projects are published while they are still becoming. Status, limitations, and next questions are part of the work—not footnotes.</p>
+</div>
+
+::: {#active-projects-listing}
+:::
+
+:::
+
+::: {.lab-section .process-section}
+
+<div class="section-heading" id="how-the-lab-works">
+  <div><span class="section-index">02 / Method</span><h2>Building is part of the reasoning.</h2></div>
+  <p>A prototype creates something concrete enough for users, experts, evidence, and constraints to push against.</p>
+</div>
+
+<ol class="process-track">
+  <li><span>01</span><h3>Observe</h3><p>Identify a recurring analytical problem or workflow that should work better.</p></li>
+  <li><span>02</span><h3>Reason</h3><p>Clarify the question, inherited assumptions, users, evidence, and whether a simple structure is sufficient.</p></li>
+  <li><span>03</span><h3>Prototype</h3><p>Make one or more possible structures tangible enough to compare, question, and test.</p></li>
+  <li><span>04</span><h3>Test</h3><p>Put it in front of users, experts, data, and real constraints.</p></li>
+  <li><span>05</span><h3>Evolve</h3><p>Improve it, pause it, publish what was learned, or develop it further.</p></li>
+</ol>
+
+:::
+
+::: {.lab-section .ai-section}
+
+::: {.ai-layout}
+
+::: {.ai-statement}
+
+<span class="section-index">03 / AI’s role</span>
+
+## Faster implementation changes more than speed.
+
+AI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace.
+
+:::
+
+::: {.ai-boundary}
+
+### Acceleration
+
+- analytical code, interfaces, and supporting workflows
+- comparison of designs before committing
+- creation of testable analytical artifacts
+- iteration between reasoning and use
+
+### Expanded possibility
+
+- reconsider the shape and scope of the project
+- represent decisions, states, uncertainty, or trajectories when useful
+- compare meaningful analytical formulations
+- let the problem determine the machinery
+
+<p class="boundary-note">The goal is not maximum sophistication. It is less compromise for the wrong reasons. Statistical reasoning, domain expertise, validation, and judgment still determine what should be built.</p>
+
+:::
+
+:::
+
+:::
+
+::: {.lab-section .philosophy-section}
+
+<div class="philosophy-mark" aria-hidden="true">S / S</div>
+
+::: {.philosophy-copy}
+
+<span class="section-index">04 / Philosophy</span>
+
+## Structure Before Sophistication {#lab-philosophy}
+
+Sophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.
+
+Expanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.
+
+<div class="principle-grid">
+  <div><strong>Clear questions</strong><span>Let the actual question—not inherited machinery—set the boundary.</span></div>
+  <div><strong>Defensible logic</strong><span>Make metrics and assumptions open to review.</span></div>
+  <div><strong>Reproducible systems</strong><span>Build work that can be understood and repeated.</span></div>
+  <div><strong>Honest boundaries</strong><span>State uncertainty and limits alongside capability.</span></div>
+</div>
+
+:::
+
+:::
+
+::: {.lab-section .engage-section}
+
+<div class="section-heading" id="participate">
+  <div><span class="section-index">05 / Participate</span><h2>Help shape what the work becomes.</h2></div>
+  <p>Test an artifact, question an assumption, offer methodological perspective, or bring a real analytical problem into conversation.</p>
+</div>
+
+<div class="engage-grid">
+  <a href="#active-projects"><span>Test</span><strong>Explore a project</strong><small>Inspect active work and its stated boundaries.</small></a>
+  <a href="mailto:alex@centralstatz.com?subject=CentralStatz%20Lab%20feedback"><span>Respond</span><strong>Share feedback</strong><small>Bring domain, analytical, or usability perspective.</small></a>
+  <a href="/#contact"><span>Discuss</span><strong>Bring a problem</strong><small>Start with the primary CentralStatz contact workflow.</small></a>
+  <a href="/#about"><span>Context</span><strong>About Alex</strong><small>Learn about the experience behind CentralStatz and the Lab.</small></a>
+</div>
+
+:::

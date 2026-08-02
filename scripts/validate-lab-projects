@@ -1,0 +1,105 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "date"
+require "optparse"
+require "pathname"
+require "yaml"
+
+options = { root: File.expand_path("..", __dir__) }
+OptionParser.new do |parser|
+  parser.banner = "Usage: scripts/validate-lab-projects [--root PATH]"
+  parser.on("--root PATH", "Validate another fixture root") { |path| options[:root] = File.expand_path(path) }
+end.parse!
+
+root = Pathname(options[:root])
+files = Dir.glob(root.join("lab", "projects", "*", "index.qmd").to_s).sort
+errors = []
+warnings = []
+required = %w[title description category status stage order central_question current_state latest_update next_step limitations looking_for]
+stages = %w[Question Concept Prototype Validation Pilot Production]
+statuses = ["Exploring", "Active Development", "Prototype Available", "Testing", "Seeking Feedback", "Pilot Ready", "Maintained", "Paused", "Archived"]
+visual_types = %w[screenshot project-output source-diagram generated-concept placeholder]
+seen_titles = {}
+seen_orders = {}
+
+errors << "No projects found under #{root.join('lab', 'projects')}" if files.empty?
+
+files.each do |filename|
+  path = Pathname(filename)
+  slug = path.dirname.basename.to_s
+  source = path.read
+  label = path.relative_path_from(root).to_s
+
+  errors << "#{label}: invalid slug #{slug.inspect}" unless slug.match?(/\A[a-z0-9]+(?:-[a-z0-9]+)*\z/)
+  match = source.match(/\A---\s*\n(.*?)\n---\s*\n/m)
+  unless match
+    errors << "#{label}: missing YAML front matter"
+    next
+  end
+
+  begin
+    data = YAML.safe_load(match[1], permitted_classes: [Date], aliases: false) || {}
+  rescue Psych::Exception => e
+    errors << "#{label}: invalid YAML (#{e.message.lines.first.strip})"
+    next
+  end
+
+  required.each do |field|
+    value = data[field]
+    errors << "#{label}: missing required field #{field}" if value.nil? || value.to_s.strip.empty?
+  end
+  errors << "#{label}: draft must be false or removed before integration" if data["draft"] == true
+  errors << "#{label}: unresolved TODO marker" if source.match?(/\bTODO(?:\(Alex\))?:?/)
+
+  errors << "#{label}: invalid stage #{data['stage'].inspect}" if data["stage"] && !stages.include?(data["stage"])
+  if data["status"] && !statuses.map(&:downcase).include?(data["status"].downcase)
+    errors << "#{label}: invalid status #{data['status'].inspect}"
+  end
+  if data["visual_type"] && !visual_types.include?(data["visual_type"])
+    errors << "#{label}: invalid visual_type #{data['visual_type'].inspect}"
+  end
+  if data.key?("visual_is_concept") && ![true, false].include?(data["visual_is_concept"])
+    errors << "#{label}: visual_is_concept must be true or false"
+  end
+
+  title = data["title"].to_s.downcase
+  errors << "#{label}: duplicate title also used by #{seen_titles[title]}" if seen_titles[title]
+  seen_titles[title] = label unless title.empty?
+
+  order = data["order"]
+  if order
+    errors << "#{label}: order must be an integer" unless order.is_a?(Integer)
+    errors << "#{label}: duplicate order also used by #{seen_orders[order]}" if seen_orders[order]
+    seen_orders[order] = label
+  end
+
+  image = data["image"]
+  if image && !image.to_s.strip.empty?
+    image_path = path.dirname.join(image).cleanpath
+    errors << "#{label}: image does not exist: #{image}" unless image_path.file?
+    alt = data["preview_alt"]
+    errors << "#{label}: image requires preview_alt" if alt.nil? || alt.to_s.strip.empty?
+  elsif data["preview_alt"]
+    warnings << "#{label}: preview_alt is present without image"
+  end
+
+  if data["visual_is_concept"] == true && !%w[generated-concept placeholder].include?(data["visual_type"])
+    errors << "#{label}: conceptual visual must use generated-concept or placeholder visual_type"
+  end
+
+  source.scan(%r{(?:/Users/|/home/|[A-Za-z]:\\Users\\)[^\s\)\]"']*}).each do |local_path|
+    errors << "#{label}: unsafe absolute local path: #{local_path}"
+  end
+  warnings << "#{label}: ownership is not recorded" unless data["ownership"]
+  warnings << "#{label}: visual provenance is not recorded" if image && !data["visual_type"]
+end
+
+warnings.each { |warning| warn "WARNING: #{warning}" }
+if errors.any?
+  errors.each { |error| warn "ERROR: #{error}" }
+  warn "Lab project validation failed with #{errors.length} error(s)."
+  exit 1
+end
+
+puts "Validated #{files.length} Lab project(s) with #{warnings.length} warning(s)."

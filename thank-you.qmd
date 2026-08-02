@@ -1,0 +1,16 @@
+---
+title: ""
+pagetitle: "Thank you | CentralStatz"
+canonical-url: "https://www.centralstatz.com/thank-you.html"
+description: "Thank you for contacting CentralStatz."
+---
+
+::: {.simple-page}
+
+# Thank you for reaching out.
+
+Thanks for reaching out. Your note goes directly to Alex, who will review it and respond by email.
+
+[Return to CentralStatz](/)
+
+:::

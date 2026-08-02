@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Zajichek">
-<meta name="dcterms.date" content="2026-03-12">
-<meta name="description" content="Generating an on-demand, branded PDF report sourced from Google Analytics.">
+<meta name="dcterms.date" content="2026-03-13">
+<meta name="description" content="A conversational interface for exploring public Hospital Readmissions Reduction Program data and making an analytical workflow easier to inspect.">
 
-<title>Streamlining a Custom Google Analytics Report – CentralStatz Statistical &amp; Data Sciences LLC</title>
+<title>Hospital Readmissions Explorer – CentralStatz Statistical &amp; Data Sciences LLC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,57 +23,22 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="../../logo_background.png" rel="icon" type="image/png">
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c7580522e2a428336c0d7f71a11321c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="../../../logo_background.png" rel="icon" type="image/png">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-051bf055be2df1db0f2ac243869edd41.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -101,32 +66,26 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="Streamlining a Custom Google Analytics Report – CentralStatz Statistical &amp; Data Sciences LLC">
-<meta property="og:description" content="Generating an on-demand, branded PDF report sourced from Google Analytics.">
-<meta property="og:image" content="https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/feature.png">
+<meta property="og:title" content="Hospital Readmissions Explorer – CentralStatz Statistical &amp; Data Sciences LLC">
+<meta property="og:description" content="A conversational interface for exploring public Hospital Readmissions Reduction Program data and making an analytical workflow easier to inspect.">
+<meta property="og:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/readmit_app.gif">
 <meta property="og:site_name" content="CentralStatz Statistical &amp; Data Sciences LLC">
-<meta property="og:image:height" content="1398">
-<meta property="og:image:width" content="1098">
-<meta property="og:image:alt" content="Preview of a branded Google Analytics PDF report">
-<meta name="twitter:title" content="Streamlining a Custom Google Analytics Report – CentralStatz Statistical &amp; Data Sciences LLC">
-<meta name="twitter:description" content="Generating an on-demand, branded PDF report sourced from Google Analytics.">
-<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/feature.png">
-<meta name="twitter:image-height" content="1398">
-<meta name="twitter:image-width" content="1098">
-<meta name="twitter:image:alt" content="Preview of a branded Google Analytics PDF report">
+<meta name="twitter:title" content="Hospital Readmissions Explorer – CentralStatz Statistical &amp; Data Sciences LLC">
+<meta name="twitter:description" content="A conversational interface for exploring public Hospital Readmissions Reduction Program data and making an analytical workflow easier to inspect.">
+<meta name="twitter:image" content="https://www.centralstatz.com/case-studies/llm-powered-app-for-hospital-readmissions/readmit_app.gif">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/">
+<link rel="canonical" href="https://www.centralstatz.com/lab/projects/readmissions-interface/">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed lab-project-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../logo.png" alt="" class="navbar-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../logo.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -135,25 +94,25 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../">
+    <a class="nav-link" href="../../../">
 <span class="menu-text">Home</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../#services">
+    <a class="nav-link" href="../../../#services">
 <span class="menu-text">Services</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../lab/">
+    <a class="nav-link" href="../../../lab/">
 <span class="menu-text">Lab</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../#about">
+    <a class="nav-link" href="../../../#about">
 <span class="menu-text">About</span></a>
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../#contact">
+    <a class="nav-link" href="../../../#contact">
 <span class="menu-text">Contact</span></a>
   </li>
 </ul>
@@ -164,60 +123,103 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Streamlining a Custom Google Analytics Report</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-</div>
-
-<div>
-  <div class="description">
-    Generating an on-demand, branded PDF report sourced from Google Analytics.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alex Zajichek </p>
-          </div>
-  </div>
-
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 12, 2026</p>
     </div>
-  </div>
+<!-- main -->
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Hospital Readmissions Explorer</h1></header>
 
+<header id="title-block-header">
 
-  </div>
+<p class="author">Alex Zajichek</p>
 
-
-
+<p class="date">2026-03-13</p>
 </header>
 
 
-<p><em>In progress</em></p>
-<section id="building-the-structure" class="level1">
-<h1>1. Building the Structure</h1>
+<div class="project-hero">
+<div class="section-kicker">
+Project notebook · Active development
+</div>
+<section id="hospital-readmissions-explorer" class="level1">
+<h1>Hospital Readmissions Explorer</h1>
+<p class="project-deck">
+A working exploration of how conversational interaction can make public hospital-readmissions data easier to question—and its analytical logic easier to inspect.
+</p>
+<div class="project-hero-actions">
+<p><a class="lab-button lab-button-primary" href="mailto:alex@centralstatz.com?subject=Hospital%20Readmissions%20Explorer">Ask about this project</a> <a class="lab-button lab-button-secondary" href="../../../lab/#active-projects">Back to active work</a></p>
+</div>
 </section>
-<section id="strengthening-the-logic" class="level1">
-<h1>2. Strengthening the Logic</h1>
-
-
-<!-- -->
-
+</div>
+<div class="project-notebook">
+<div class="notebook-preview">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../case-studies/llm-powered-app-for-hospital-readmissions/readmit_app.gif" class="img-fluid figure-img" alt="Hospital readmissions explorer prototype responding to a question with a chart"></p>
+<figcaption>Hospital readmissions explorer prototype responding to a question with a chart</figcaption>
+</figure>
+</div>
+<p><span>Current working interface · March 2026</span></p>
+</div>
+<div class="notebook-grid">
+<div class="notebook-main">
+<section id="why-this-exists" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-exists">Why this exists</h2>
+<p>Public healthcare datasets contain valuable evidence, but useful exploration often requires knowledge of the source, measures, and analytical tools. This project asks whether a carefully bounded conversational layer can lower that interaction cost without pretending the underlying complexity has disappeared.</p>
 </section>
+<section id="current-hypothesis" class="level2">
+<h2 class="anchored" data-anchor-id="current-hypothesis">Current hypothesis</h2>
+<p>A constrained interface can shorten the path from a question to an inspectable result while keeping source data, definitions, and analytical logic visible enough to question.</p>
+</section>
+<section id="what-the-prototype-demonstrates" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-prototype-demonstrates">What the prototype demonstrates</h2>
+<ul>
+<li>A custom web interface for asking questions about Hospital Readmissions Reduction Program data.</li>
+<li>A deployment path connecting a conversational interaction to analytical output.</li>
+<li>A tangible interface that can now be evaluated instead of discussed only as a specification.</li>
+</ul>
+</section>
+<section id="ais-role" class="level2">
+<h2 class="anchored" data-anchor-id="ais-role">AI’s role</h2>
+<p>AI-assisted implementation made it faster to connect the interface, analytical workflow, and deployment pieces. It did not define valid measures, determine appropriate interpretations, review the source data, or validate whether a response is fit for a healthcare decision.</p>
+</section>
+<section id="what-remains-expert-driven" class="level2">
+<h2 class="anchored" data-anchor-id="what-remains-expert-driven">What remains expert-driven</h2>
+<p>Question framing, measure definitions, analytical constraints, evaluation, interpretation, and governance remain human responsibilities. In this context, a plausible answer is not the same as a defensible one.</p>
+</section>
+</div>
+<section id="project-state" class="level3 notebook-aside">
+<h3 class="anchored" data-anchor-id="project-state">Project state</h3>
+<p><strong>Status</strong><br>
+Active development</p>
+<p><strong>Stage</strong><br>
+Prototype</p>
+<p><strong>Known limitations</strong><br>
+Exploratory only. This is not clinical decision support, and no claims of validation, completeness, or production readiness are made.</p>
+<p><strong>Next experiment</strong><br>
+Clarify guardrails, evaluation criteria, and the questions the interface should and should not answer.</p>
+<p><strong>Useful participation</strong><br>
+Questions, usability feedback, and healthcare-data perspectives.</p>
+</section>
+</div>
+<section id="latest-meaningful-update" class="level2">
+<h2 class="anchored" data-anchor-id="latest-meaningful-update">Latest meaningful update</h2>
+<p>A deployment pipeline and custom web interface were assembled for interactive exploration of HRRP results. The next phase is less about adding surface-level capability and more about testing the structure: which questions are supported, how results expose their basis, and where the interface should decline to answer.</p>
+</section>
+<section id="relevant-notes" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-notes">Relevant notes</h2>
+<ul>
+<li><a href="https://www.zajichekstats.com/post/building-an-llm-powered-shiny-app-for-hospital-readmissions/">Technical build notes</a></li>
+<li><a href="https://www.youtube.com/watch?v=YlLcxuAjgJw">Video walkthrough</a></li>
+<li><a href="mailto:alex@centralstatz.com?subject=Hospital%20Readmissions%20Explorer">Start a conversation</a></li>
+</ul>
+</section>
+</div>
+
+
 
 </main> <!-- /main -->
 <script>
@@ -304,57 +306,6 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          }
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -684,27 +635,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Streamlining a Custom Google Analytics Report"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">canonical-url:</span><span class="co"> "https://www.centralstatz.com/case-studies/streamlining-google-analytics-pdf-report/"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Generating an on-demand, branded PDF report sourced from Google Analytics."</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Alex Zajichek"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "3/12/2026"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "feature.png"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">image-alt:</span><span class="co"> "Preview of a branded Google Analytics PDF report"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>_In progress_</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Building the Structure</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Strengthening the Logic</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -712,7 +643,7 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 <p>© 2026 CentralStatz Statistical &amp; Data Sciences LLC · Wausau, Wisconsin</p>
 </div>
     <div class="nav-footer-center">
-<p><a href="../../">Home</a> · <a href="../../#services">Services</a> · <a href="../../lab/">Lab</a> · <a href="../../#about">About</a> · <a href="../../#contact">Contact</a></p>
+<p><a href="../../../">Home</a> · <a href="../../../#services">Services</a> · <a href="../../../lab/">Lab</a> · <a href="../../../#about">About</a> · <a href="../../../#contact">Contact</a></p>
 </div>
     <div class="nav-footer-right">
 <div class="footer-icons">
@@ -725,5 +656,5 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

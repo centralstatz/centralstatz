@@ -1,5 +1,10 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "lab/**/*.qmd"
+    - "case-studies/**/*.qmd"
+    - "!tests/**"
 
 website:
   title: "CentralStatz Statistical & Data Sciences LLC"
@@ -7,39 +12,43 @@ website:
   google-analytics: "G-GQTNSLKV9S"
   site-url: https://www.centralstatz.com/
   repo-url: https://github.com/centralstatz/centralstatz
-  description: "Data science, statistics, and analytics advising located in Central Wisconsin."
-  page-footer: 
-    center: |
-        © 2026 CentralStatz Statistical & Data Sciences LLC
-        <div class="footer-icons">
-          <a href="mailto:alex@centralstatz.com" target="_blank"><i class="bi bi-envelope"></i></a>
-          <a href="https://www.linkedin.com/company/centralstatz" target="_blank"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/centralstatz" target="_blank"><i class="bi bi-github"></i></a>
-          <a href="https://www.youtube.com/@centralstatz" target="_blank"><i class="bi bi-youtube"></i></a>
-        </div>
+  description: "Analytical advising, systems design, and implementation for teams navigating difficult data problems."
   open-graph: true
+  twitter-card: true
+  search: false
+  page-footer:
+    left: "© 2026 CentralStatz Statistical & Data Sciences LLC · Wausau, Wisconsin"
+    center: |
+      <a href="/">Home</a> · <a href="/#services">Services</a> · <a href="/lab/">Lab</a> · <a href="/#about">About</a> · <a href="/#contact">Contact</a>
+    right: |
+      <div class="footer-icons">
+        <a href="mailto:alex@centralstatz.com" aria-label="Email CentralStatz"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/company/centralstatz" aria-label="CentralStatz on LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/centralstatz" aria-label="CentralStatz on GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.youtube.com/@centralstatz" aria-label="CentralStatz on YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
   navbar:
     logo: "logo.png"
     title: false
+    pinned: true
     left:
-          - text: What We Do
-            href: "/#what-we-do"
-          - text: Our Philosophy
-            href: "/#our-philosophy"
-          - text: About
-            href: "/#about"
-          - text: Contact
-            href: "/#contact"
+      - text: Home
+        href: "/"
+      - text: Services
+        href: "/#services"
+      - text: Lab
+        href: "/lab/"
+      - text: About
+        href: "/#about"
     right:
-      - icon: linkedin
-        href: https://www.linkedin.com/company/centralstatz
-        aria-label: LinkedIn
-      - icon: envelope
-        href: mailto:alex@centralstatz.com
-        aria-label: Email
+      - text: Contact
+        href: "/#contact"
+
 format:
   html:
     theme: [styles.scss, lux]
+    anchor-sections: true
+    smooth-scroll: true
+    include-after-body: "_includes/site-navigation.html"
 
 editor: source
-
