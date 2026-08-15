@@ -66,7 +66,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .navbar-nav .nav-link.active { color: $gold-bright !important; }
 .navbar-nav:last-child .nav-link { border: 1px solid rgba($gold-bright,.6); border-radius: 999px; padding-inline: 1rem !important; }
 
-.lab-hero, .lab-section, .contact-section, .project-hero, .project-notebook, .simple-page {
+.home-hero, .lab-hero, .lab-section, .contact-section, .project-hero, .project-notebook, .simple-page {
   width: min(1240px, calc(100% - 3rem));
   margin-inline: auto;
 }
@@ -229,9 +229,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .nav-footer a { color: #c7c9c2; }
 .footer-icons { display: flex; gap: 1rem; }
 
+/* Root business hero: editorial practice, distinct from the Lab workbench. */
+.home-hero { min-height: 78vh; display: grid; align-items: center; padding: 5.5rem 0 5rem; }
+.home-hero-layout { display: grid; gap: clamp(3.5rem, 7vw, 6.5rem); }
+.home-hero-heading { max-width: 1120px; }
+.home-hero-heading h1 { margin: 1.3rem 0 0; font-size: clamp(3.6rem, 7.2vw, 7rem); line-height: .93; letter-spacing: -.065em; }
+.home-hero-lower { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(390px, .95fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; padding-top: clamp(2rem, 4vw, 3.5rem); border-top: 1px solid $line; }
+.home-hero-copy .hero-lead { margin-top: 0; }
+.home-hero-copy .hero-support { max-width: 700px; }
+.home-pathway { padding-left: clamp(1.5rem, 3vw, 2.5rem); border-left: 2px solid rgba($blue,.72); }
+.home-pathway-heading { display: grid; gap: .55rem; margin-bottom: 1.5rem; }
+.home-pathway-heading span { color: $gold-bright; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .66rem; letter-spacing: .11em; text-transform: uppercase; }
+.home-pathway-heading strong { max-width: 520px; color: $paper; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; line-height: 1.35; }
+.home-pathway ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid $line; }
+.home-pathway li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid $line; }
+.home-pathway li > span { padding-top: .15rem; color: $gold-bright; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .7rem; }
+.home-pathway li div { display: grid; grid-template-columns: minmax(95px, .35fr) 1fr; gap: 1rem; align-items: baseline; }
+.home-pathway li strong { color: $paper; font-size: .95rem; }
+.home-pathway li small { color: $muted; font-size: .76rem; line-height: 1.5; }
+
 /* Shared business-site components */
-.business-hero .hero-copy h1 { max-width: 850px; font-size: clamp(3.2rem, 6.3vw, 6rem); }
-.business-instrument { transform: rotate(-.7deg); }
 .business-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .business-card { min-height: 300px; display: flex; flex-direction: column; padding: clamp(1.4rem, 3vw, 2rem); background: $surface; border: 1px solid $line; }
 .business-card > span, .lab-intro-note > span { color: $gold-bright; font-family: ui-monospace, monospace; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
@@ -263,13 +280,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .philosophy-section { grid-template-columns: 1fr; }
   .philosophy-mark { font-size: 6rem; }
   .contact-direct { grid-column: 1; margin: -2rem 0 0; }
+  .home-hero { min-height: auto; padding-top: 4.5rem; }
+  .home-hero-lower { grid-template-columns: 1fr; gap: 3rem; }
+  .home-pathway { max-width: 720px; }
   .business-card-grid { grid-template-columns: 1fr 1fr; }
   .business-card:last-child { grid-column: 1 / -1; }
   .lab-intro-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
-  .lab-hero, .lab-section, .contact-section, .project-hero, .project-notebook, .simple-page { width: min(100% - 2rem, 1240px); }
+  .home-hero, .lab-hero, .lab-section, .contact-section, .project-hero, .project-notebook, .simple-page { width: min(100% - 2rem, 1240px); }
+  .home-hero { padding: 3.5rem 0 4rem; }
+  .home-hero-layout { gap: 2.5rem; }
+  .home-hero-heading h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
+  .home-hero-lower { gap: 2.5rem; padding-top: 2rem; }
+  .home-pathway { padding-left: 1rem; }
+  .home-pathway li div { grid-template-columns: 1fr; gap: .25rem; }
   .lab-hero { min-height: auto; padding: 3.5rem 0 4rem; }
   .hero-copy h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
   .hero-actions .lab-button, .project-hero-actions .lab-button { width: 100%; }

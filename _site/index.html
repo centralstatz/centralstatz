@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c7580522e2a428336c0d7f71a11321c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7f77f2039dab6ac393cf0e580edff4c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -137,14 +137,18 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 
 
 
-<div class="lab-hero business-hero">
-<div class="hero-grid">
-<div class="hero-copy">
+<div class="home-hero">
+<div class="home-hero-layout">
+<div class="home-hero-heading">
 <div class="eyebrow">
 Analytical partner for teams and organizations
 </div>
 <section id="bring-structure-to-difficult-analytical-problems." class="level1">
 <h1>Bring structure to difficult analytical problems.</h1>
+</section>
+</div>
+<div class="home-hero-lower">
+<div class="home-hero-copy">
 <p class="hero-lead">
 CentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.
 </p>
@@ -154,28 +158,31 @@ The work can begin with advisory leadership, a fragile reporting process, an unc
 <div class="hero-actions">
 <p><a class="lab-button lab-button-primary" href="#contact">Start a conversation</a> <a class="lab-button lab-button-secondary" href="#services">How CentralStatz helps</a></p>
 </div>
-</section>
 </div>
-<div class="hero-instrument business-instrument" aria-label="CentralStatz analytical approach">
-<div class="instrument-topline">
-<span>CentralStatz / Approach</span><span>Structure before sophistication</span>
+<div class="home-pathway" aria-label="CentralStatz works through three connected capabilities">
+<div class="home-pathway-heading">
+<span>How the work moves</span><strong>From ambiguity to a dependable analytical system.</strong>
 </div>
-<div class="instrument-question">
-Build what the decision actually requires.
-</div>
-<div class="instrument-flow">
+<ol>
+<li>
+<span>01</span>
 <div>
-<span>01</span><strong>Structure</strong><small>Frame the system</small>
+<strong>Evaluate</strong><small>Clarify the question, decision, and constraints.</small>
 </div>
+</li>
+<li>
+<span>02</span>
 <div>
-<span>02</span><strong>Logic</strong><small>Defend the reasoning</small>
+<strong>Design</strong><small>Connect sound reasoning to a maintainable structure.</small>
 </div>
+</li>
+<li>
+<span>03</span>
 <div>
-<span>03</span><strong>Build</strong><small>Implement where useful</small>
+<strong>Build</strong><small>Implement the system the work actually requires.</small>
 </div>
-</div>
-<div class="instrument-note">
-<span aria-hidden="true">↳</span> Good analytical work connects questions, evidence, decisions, and maintainable implementation.
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -304,12 +311,20 @@ Share the rough version. This is a conversation-first starting point, not a comm
 <label for="problem">The problem, workflow, or idea</label>
 <textarea id="problem" name="problem" placeholder="What is happening now—and what do you wish worked better?" required=""></textarea>
 <div class="form-row">
-<pre><code>&lt;div&gt;&lt;label for="name"&gt;Name &lt;span&gt;(optional)&lt;/span&gt;&lt;/label&gt;&lt;input id="name" type="text" name="name" autocomplete="name"&gt;&lt;/div&gt;
-&lt;div&gt;&lt;label for="email"&gt;Email&lt;/label&gt;&lt;input id="email" type="email" name="email" autocomplete="email" required&gt;&lt;/div&gt;</code></pre>
+<div>
+<label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name">
+</div>
+<div>
+<label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required="">
+</div>
 </div>
 <div class="form-submit">
-<pre><code>&lt;button type="submit" class="lab-button lab-button-primary"&gt;Start the conversation&lt;/button&gt;
-&lt;button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog"&gt;What happens when I submit?&lt;/button&gt;</code></pre>
+<button type="submit" class="lab-button lab-button-primary">
+Start the conversation
+</button>
+<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">
+What happens when I submit?
+</button>
 </div>
 </form>
 <p class="contact-direct">

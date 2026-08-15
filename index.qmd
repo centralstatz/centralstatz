@@ -9,15 +9,21 @@ format:
     body-classes: business-home
 ---
 
-::: {.lab-hero .business-hero}
+::: {.home-hero}
 
-::: {.hero-grid}
+::: {.home-hero-layout}
 
-::: {.hero-copy}
+::: {.home-hero-heading}
 
 <div class="eyebrow">Analytical partner for teams and organizations</div>
 
 # Bring structure to difficult analytical problems.
+
+:::
+
+::: {.home-hero-lower}
+
+::: {.home-hero-copy}
 
 <p class="hero-lead">CentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.</p>
 
@@ -30,19 +36,17 @@ format:
 
 :::
 
-::: {.hero-instrument .business-instrument aria-label="CentralStatz analytical approach"}
+::: {.home-pathway aria-label="CentralStatz works through three connected capabilities"}
 
-<div class="instrument-topline"><span>CentralStatz / Approach</span><span>Structure before sophistication</span></div>
+<div class="home-pathway-heading"><span>How the work moves</span><strong>From ambiguity to a dependable analytical system.</strong></div>
 
-<div class="instrument-question">Build what the decision actually requires.</div>
+<ol>
+  <li><span>01</span><div><strong>Evaluate</strong><small>Clarify the question, decision, and constraints.</small></div></li>
+  <li><span>02</span><div><strong>Design</strong><small>Connect sound reasoning to a maintainable structure.</small></div></li>
+  <li><span>03</span><div><strong>Build</strong><small>Implement the system the work actually requires.</small></div></li>
+</ol>
 
-<div class="instrument-flow">
-  <div><span>01</span><strong>Structure</strong><small>Frame the system</small></div>
-  <div><span>02</span><strong>Logic</strong><small>Defend the reasoning</small></div>
-  <div><span>03</span><strong>Build</strong><small>Implement where useful</small></div>
-</div>
-
-<div class="instrument-note"><span aria-hidden="true">↳</span> Good analytical work connects questions, evidence, decisions, and maintainable implementation.</div>
+:::
 
 :::
 
@@ -166,12 +170,12 @@ His work is especially grounded in healthcare, where messy systems, consequentia
   <label for="problem">The problem, workflow, or idea</label>
   <textarea id="problem" name="problem" placeholder="What is happening now—and what do you wish worked better?" required></textarea>
   <div class="form-row">
-    <div><label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name"></div>
-    <div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+<div><label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name"></div>
+<div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
   </div>
   <div class="form-submit">
-    <button type="submit" class="lab-button lab-button-primary">Start the conversation</button>
-    <button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">What happens when I submit?</button>
+<button type="submit" class="lab-button lab-button-primary">Start the conversation</button>
+<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">What happens when I submit?</button>
   </div>
 </form>
 

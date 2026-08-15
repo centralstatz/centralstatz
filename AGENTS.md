@@ -31,6 +31,8 @@ Never publish credentials, environment variables, local paths, internal URLs, PH
 
 Use the Lab-developed design system as the shared visual foundation: typography, navigation, footer, widths, spacing, buttons, cards, headings, backgrounds, forms, focus states, breakpoints, and reduced-motion behavior. The Lab may remain distinct through its workbench and project components, but it must feel part of the same CentralStatz identity.
 
+The root homepage and Lab intentionally use different hero compositions within that system. Keep the root hero calm, editorial, and oriented toward professional analytical partnership; reserve the tilted instrument and research-workbench treatment for the Lab hero.
+
 Avoid duplicating tokens, breakpoints, navigation scripts, or large stylesheets. Shared-style changes must be checked across the root homepage, Lab homepage, and a Lab project page. Preserve semantic headings, meaningful alt text, keyboard access, visible focus, sufficient contrast, accessible dialogs, form labels, responsive navigation, and status information that is not color-only.
 
 For Lab visuals, prefer real interfaces, real outputs, and real diagrams before generated concepts. Generated visuals must be evidence-grounded, clearly conceptual, minimally labeled, and recorded with `visual_type` and `visual_is_concept`.
