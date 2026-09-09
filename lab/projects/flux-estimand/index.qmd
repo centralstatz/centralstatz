@@ -11,7 +11,7 @@ preview_alt: "Concept diagram showing a shared conditioning state branching into
 category: "Simulation methodology"
 status: "Exploring"
 stage: "Concept"
-featured: true
+featured: false
 order: 3
 ownership: "Owned by Alex Zajichek"
 source_type: "repository"

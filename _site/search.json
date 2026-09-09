@@ -7,6 +7,188 @@
     "text": "Thank you for reaching out.\nThanks for reaching out. Your note goes directly to Alex, who will review it and respond by email.\nReturn to CentralStatz"
   },
   {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html",
+    "title": "Readmission Risk Pool Platform",
+    "section": "",
+    "text": "Alex Zajichek"
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#the-problem-this-is-trying-to-solve",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#the-problem-this-is-trying-to-solve",
+    "title": "Readmission Risk Pool Platform",
+    "section": "The problem this is trying to solve",
+    "text": "The problem this is trying to solve\nThis is a problem I have been thinking about for several years. Hospitals may have a readmission score when a patient leaves, but that score quickly becomes stale. Care teams then struggle to assemble what has happened after discharge, while quality and executive leaders often see a separate, delayed set of aggregate measures.\nThose are not three independent problems. They are different views of the same work.\nThe readmission risk pool is the group of recently discharged patients who have not yet been readmitted and can still benefit from follow-up. Managing that pool well means knowing who is in it now, what has changed, where attention may be most useful, and how the collective picture affects hospital performance.\nThe idea began as a proposed way to connect patient-level follow-up with a hospital-wide view. Read the original 2024 article."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#one-connected-working-picture",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#one-connected-working-picture",
+    "title": "Readmission Risk Pool Platform",
+    "section": "One connected working picture",
+    "text": "One connected working picture\nThe platform is meant to support a shared readmission “command center” without forcing every audience into the same screen or level of detail.\n\nCare teams need a current view of which patients remain at risk, what has happened since discharge, and who may need attention today.\nHospital analysts and modelers need room to use local data, existing discharge scores, and methods that reflect the hospital’s population and reasons for readmission.\nQuality and executive leaders need the individual patient picture to roll into trustworthy measures of volume, trends, expected readmissions, and operational impact.\n\nThe practical value is the connection between those views. A patient-level risk update should not live in a standalone model, and an executive metric should not be detached from the day-to-day work that produced it."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#start-with-something-that-already-works",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#start-with-something-that-already-works",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Start with something that already works",
+    "text": "Start with something that already works\nThe Readmission Risk Pool Hospital Implementation is the repository a hospital installs and customizes. It is not itself a fictional project. It includes fictional data and examples so a team can run and inspect a complete working path—from source data through risk updates and history to a web application—before asking for internal approval or connecting sensitive hospital data.\nThat makes the early conversation concrete. A developer or analyst can evaluate the workflow, see what the app provides, and identify what the hospital would need to change without starting from a blank repository or committing to a predefined vendor tool."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#adopt-it-one-piece-at-a-time",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#adopt-it-one-piece-at-a-time",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Adopt it one piece at a time",
+    "text": "Adopt it one piece at a time\nThe platform is intentionally designed for incremental implementation. A hospital can keep a working reference path while replacing one locally owned piece at a time.\n\nRun the complete example. Install the Hospital Implementation and exercise the fictional source-to-application workflow.\nChoose the deployment path. The platform can currently generate and validate a repository prepared for Posit Connect Cloud setup. A supported container target is a planned next step for deployment inside hospital-controlled infrastructure.\nConnect hospital data. Write the local SQL or other extraction and mapping logic needed to populate the shared canonical model. Once that mapping passes validation, the rest of the pipeline is designed to continue working unchanged.\nMake the risk method local. Begin with an existing discharge score if useful, then update risk throughout follow-up using the hospital’s own data and modeling approach. Use a built-in estimand—the precise quantity a model is asked to estimate—or register another quantity that better matches the hospital’s decisions.\n\nThe same principle extends to storage, analytical products, and the application: adopt the reference first, then replace a component when there is a concrete reason to do so."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#current-risk-not-only-discharge-risk",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#current-risk-not-only-discharge-risk",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Current risk, not only discharge risk",
+    "text": "Current risk, not only discharge risk\nThe methodological idea is straightforward: risk should reflect what is known now, not only what was known when the patient left the hospital.\nA hospital can retain its existing discharge risk score as a useful starting point. During follow-up, its own models can incorporate information such as completed visits, medication access, transportation, or other locally meaningful events. Because different hospitals and patient populations may have different drivers of readmission, the platform does not prescribe one universal model.\nIt does insist on clarity about what the model predicts. For example, a care team may need the probability that a patient who has not yet returned will be readmitted during the remaining follow-up window—not a generic score whose meaning changes from one implementation to another. That statistical discipline is built into the workflow while leaving the modeling method under hospital control."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#rigor-in-the-background",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#rigor-in-the-background",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Rigor in the background",
+    "text": "Rigor in the background\nThere is substantial engineering beneath the working example, but a hospital should not need to understand every internal detail to evaluate or operate it.\n\nValidation is built throughout the workflow so incompatible data or configuration can fail early and visibly instead of silently producing a misleading result.\nThe normal operator journey is documented through a small set of top-level commands for setup, readiness checks, platform runs, history, product refreshes, application checks, and deployment-artifact generation.\nAI and agent workflows are optional conveniences. Every supported operation has a documented human path, and an agent can only invoke the same predefined operations a person can run directly.\n\nThe backend documentation remains available for teams that need to review the statistical definitions, validation behavior, history, or replacement boundaries in depth."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#open-source-and-hospital-owned",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#open-source-and-hospital-owned",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Open source and hospital owned",
+    "text": "Open source and hospital owned\nThe Platform and Hospital Implementation are released under the Apache-2.0 license. There is no proprietary platform license required to use, inspect, or adapt the software; a hospital still bears its own implementation, infrastructure, security, and operating costs.\nThe hospital owns its data connections, model choices, infrastructure, workflows, and local modifications. CentralStatz provides an inspectable foundation rather than a closed tool that dictates how readmission risk must be modeled everywhere."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#where-it-stands-today",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#where-it-stands-today",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Where it stands today",
+    "text": "Where it stands today\nThe current release demonstrates a complete, runnable implementation using synthetic data and an intentionally nonclinical reference risk method. It includes durable risk history, analytical products, a web application, strong validation, and generation of deployable application artifacts.\nIt is not yet a clinically validated or production-approved hospital system. Real use requires local source mapping, development and validation of an appropriate risk method, approved infrastructure, privacy and security controls, workflow design, monitoring, and clinical governance. Posit Connect Cloud preparation is implemented; a supported container target and turnkey inside-the-firewall deployment are not."
+  },
+  {
+    "objectID": "lab/projects/readmission-risk-pool-platform/index.html#participate",
+    "href": "lab/projects/readmission-risk-pool-platform/index.html#participate",
+    "title": "Readmission Risk Pool Platform",
+    "section": "Participate",
+    "text": "Participate\nThe most useful feedback now is practical: what questions should care managers be able to answer each morning, what context do analysts need to trust a changing risk estimate, and which connected measures help quality and executive leaders act rather than merely review performance after the fact?\n\nInstall or review the Hospital Implementation\nReview the underlying Platform\nRead the original practical framework\nDiscuss the project"
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html",
+    "href": "lab/projects/analytics-reporting/index.html",
+    "title": "On-Demand Analytics Report",
+    "section": "",
+    "text": "Alex Zajichek\n\n2026-03-12"
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#why-this-exists",
+    "href": "lab/projects/analytics-reporting/index.html#why-this-exists",
+    "title": "On-Demand Analytics Report",
+    "section": "Why this exists",
+    "text": "Why this exists\nRecurring reports often accumulate manual steps, hidden decisions, and formatting work. This project explores a more explicit system: defined inputs, repeatable transformations, a consistent artifact, and clear places for analyst review."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#current-state",
+    "href": "lab/projects/analytics-reporting/index.html#current-state",
+    "title": "On-Demand Analytics Report",
+    "section": "Current state",
+    "text": "Current state\nAn initial report-generation workflow and visual artifact exist. The repository does not yet contain enough evidence to describe operational use, validation, or deployment, so those details remain intentionally provisional."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#current-hypothesis",
+    "href": "lab/projects/analytics-reporting/index.html#current-hypothesis",
+    "title": "On-Demand Analytics Report",
+    "section": "Current hypothesis",
+    "text": "Current hypothesis\nA parameterized, on-demand workflow can reduce repetitive assembly and improve consistency, while leaving interpretation and quality review with the analyst."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#next-experiment",
+    "href": "lab/projects/analytics-reporting/index.html#next-experiment",
+    "title": "On-Demand Analytics Report",
+    "section": "Next experiment",
+    "text": "Next experiment\nDocument the inputs, review gates, and the boundary between automated output and analyst interpretation."
+  },
+  {
+    "objectID": "lab/projects/analytics-reporting/index.html#participate",
+    "href": "lab/projects/analytics-reporting/index.html#participate",
+    "title": "On-Demand Analytics Report",
+    "section": "Participate",
+    "text": "Participate\nIf your team maintains a recurring report that is difficult to reproduce or update, share the workflow."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "",
+    "text": "Analytical partner for teams and organizations\n\n\n\n\n\n\n\n\nCentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.\n\n\nThe work can begin with advisory leadership, a fragile reporting process, an unclear analytical question, or a system that no longer supports the decisions around it. The starting point is a conversation about the real problem—not a predetermined tool.\n\n\nStart a conversation How CentralStatz helps\n\n\n\n\nHow the work movesFrom ambiguity to a dependable analytical system.\n\n\n\n01\n\nEvaluateClarify the question, decision, and constraints.\n\n\n\n02\n\nDesignConnect sound reasoning to a maintainable structure.\n\n\n\n03\n\nBuildImplement the system the work actually requires."
+  },
+  {
+    "objectID": "index.html#philosophy",
+    "href": "index.html#philosophy",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "Structure Before Sophistication",
+    "text": "Structure Before Sophistication\nMost analytical problems do not begin with dashboards or models. They begin with questions. CentralStatz works through the structure behind the problem before building a solution.\nMany organizations focus on output first. The stronger foundation is the system and reasoning that make an output trustworthy: transparent definitions, reproducible processes, defensible metrics, and maintainable implementation.\n\n\nClear questionsDefine what the work is meant to answer and support.\n\n\nDefensible logicMake measures and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood, repeated, and maintained.\n\n\nAppropriate toolsUse sophistication only where the problem earns it."
+  },
+  {
+    "objectID": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
+    "href": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "A place to investigate what analytical work could become.",
+    "text": "A place to investigate what analytical work could become.\nThe CentralStatz Lab turns carefully reasoned ideas into tangible prototypes, frameworks, and working systems that can be tested, challenged, and refined. It complements advisory work by making Alex’s approach to framing and building analytical systems visible—without making client work experimental by default.\nExplore the Lab →"
+  },
+  {
+    "objectID": "index.html#meet-alex-zajichek",
+    "href": "index.html#meet-alex-zajichek",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "Meet Alex Zajichek",
+    "text": "Meet Alex Zajichek\nAlex is a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time."
+  },
+  {
+    "objectID": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
+    "href": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
+    "title": "Deploying a Chatbot to Analyze Hospital Readmissions Data",
+    "section": "",
+    "text": "In progress\n\n\n\nHospital readmissions exploration interface showing a map, charts, summary counts, and a data table\n\n\n\n1. Building the Structure\n\n\n2. Strengthening the Logic\nFor more details on the technical backend for how this was built, you can read this blog post or watch the video below."
+  },
+  {
+    "objectID": "case-studies.html",
+    "href": "case-studies.html",
+    "title": "Case Studies",
+    "section": "",
+    "text": "This page is a work in progress\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeploying a Chatbot to Analyze Hospital Readmissions Data\n\n\nBuilding a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data.\n\n\n\n\n\nMar 13, 2026\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nStreamlining a Custom Google Analytics Report\n\n\nGenerating an on-demand, branded PDF report sourced from Google Analytics.\n\n\n\n\n\nMar 12, 2026\n\n\nAlex Zajichek\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
+    "title": "Streamlining a Custom Google Analytics Report",
+    "section": "",
+    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
+  },
+  {
+    "objectID": "lab/index.html",
+    "href": "lab/index.html",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "",
+    "text": "CentralStatz Lab\n\n\n\n\nA focused space for exploring what analytical work can become when implementation is no longer the primary constraint.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.\n\n\nExplore active projects Work with CentralStatz\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it tangible\n\n\n03TestExpose it to reality\n\n\n\n↳ The artifact expresses the current hypothesis—it does not prove the hypothesis is right."
+  },
+  {
+    "objectID": "lab/index.html#faster-implementation-changes-more-than-speed.",
+    "href": "lab/index.html#faster-implementation-changes-more-than-speed.",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Faster implementation changes more than speed.",
+    "text": "Faster implementation changes more than speed.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace."
+  },
+  {
+    "objectID": "lab/index.html#lab-philosophy",
+    "href": "lab/index.html#lab-philosophy",
+    "title": "Better analytical ideas, made tangible.",
+    "section": "Structure Before Sophistication",
+    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nExpanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.\n\n\nClear questionsLet the actual question—not inherited machinery—set the boundary.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
+  },
+  {
     "objectID": "lab/projects/flux-estimand/index.html",
     "href": "lab/projects/flux-estimand/index.html",
     "title": "Flux Estimand Framework",
@@ -75,118 +257,6 @@
     "title": "Flux Estimand Framework",
     "section": "Participate",
     "text": "Participate\nMethodological critique is welcome—especially around conditioning states, counterfactual definitions, model sufficiency, validation targets, and the boundary between estimands and their implementations.\n\nReview Flux Estimand on GitHub\nShare methodological feedback"
-  },
-  {
-    "objectID": "lab/index.html",
-    "href": "lab/index.html",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "",
-    "text": "CentralStatz Lab\n\n\n\n\nA focused space for exploring what analytical work can become when implementation is no longer the primary constraint.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.\n\n\nExplore active projects Work with CentralStatz\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it tangible\n\n\n03TestExpose it to reality\n\n\n\n↳ The artifact expresses the current hypothesis—it does not prove the hypothesis is right."
-  },
-  {
-    "objectID": "lab/index.html#faster-implementation-changes-more-than-speed.",
-    "href": "lab/index.html#faster-implementation-changes-more-than-speed.",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "Faster implementation changes more than speed.",
-    "text": "Faster implementation changes more than speed.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace."
-  },
-  {
-    "objectID": "lab/index.html#lab-philosophy",
-    "href": "lab/index.html#lab-philosophy",
-    "title": "Better analytical ideas, made tangible.",
-    "section": "Structure Before Sophistication",
-    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nExpanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.\n\n\nClear questionsLet the actual question—not inherited machinery—set the boundary.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
-  },
-  {
-    "objectID": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "href": "case-studies/streamlining-google-analytics-pdf-report/index.html",
-    "title": "Streamlining a Custom Google Analytics Report",
-    "section": "",
-    "text": "In progress\n\n1. Building the Structure\n\n\n2. Strengthening the Logic"
-  },
-  {
-    "objectID": "case-studies.html",
-    "href": "case-studies.html",
-    "title": "Case Studies",
-    "section": "",
-    "text": "This page is a work in progress\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeploying a Chatbot to Analyze Hospital Readmissions Data\n\n\nBuilding a deployment pipeline for an LLM-based chat interface into a custom web application for interactively exploring results from the Hospital Readmissions Reduction Program (HRRP) data.\n\n\n\n\n\nMar 13, 2026\n\n\nAlex Zajichek\n\n\n\n\n\n\n\n\n\n\n\n\nStreamlining a Custom Google Analytics Report\n\n\nGenerating an on-demand, branded PDF report sourced from Google Analytics.\n\n\n\n\n\nMar 12, 2026\n\n\nAlex Zajichek\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
-    "href": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
-    "title": "Deploying a Chatbot to Analyze Hospital Readmissions Data",
-    "section": "",
-    "text": "In progress\n\n\n\nHospital readmissions exploration interface showing a map, charts, summary counts, and a data table\n\n\n\n1. Building the Structure\n\n\n2. Strengthening the Logic\nFor more details on the technical backend for how this was built, you can read this blog post or watch the video below."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bring structure to difficult analytical problems.",
-    "section": "",
-    "text": "Analytical partner for teams and organizations\n\n\n\n\n\n\n\n\nCentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.\n\n\nThe work can begin with advisory leadership, a fragile reporting process, an unclear analytical question, or a system that no longer supports the decisions around it. The starting point is a conversation about the real problem—not a predetermined tool.\n\n\nStart a conversation How CentralStatz helps\n\n\n\n\nHow the work movesFrom ambiguity to a dependable analytical system.\n\n\n\n01\n\nEvaluateClarify the question, decision, and constraints.\n\n\n\n02\n\nDesignConnect sound reasoning to a maintainable structure.\n\n\n\n03\n\nBuildImplement the system the work actually requires."
-  },
-  {
-    "objectID": "index.html#philosophy",
-    "href": "index.html#philosophy",
-    "title": "Bring structure to difficult analytical problems.",
-    "section": "Structure Before Sophistication",
-    "text": "Structure Before Sophistication\nMost analytical problems do not begin with dashboards or models. They begin with questions. CentralStatz works through the structure behind the problem before building a solution.\nMany organizations focus on output first. The stronger foundation is the system and reasoning that make an output trustworthy: transparent definitions, reproducible processes, defensible metrics, and maintainable implementation.\n\n\nClear questionsDefine what the work is meant to answer and support.\n\n\nDefensible logicMake measures and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood, repeated, and maintained.\n\n\nAppropriate toolsUse sophistication only where the problem earns it."
-  },
-  {
-    "objectID": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
-    "href": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
-    "title": "Bring structure to difficult analytical problems.",
-    "section": "A place to investigate what analytical work could become.",
-    "text": "A place to investigate what analytical work could become.\nThe CentralStatz Lab turns carefully reasoned ideas into tangible prototypes, frameworks, and working systems that can be tested, challenged, and refined. It complements advisory work by making Alex’s approach to framing and building analytical systems visible—without making client work experimental by default.\nExplore the Lab →"
-  },
-  {
-    "objectID": "index.html#meet-alex-zajichek",
-    "href": "index.html#meet-alex-zajichek",
-    "title": "Bring structure to difficult analytical problems.",
-    "section": "Meet Alex Zajichek",
-    "text": "Meet Alex Zajichek\nAlex is a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time."
-  },
-  {
-    "objectID": "lab/projects/analytics-reporting/index.html",
-    "href": "lab/projects/analytics-reporting/index.html",
-    "title": "On-Demand Analytics Report",
-    "section": "",
-    "text": "Alex Zajichek\n\n2026-03-12"
-  },
-  {
-    "objectID": "lab/projects/analytics-reporting/index.html#why-this-exists",
-    "href": "lab/projects/analytics-reporting/index.html#why-this-exists",
-    "title": "On-Demand Analytics Report",
-    "section": "Why this exists",
-    "text": "Why this exists\nRecurring reports often accumulate manual steps, hidden decisions, and formatting work. This project explores a more explicit system: defined inputs, repeatable transformations, a consistent artifact, and clear places for analyst review."
-  },
-  {
-    "objectID": "lab/projects/analytics-reporting/index.html#current-state",
-    "href": "lab/projects/analytics-reporting/index.html#current-state",
-    "title": "On-Demand Analytics Report",
-    "section": "Current state",
-    "text": "Current state\nAn initial report-generation workflow and visual artifact exist. The repository does not yet contain enough evidence to describe operational use, validation, or deployment, so those details remain intentionally provisional."
-  },
-  {
-    "objectID": "lab/projects/analytics-reporting/index.html#current-hypothesis",
-    "href": "lab/projects/analytics-reporting/index.html#current-hypothesis",
-    "title": "On-Demand Analytics Report",
-    "section": "Current hypothesis",
-    "text": "Current hypothesis\nA parameterized, on-demand workflow can reduce repetitive assembly and improve consistency, while leaving interpretation and quality review with the analyst."
-  },
-  {
-    "objectID": "lab/projects/analytics-reporting/index.html#next-experiment",
-    "href": "lab/projects/analytics-reporting/index.html#next-experiment",
-    "title": "On-Demand Analytics Report",
-    "section": "Next experiment",
-    "text": "Next experiment\nDocument the inputs, review gates, and the boundary between automated output and analyst interpretation."
-  },
-  {
-    "objectID": "lab/projects/analytics-reporting/index.html#participate",
-    "href": "lab/projects/analytics-reporting/index.html#participate",
-    "title": "On-Demand Analytics Report",
-    "section": "Participate",
-    "text": "Participate\nIf your team maintains a recurring report that is difficult to reproduce or update, share the workflow."
   },
   {
     "objectID": "lab/projects/readmissions-interface/index.html",

@@ -9,7 +9,7 @@ format:
     body-classes: lab-home
 listing:
   id: active-projects-listing
-  contents: "projects/*/index.qmd"
+  contents: "projects/readmission-risk-pool-platform/index.qmd"
   template: "../_templates/project-card.ejs.md"
   sort: "order asc"
   fields: [title, description, image, preview_alt, category, status, stage, order, central_question, current_state, latest_update, next_step, limitations, looking_for, visual_type, visual_is_concept]

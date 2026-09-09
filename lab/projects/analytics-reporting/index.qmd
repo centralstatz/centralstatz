@@ -11,7 +11,7 @@ preview_alt: "Preview of a branded Google Analytics PDF report"
 category: "Reporting systems"
 status: "Exploring"
 stage: "Concept"
-featured: true
+featured: false
 order: 2
 ownership: "Project page authored by Alex Zajichek for CentralStatz"
 source_type: "mixed"

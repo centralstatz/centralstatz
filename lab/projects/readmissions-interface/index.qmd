@@ -11,7 +11,7 @@ preview_alt: "Hospital readmissions explorer with controls, a Wisconsin hospital
 category: "Healthcare analytics"
 status: "Active development"
 stage: "Prototype"
-featured: true
+featured: false
 order: 1
 ownership: "Project page authored by Alex Zajichek for CentralStatz"
 source_type: "mixed"

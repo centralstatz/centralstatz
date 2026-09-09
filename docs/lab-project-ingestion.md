@@ -58,6 +58,8 @@ Do not copy credentials, PHI, client data, private names, internal URLs, local p
 
 Each project is `lab/projects/<slug>/index.qmd`. The listing in `lab/index.qmd` discovers `projects/*/index.qmd` relative to the Lab home; `_templates/project-card.ejs.md` renders its card. This produces `/lab/projects/<slug>/` routes without a separate registration step.
 
+The Lab homepage listing uses an explicit `contents` selection in `lab/index.qmd`. Set an older project's `featured` value to `false` and remove its path from that selection to retire it from the active listing while preserving its notebook route and evidence record.
+
 Keep project-specific screenshots and generated visuals in the project directory when practical. Existing shared historical assets may be referenced relatively. Use a 16:9 landscape preview around 1600×900. Cards use cover cropping, so keep meaningful content near the center. Every image requires accurate alt text.
 
 ## Metadata schema
