@@ -1,7 +1,7 @@
 ---
 title: ""
 pagetitle: "CentralStatz Lab"
-description: "CentralStatz Lab explores new forms of analytical work through tangible prototypes, interactive systems, and rigorously reasoned experiments."
+description: "CentralStatz Lab explores healthcare analytical problems through tangible prototypes, frameworks, and working systems."
 canonical-url: "https://www.centralstatz.com/lab/"
 format:
   html:
@@ -27,7 +27,7 @@ listing:
 
 # Better analytical ideas, made tangible.
 
-<p class="hero-lead">A focused space for exploring what analytical work can become when implementation is no longer the primary constraint.</p>
+<p class="hero-lead">A focused space for exploring healthcare analytical problems and what becomes possible when implementation is no longer the primary constraint.</p>
 
 <p class="hero-support">Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.</p>
 

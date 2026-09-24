@@ -252,12 +252,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .business-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .business-card { min-height: 300px; display: flex; flex-direction: column; padding: clamp(1.4rem, 3vw, 2rem); background: $surface; border: 1px solid $line; }
 .business-card > span, .lab-intro-note > span { color: $gold-bright; font-family: ui-monospace, monospace; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
-.business-card h3 { margin: auto 0 .75rem; font-size: clamp(1.4rem, 2.5vw, 2rem); }
+.business-card h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 1.5rem 0 .75rem; min-height: 2.7em;}
 .business-card p { margin: 0; color: $muted; font-size: .9rem; }
 .service-note { margin-top: 1rem; padding: 1.2rem 1.4rem; color: #c7c9c2; border-left: 2px solid $gold-bright; background: rgba($paper,.035); }
 .service-note strong { color: $paper; }
 .lab-introduction { background: linear-gradient(135deg, rgba($blue,.08), rgba($gold-bright,.045)); }
-.lab-intro-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; }
+.lab-intro-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; padding-inline: clamp(1.5rem, 3vw, 3rem);}
 .lab-intro-copy h2 { max-width: 850px; margin: 1rem 0; }
 .lab-intro-copy p { max-width: 760px; }
 .lab-intro-note { padding: 1.6rem; border-top: 2px solid $blue; background: $surface; }

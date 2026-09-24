@@ -123,14 +123,14 @@
     "href": "index.html",
     "title": "Bring structure to difficult analytical problems.",
     "section": "",
-    "text": "Analytical partner for teams and organizations\n\n\n\n\n\n\n\n\nCentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.\n\n\nThe work can begin with advisory leadership, a fragile reporting process, an unclear analytical question, or a system that no longer supports the decisions around it. The starting point is a conversation about the real problem—not a predetermined tool.\n\n\nStart a conversation How CentralStatz helps\n\n\n\n\nHow the work movesFrom ambiguity to a dependable analytical system.\n\n\n\n01\n\nEvaluateClarify the question, decision, and constraints.\n\n\n\n02\n\nDesignConnect sound reasoning to a maintainable structure.\n\n\n\n03\n\nBuildImplement the system the work actually requires."
+    "text": "Analytical partner for healthcare teams and organizations\n\n\n\n\n\n\n\n\nCentralStatz helps healthcare teams and organizations think through, design, and build analytical systems and processes that bring structure, clarity, and reproducibility to complex problems.\n\n\nSometimes that means reporting pipelines, analytical applications, statistical workflows, or internal analytics infrastructure. Other times it simply means helping navigate difficult analytical questions. The starting point is a conversation about the real problem, not a predefined solution.\n\n\nStart a conversation How CentralStatz helps\n\n\n\n\nHow the work movesFrom ambiguity to analytical clarity.\n\n\n\n01\n\nEvaluateClarify the questions, decisions, and constraints.\n\n\n\n02\n\nDesignDefine the analytical approach and how the pieces fit together.\n\n\n\n03\n\nBuildImplement the solution the problem actually requires."
   },
   {
     "objectID": "index.html#philosophy",
     "href": "index.html#philosophy",
     "title": "Bring structure to difficult analytical problems.",
     "section": "Structure Before Sophistication",
-    "text": "Structure Before Sophistication\nMost analytical problems do not begin with dashboards or models. They begin with questions. CentralStatz works through the structure behind the problem before building a solution.\nMany organizations focus on output first. The stronger foundation is the system and reasoning that make an output trustworthy: transparent definitions, reproducible processes, defensible metrics, and maintainable implementation.\n\n\nClear questionsDefine what the work is meant to answer and support.\n\n\nDefensible logicMake measures and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood, repeated, and maintained.\n\n\nAppropriate toolsUse sophistication only where the problem earns it."
+    "text": "Structure Before Sophistication\nMost analytical problems do not begin with dashboards or models. They begin with questions. CentralStatz works through the structure behind the problem before building a solution.\nIt is easy to focus on the output first. But the output is only as useful as the reasoning and processes behind it: clear definitions, reproducible workflows, defensible metrics, and maintainable implementation.\n\n\nClear questionsDefine what the work is meant to answer and support.\n\n\nDefensible logicMake measures and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood, repeated, and maintained.\n\n\nAppropriate toolsUse sophistication only where the problem earns it."
   },
   {
     "objectID": "index.html#a-place-to-investigate-what-analytical-work-could-become.",
@@ -144,7 +144,7 @@
     "href": "index.html#meet-alex-zajichek",
     "title": "Bring structure to difficult analytical problems.",
     "section": "Meet Alex Zajichek",
-    "text": "Meet Alex Zajichek\nAlex is a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time."
+    "text": "Meet Alex Zajichek\nAlex is a statistician and data scientist in Central Wisconsin with more than a decade of experience working across healthcare research, analytics, and data science.\nHis work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps teams and organizations build reproducible analytics, strengthen statistical reasoning, and create systems and processes that make complex questions easier to answer over time."
   },
   {
     "objectID": "case-studies/llm-powered-app-for-hospital-readmissions/index.html",
@@ -172,7 +172,7 @@
     "href": "lab/index.html",
     "title": "Better analytical ideas, made tangible.",
     "section": "",
-    "text": "CentralStatz Lab\n\n\n\n\nA focused space for exploring what analytical work can become when implementation is no longer the primary constraint.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.\n\n\nExplore active projects Work with CentralStatz\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it tangible\n\n\n03TestExpose it to reality\n\n\n\n↳ The artifact expresses the current hypothesis—it does not prove the hypothesis is right."
+    "text": "CentralStatz Lab\n\n\n\n\nA focused space for exploring healthcare analytical problems and what becomes possible when implementation is no longer the primary constraint.\n\n\nEach project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.\n\n\nExplore active projects Work with CentralStatz\n\n\n\n\n\nLAB / 001Current operating model\n\n\nWhat should analytical work make possible?\n\n\n\n01ReasonFrame the question\n\n\n02BuildMake it tangible\n\n\n03TestExpose it to reality\n\n\n\n↳ The artifact expresses the current hypothesis—it does not prove the hypothesis is right."
   },
   {
     "objectID": "lab/index.html#faster-implementation-changes-more-than-speed.",
@@ -313,5 +313,12 @@
     "title": "Hospital Readmissions Explorer",
     "section": "Relevant notes",
     "text": "Relevant notes\n\nTechnical build notes\nVideo walkthrough\nStart a conversation"
+  },
+  {
+    "objectID": "index.html#exploring-analytical-problems-in-healthcare.",
+    "href": "index.html#exploring-analytical-problems-in-healthcare.",
+    "title": "Bring structure to difficult analytical problems.",
+    "section": "Exploring analytical problems in healthcare.",
+    "text": "Exploring analytical problems in healthcare.\nThe CentralStatz Lab is where ideas are developed into prototypes, frameworks, and working systems that can be tested, challenged, and refined. It provides a place to explore healthcare problems beyond the constraints of client work while making the thinking and methods behind CentralStatz visible.\nExplore the Lab →"
   }
 ]

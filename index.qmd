@@ -15,7 +15,7 @@ format:
 
 ::: {.home-hero-heading}
 
-<div class="eyebrow">Analytical partner for teams and organizations</div>
+<div class="eyebrow">Analytical partner for healthcare teams and organizations</div>
 
 # Bring structure to difficult analytical problems.
 
@@ -25,9 +25,9 @@ format:
 
 ::: {.home-hero-copy}
 
-<p class="hero-lead">CentralStatz helps organizations evaluate, design, and build analytical systems that are clear, reproducible, and defensible.</p>
+<p class="hero-lead">CentralStatz helps healthcare teams and organizations think through, design, and build analytical systems and processes that bring structure, clarity, and reproducibility to complex problems.</p>
 
-<p class="hero-support">The work can begin with advisory leadership, a fragile reporting process, an unclear analytical question, or a system that no longer supports the decisions around it. The starting point is a conversation about the real problem—not a predetermined tool.</p>
+<p class="hero-support">Sometimes that means reporting pipelines, analytical applications, statistical workflows, or internal analytics infrastructure. Other times it simply means helping navigate difficult analytical questions. The starting point is a conversation about the real problem, not a predefined solution.</p>
 
 <div class="hero-actions">
   <a class="lab-button lab-button-primary" href="#contact">Start a conversation</a>
@@ -38,12 +38,12 @@ format:
 
 ::: {.home-pathway aria-label="CentralStatz works through three connected capabilities"}
 
-<div class="home-pathway-heading"><span>How the work moves</span><strong>From ambiguity to a dependable analytical system.</strong></div>
+<div class="home-pathway-heading"><span>How the work moves</span><strong>From ambiguity to analytical clarity.</strong></div>
 
 <ol>
-  <li><span>01</span><div><strong>Evaluate</strong><small>Clarify the question, decision, and constraints.</small></div></li>
-  <li><span>02</span><div><strong>Design</strong><small>Connect sound reasoning to a maintainable structure.</small></div></li>
-  <li><span>03</span><div><strong>Build</strong><small>Implement the system the work actually requires.</small></div></li>
+  <li><span>01</span><div><strong>Evaluate</strong><small>Clarify the questions, decisions, and constraints.</small></div></li>
+  <li><span>02</span><div><strong>Design</strong><small>Define the analytical approach and how the pieces fit together.</small></div></li>
+  <li><span>03</span><div><strong>Build</strong><small>Implement the solution the problem actually requires.</small></div></li>
 </ol>
 
 :::
@@ -58,16 +58,16 @@ format:
 
 <div class="section-heading">
   <div><span class="section-index">01 / Work with CentralStatz</span><h2>Evaluate. Design. Build.</h2></div>
-  <p>Support can be advisory, hands-on, or a combination—matched to the analytical problem and the capabilities a team already has.</p>
+  <p>Support can be advisory, hands-on, or a combination depending on the problem and the capabilities already in place.</p>
 </div>
 
 <div class="business-card-grid">
-  <article class="business-card"><span>Advisory</span><h3>Analytical leadership</h3><p>Navigate difficult analytical decisions, clarify priorities, and add experienced statistical and systems perspective without forcing a full-time model.</p></article>
+  <article class="business-card"><span>Advisory</span><h3>Analytical leadership</h3><p>Help navigate difficult analytical questions, set priorities, and provide experienced statistical and technical direction as the work evolves.</p></article>
   <article class="business-card"><span>Reasoning</span><h3>Strengthen the logic</h3><p>Review definitions, cohorts, attribution rules, assumptions, statistical approaches, and sources of bias or instability.</p></article>
   <article class="business-card"><span>Systems</span><h3>Build the structure</h3><p>Design reproducible reporting pipelines, analytical datasets, applications, workflows, documentation, and internal infrastructure.</p></article>
 </div>
 
-<div class="service-note"><strong>Common thread:</strong> disciplined design, reproducibility, statistical clarity, and implementation that remains understandable after launch.</div>
+<div class="service-note"><strong>Common thread:</strong> <span style="font-size:larger; color:white;">Disciplined</span> design. <span style="font-size:larger; color:white;">Reproducibility.</span> Statistical <span style="font-size:larger; color:white;">clarity.</span></div>
 
 :::
 
@@ -83,7 +83,7 @@ format:
 
 Most analytical problems do not begin with dashboards or models. They begin with questions. CentralStatz works through the structure behind the problem before building a solution.
 
-Many organizations focus on output first. The stronger foundation is the system and reasoning that make an output trustworthy: transparent definitions, reproducible processes, defensible metrics, and maintainable implementation.
+It is easy to focus on the output first. But the output is only as useful as the reasoning and processes behind it: clear definitions, reproducible workflows, defensible metrics, and maintainable implementation.
 
 <div class="principle-grid">
   <div><strong>Clear questions</strong><span>Define what the work is meant to answer and support.</span></div>
@@ -104,9 +104,9 @@ Many organizations focus on output first. The stronger foundation is the system 
 
 <span class="section-index">03 / CentralStatz Lab</span>
 
-## A place to investigate what analytical work could become.
+## Exploring analytical problems in healthcare.
 
-The CentralStatz Lab turns carefully reasoned ideas into tangible prototypes, frameworks, and working systems that can be tested, challenged, and refined. It complements advisory work by making Alex’s approach to framing and building analytical systems visible—without making client work experimental by default.
+The CentralStatz Lab is where ideas are developed into prototypes, frameworks, and working systems that can be tested, challenged, and refined. It provides a place to explore healthcare problems beyond the constraints of client work while making the thinking and methods behind CentralStatz visible.
 
 <a class="lab-button lab-button-secondary" href="/lab/">Explore the Lab <span aria-hidden="true">→</span></a>
 
@@ -114,13 +114,9 @@ The CentralStatz Lab turns carefully reasoned ideas into tangible prototypes, fr
 
 ::: {.lab-intro-note}
 
-<span>Advisory work</span>
+<span>CURRENT AREAS OF EXPLORATION</span>
 
-Begins with an organization’s real problem, constraints, and responsibilities.
-
-<span>Lab work</span>
-
-Explores broader or emerging questions in public, testable form.
+Readmission risk trajectories
 
 :::
 
@@ -138,9 +134,9 @@ Explores broader or emerging questions in public, testable form.
 
 ## Meet Alex Zajichek
 
-Alex is a statistician and data scientist in Central Wisconsin with more than a decade of experience learning, teaching, and doing data science work across tools, methods, and problem contexts.
+Alex is a statistician and data scientist in Central Wisconsin with more than a decade of experience working across healthcare research, analytics, and data science.
 
-His work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps organizations build reproducible analytics, strengthen statistical reasoning, and create systems that make complex questions easier to answer over time.
+His work is especially grounded in healthcare, where messy systems, consequential decisions, and fragile metrics make sound analytical structure essential. Through CentralStatz, he helps teams and organizations build reproducible analytics, strengthen statistical reasoning, and create systems and processes that make complex questions easier to answer over time.
 
 :::
 
@@ -161,7 +157,7 @@ His work is especially grounded in healthcare, where messy systems, consequentia
 <div class="contact-intro">
   <span class="section-index">05 / Start here</span>
   <h2>What analytical problem should work better?</h2>
-  <p>Share the rough version. This is a conversation-first starting point, not a commitment.</p>
+  <p>Share the rough version. Starting with a conversation doesn't commit you to anything.</p>
 </div>
 
 <form name="analytics-question" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="problem-form" action="/thank-you.html">
