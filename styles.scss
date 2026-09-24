@@ -152,8 +152,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .process-track h3 { margin: 2rem 0 .5rem; }
 .process-track p { margin: 0; padding-right: .9rem; color: $muted; font-size: .82rem; }
 
-.ai-section { width: 100%; max-width: none; padding-inline: max(1.5rem, calc((100vw - 1240px)/2)); background: #e2e0d8; }
-.ai-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 8rem); }
+.ai-section { width: 100%; max-width: none; background: #e2e0d8;}
+.ai-layout {
+  width: min(1240px, calc(100% - 3rem));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+.ai-section .section-index {
+  color: darken($gold, 12%);
+}
 .ai-section h2, .ai-section h3 { color: #1a1c18; }
 .ai-section p, .ai-section li { color: #454941; }
 .ai-statement h2 { margin-top: 1rem; }

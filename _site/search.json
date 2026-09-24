@@ -179,14 +179,14 @@
     "href": "lab/index.html#faster-implementation-changes-more-than-speed.",
     "title": "Better analytical ideas, made tangible.",
     "section": "Faster implementation changes more than speed.",
-    "text": "Faster implementation changes more than speed.\nAI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace."
+    "text": "Faster implementation changes more than speed.\nAI-assisted development can reduce the distance between a well-reasoned healthcare problem and a working analytical system. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace.\n\nThe goal is not maximum sophistication. It is less compromise for the wrong reasons. Statistical reasoning, domain expertise, validation, and judgment still determine what should be built."
   },
   {
     "objectID": "lab/index.html#lab-philosophy",
     "href": "lab/index.html#lab-philosophy",
     "title": "Better analytical ideas, made tangible.",
     "section": "Structure Before Sophistication",
-    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.\nExpanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.\n\n\nClear questionsLet the actual question—not inherited machinery—set the boundary.\n\n\nDefensible logicMake metrics and assumptions open to review.\n\n\nReproducible systemsBuild work that can be understood and repeated.\n\n\nHonest boundariesState uncertainty and limits alongside capability."
+    "text": "Structure Before Sophistication\nSophisticated-looking outputs are becoming easier to generate. Understanding the healthcare problem, defining what should be measured, making assumptions explicit, and determining how the work will be used are not.\nExpanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Get the structure right first, then add complexity only where it improves the solution.\n\n\nClear questionsStart with the healthcare question and the decision it needs to support.\n\n\nDefensible logicMake definitions, metrics, assumptions, and analytical choices open to review.\n\n\nReproducible systemsBuild work that can be understood, repeated, and maintained.\n\n\nHonest boundariesMake uncertainty, limitations, and appropriate use part of the system."
   },
   {
     "objectID": "lab/projects/flux-estimand/index.html",

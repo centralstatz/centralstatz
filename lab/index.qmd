@@ -75,10 +75,10 @@ listing:
 </div>
 
 <ol class="process-track">
-  <li><span>01</span><h3>Observe</h3><p>Identify a recurring analytical problem or workflow that should work better.</p></li>
-  <li><span>02</span><h3>Reason</h3><p>Clarify the question, inherited assumptions, users, evidence, and whether a simple structure is sufficient.</p></li>
+  <li><span>01</span><h3>Observe</h3><p>Identify a recurring healthcare analytical problem or workflow that should work better.</p></li>
+  <li><span>02</span><h3>Reason</h3><p>Clarify the question, clinical or operational context, inherited assumptions, users, evidence, and whether a simple structure is sufficient.</p></li>
   <li><span>03</span><h3>Prototype</h3><p>Make one or more possible structures tangible enough to compare, question, and test.</p></li>
-  <li><span>04</span><h3>Test</h3><p>Put it in front of users, experts, data, and real constraints.</p></li>
+  <li><span>04</span><h3>Test</h3><p>Put it in front of users, domain experts, data, and real-world constraints.</p></li>
   <li><span>05</span><h3>Evolve</h3><p>Improve it, pause it, publish what was learned, or develop it further.</p></li>
 </ol>
 
@@ -94,7 +94,9 @@ listing:
 
 ## Faster implementation changes more than speed.
 
-AI-assisted development can reduce the distance between a well-reasoned concept and a working interface. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace.
+AI-assisted development can reduce the distance between a well-reasoned healthcare problem and a working analytical system. More importantly, lower implementation cost expands the set of solutions worth considering before one structure becomes expensive to replace.
+
+<p class="boundary-note">The goal is not maximum sophistication. It is less compromise for the wrong reasons. Statistical reasoning, domain expertise, validation, and judgment still determine what should be built.</p>
 
 :::
 
@@ -102,19 +104,17 @@ AI-assisted development can reduce the distance between a well-reasoned concept 
 
 ### Acceleration
 
-- analytical code, interfaces, and supporting workflows
-- comparison of designs before committing
-- creation of testable analytical artifacts
-- iteration between reasoning and use
+- analytical code + interfaces
+- rapid design comparison
+- testable analytical artifacts
+- faster reasoning–use iteration
 
 ### Expanded possibility
 
-- reconsider the shape and scope of the project
-- represent decisions, states, uncertainty, or trajectories when useful
-- compare meaningful analytical formulations
-- let the problem determine the machinery
-
-<p class="boundary-note">The goal is not maximum sophistication. It is less compromise for the wrong reasons. Statistical reasoning, domain expertise, validation, and judgment still determine what should be built.</p>
+- reconsider project scope
+- represent states + trajectories
+- compare analytical formulations
+- problem determines machinery
 
 :::
 
@@ -132,15 +132,15 @@ AI-assisted development can reduce the distance between a well-reasoned concept 
 
 ## Structure Before Sophistication {#lab-philosophy}
 
-Sophisticated-looking outputs are becoming easier to generate. Framing, definitions, assumptions, architecture, and validation are not.
+Sophisticated-looking outputs are becoming easier to generate. Understanding the healthcare problem, defining what should be measured, making assumptions explicit, and determining how the work will be used are not.
 
-Expanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Structure decides where added machinery earns its place—and where it does not.
+Expanded technical capability does not make complexity inherently better. A simple method is still the right method when it matches the question, data, and decision. Get the structure right first, then add complexity only where it improves the solution.
 
 <div class="principle-grid">
-  <div><strong>Clear questions</strong><span>Let the actual question—not inherited machinery—set the boundary.</span></div>
-  <div><strong>Defensible logic</strong><span>Make metrics and assumptions open to review.</span></div>
-  <div><strong>Reproducible systems</strong><span>Build work that can be understood and repeated.</span></div>
-  <div><strong>Honest boundaries</strong><span>State uncertainty and limits alongside capability.</span></div>
+  <div><strong>Clear questions</strong><span>Start with the healthcare question and the decision it needs to support.</span></div>
+  <div><strong>Defensible logic</strong><span>Make definitions, metrics, assumptions, and analytical choices open to review.</span></div>
+  <div><strong>Reproducible systems</strong><span>Build work that can be understood, repeated, and maintained.</span></div>
+  <div><strong>Honest boundaries</strong><span>Make uncertainty, limitations, and appropriate use part of the system.</span></div>
 </div>
 
 :::
