@@ -19,7 +19,7 @@ website:
   page-footer:
     left: "© 2026 CentralStatz Statistical & Data Sciences LLC · Wausau, Wisconsin"
     center: |
-      <a href="/">Home</a> · <a href="/#services">Services</a> · <a href="/lab/">Lab</a> · <a href="/#about">About</a> · <a href="/#contact">Contact</a>
+      <a href="/">Home</a> · <a href="/#services">Services</a> · <a href="/#about">About</a> · <a href="/#contact">Contact</a> · <a href="/lab/">Lab</a> 
     right: |
       <div class="footer-icons">
         <a href="mailto:alex@centralstatz.com" aria-label="Email CentralStatz"><i class="bi bi-envelope"></i></a>
@@ -36,10 +36,10 @@ website:
         href: "/"
       - text: Services
         href: "/#services"
-      - text: Lab
-        href: "/lab/"
       - text: About
         href: "/#about"
+      - text: Lab
+        href: "/lab/"
     right:
       - text: Contact
         href: "/#contact"

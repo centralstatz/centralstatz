@@ -29,7 +29,7 @@ listing:
 
 <p class="hero-lead">A focused space for exploring healthcare analytical problems and what becomes possible when implementation is no longer the primary constraint.</p>
 
-<p class="hero-support">Each project begins with a real analytical problem—not a technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.</p>
+<p class="hero-support">Each project begins with a real analytical problem, not a basic technology demo. Rigorous reasoning defines the structure; rapid, AI-assisted development makes alternative ways of framing and solving it tangible early enough to test.</p>
 
 <div class="hero-actions">
   <a class="lab-button lab-button-primary" href="#active-projects">Explore active projects</a>
@@ -47,7 +47,7 @@ listing:
   <div><span>02</span><strong>Build</strong><small>Make it tangible</small></div>
   <div><span>03</span><strong>Test</strong><small>Expose it to reality</small></div>
 </div>
-<div class="instrument-note"><span aria-hidden="true">↳</span> The artifact expresses the current hypothesis—it does not prove the hypothesis is right.</div>
+<div class="instrument-note"><span aria-hidden="true">↳</span> Building the idea makes it testable. It does not make it right. </div>
 
 :::
 
@@ -59,7 +59,7 @@ listing:
 
 <div class="section-heading" id="active-projects">
   <div><span class="section-index">01 / Active work</span><h2>Working hypotheses, made inspectable.</h2></div>
-  <p>Projects are published while they are still becoming. Status, limitations, and next questions are part of the work—not footnotes.</p>
+  <p>Projects are published while they are still becoming. Status, limitations, and next questions are part of the work.</p>
 </div>
 
 ::: {#active-projects-listing}
