@@ -198,17 +198,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .contact-section { margin-bottom: 7rem; padding: clamp(2rem, 6vw, 5rem); display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(3rem, 7vw, 7rem); background: $surface-raised; border: 1px solid rgba($gold-bright,.38); }
 .contact-intro h2 { margin: 1rem 0; font-size: clamp(2.2rem, 4vw, 4rem); }
-.problem-form { display: grid; gap: .8rem; }
+.problem-form { display: grid; gap: .65rem; }
 .problem-form label { color: #dcdad3; font-size: .76rem; font-weight: 650; }
 .problem-form label span { color: $muted; font-weight: 400; }
-.problem-form textarea, .problem-form input { width: 100%; padding: .9rem 1rem; color: $paper; background: #141613; border: 1px solid rgba($paper,.22); border-radius: 2px; }
-.problem-form textarea { min-height: 155px; resize: vertical; }
+.problem-form textarea, .problem-form input { width: 100%; color: $paper; background: #141613; border: 1px solid rgba($paper,.22); border-radius: 2px; }
+.problem-form textarea { min-height: 118px; padding: .75rem .9rem; line-height: 1.5; resize: vertical; }
+.problem-form input { height: 44px; padding: .55rem .85rem; }
 .problem-form textarea::placeholder { color: #757a72; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
-.form-row div { display: grid; gap: .4rem; }
-.form-submit { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: .6rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.problem-form .form-row > div { display: grid; align-content: start; gap: .3rem; }
+.form-submit { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; margin-top: .1rem; }
 .problem-form button { margin: 0; }
-.form-explainer { padding: .5rem; color: $muted; background: none; border: 0; text-decoration: underline; text-underline-offset: .2em; font-size: .76rem; }
+.form-explainer { min-height: 46px; display: inline-flex; align-items: center; padding: .35rem .25rem; color: $muted; background: none; border: 0; text-decoration: underline; text-underline-offset: .2em; font-size: .76rem; }
 .contact-direct { grid-column: 2; margin: -2rem 0 0; font-size: .8rem; }
 
 .modal[hidden] { display: none; }

@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0d1fc4955632b99986408985eb9c0214.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b21789bc6d16205ed8b3a81fa60665ee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -298,16 +298,15 @@ S / S
 What analytical problem should work better?
 </h2>
 <p>
-Share the rough version. Starting with a conversation doesn’t commit you to anything.
+Share the rough version. Starting a conversation doesn’t commit you to anything.
 </p>
 </div>
 <form name="analytics-question" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="problem-form" action="/thank-you.html">
 <input type="hidden" name="form-name" value="analytics-question">
-<p class="visually-hidden">
-<label>Do not fill this out: <input name="bot-field"></label>
+<p hidden="">
+<label>Don’t fill this out: <input name="bot-field"></label>
 </p>
-<label for="problem">The problem, workflow, or idea</label>
-<textarea id="problem" name="problem" placeholder="What is happening now—and what do you wish worked better?" required=""></textarea>
+<textarea id="problem" name="problem" placeholder="Tell me about it..." required=""></textarea>
 <div class="form-row">
 <div>
 <label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name">
@@ -320,7 +319,7 @@ Share the rough version. Starting with a conversation doesn’t commit you to an
 <button type="submit" class="lab-button lab-button-primary">
 Start the conversation
 </button>
-<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">
+<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog" aria-controls="submissionModal" aria-expanded="false">
 What happens when I submit?
 </button>
 </div>
@@ -333,7 +332,7 @@ Prefer email? <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>
   <div class="modal-content">
     <button type="button" class="close-modal" aria-label="Close dialog">×</button>
     <h3 id="modalTitle" class="anchored">What happens when I submit?</h3>
-    <p>Your note goes directly to me at <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>. I’ll review it and respond by email with any initial perspective I can offer. It is a connection point—not a commitment or obligation.</p>
+    <p>Your submission goes directly to me (<a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>). I'll review it and reach out via email with any initial advice or perspective I feel I can offer. This is not a commitment or bind to anything. But rather a connection point to begin a conversation about your problem. We'll take that wherever it leads.</p>
     <p><strong>— Alex</strong></p>
   </div>
 </div>
@@ -344,12 +343,38 @@ Prefer email? <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>
   const closeButton = modal?.querySelector('.close-modal');
   let previousFocus;
   if (!modal || !openButton || !closeButton) return;
-  const open = () => { previousFocus = document.activeElement; modal.hidden = false; document.body.classList.add('modal-open'); closeButton.focus(); };
-  const close = () => { modal.hidden = true; document.body.classList.remove('modal-open'); previousFocus?.focus(); };
+  const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  const open = () => {
+    previousFocus = document.activeElement;
+    modal.hidden = false;
+    openButton.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('modal-open');
+    closeButton.focus();
+  };
+  const close = () => {
+    modal.hidden = true;
+    openButton.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('modal-open');
+    previousFocus?.focus();
+  };
   openButton.addEventListener('click', open);
   closeButton.addEventListener('click', close);
   modal.addEventListener('click', event => { if (event.target === modal) close(); });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.hidden) close(); });
+  document.addEventListener('keydown', event => {
+    if (modal.hidden) return;
+    if (event.key === 'Escape') close();
+    if (event.key !== 'Tab') return;
+    const focusable = [...modal.querySelectorAll(focusableSelector)];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
 })();
 </script>
 

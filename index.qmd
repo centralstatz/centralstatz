@@ -157,21 +157,22 @@ His work is especially grounded in healthcare, where messy systems, consequentia
 <div class="contact-intro">
   <span class="section-index">05 / Start here</span>
   <h2>What analytical problem should work better?</h2>
-  <p>Share the rough version. Starting with a conversation doesn't commit you to anything.</p>
+  <p>Share the rough version. Starting a conversation doesn't commit you to anything.</p>
 </div>
 
 <form name="analytics-question" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="problem-form" action="/thank-you.html">
   <input type="hidden" name="form-name" value="analytics-question">
-  <p class="visually-hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
-  <label for="problem">The problem, workflow, or idea</label>
-  <textarea id="problem" name="problem" placeholder="What is happening now—and what do you wish worked better?" required></textarea>
+  <p hidden>
+  <label>Don't fill this out: <input name="bot-field"></label>
+</p>
+  <textarea id="problem" name="problem" placeholder="Tell me about it..." required></textarea>
   <div class="form-row">
 <div><label for="name">Name <span>(optional)</span></label><input id="name" type="text" name="name" autocomplete="name"></div>
 <div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
   </div>
   <div class="form-submit">
 <button type="submit" class="lab-button lab-button-primary">Start the conversation</button>
-<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog">What happens when I submit?</button>
+<button type="button" class="form-explainer" id="openSubmissionModal" aria-haspopup="dialog" aria-controls="submissionModal" aria-expanded="false">What happens when I submit?</button>
   </div>
 </form>
 
@@ -184,7 +185,7 @@ His work is especially grounded in healthcare, where messy systems, consequentia
   <div class="modal-content">
     <button type="button" class="close-modal" aria-label="Close dialog">&times;</button>
     <h3 id="modalTitle">What happens when I submit?</h3>
-    <p>Your note goes directly to me at <a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>. I’ll review it and respond by email with any initial perspective I can offer. It is a connection point—not a commitment or obligation.</p>
+    <p>Your submission goes directly to me (<a href="mailto:alex@centralstatz.com">alex@centralstatz.com</a>). I'll review it and reach out via email with any initial advice or perspective I feel I can offer. This is not a commitment or bind to anything. But rather a connection point to begin a conversation about your problem. We'll take that wherever it leads.</p>
     <p><strong>— Alex</strong></p>
   </div>
 </div>
@@ -195,12 +196,38 @@ His work is especially grounded in healthcare, where messy systems, consequentia
   const closeButton = modal?.querySelector('.close-modal');
   let previousFocus;
   if (!modal || !openButton || !closeButton) return;
-  const open = () => { previousFocus = document.activeElement; modal.hidden = false; document.body.classList.add('modal-open'); closeButton.focus(); };
-  const close = () => { modal.hidden = true; document.body.classList.remove('modal-open'); previousFocus?.focus(); };
+  const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  const open = () => {
+    previousFocus = document.activeElement;
+    modal.hidden = false;
+    openButton.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('modal-open');
+    closeButton.focus();
+  };
+  const close = () => {
+    modal.hidden = true;
+    openButton.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('modal-open');
+    previousFocus?.focus();
+  };
   openButton.addEventListener('click', open);
   closeButton.addEventListener('click', close);
   modal.addEventListener('click', event => { if (event.target === modal) close(); });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.hidden) close(); });
+  document.addEventListener('keydown', event => {
+    if (modal.hidden) return;
+    if (event.key === 'Escape') close();
+    if (event.key !== 'Tab') return;
+    const focusable = [...modal.querySelectorAll(focusableSelector)];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
 })();
 </script>
 ```
