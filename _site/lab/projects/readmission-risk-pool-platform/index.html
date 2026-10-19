@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Zajichek">
-<meta name="description" content="An open-source way for hospitals to keep readmission risk current, help care teams focus follow-up, and connect day-to-day work with the larger hospital picture.">
+<meta name="description" content="An open-source platform being built to help hospitals keep readmission risk current, understand how it changes after discharge, and turn that shared picture into more connected follow-up and oversight.">
 
 <title>Readmission Risk Pool Platform – CentralStatz Statistical &amp; Data Sciences LLC</title>
 <style>
@@ -66,11 +66,11 @@ gtag('config', 'G-GQTNSLKV9S', { 'anonymize_ip': true});
 
 
 <meta property="og:title" content="Readmission Risk Pool Platform – CentralStatz Statistical &amp; Data Sciences LLC">
-<meta property="og:description" content="An open-source way for hospitals to keep readmission risk current, help care teams focus follow-up, and connect day-to-day work with the larger hospital picture.">
+<meta property="og:description" content="An open-source platform being built to help hospitals keep readmission risk current, understand how it changes after discharge, and turn that shared picture into more connected follow-up and oversight.">
 <meta property="og:image" content="https://www.centralstatz.com/lab/projects/readmission-risk-pool-platform/architecture.svg">
 <meta property="og:site_name" content="CentralStatz Statistical &amp; Data Sciences LLC">
 <meta name="twitter:title" content="Readmission Risk Pool Platform – CentralStatz Statistical &amp; Data Sciences LLC">
-<meta name="twitter:description" content="An open-source way for hospitals to keep readmission risk current, help care teams focus follow-up, and connect day-to-day work with the larger hospital picture.">
+<meta name="twitter:description" content="An open-source platform being built to help hospitals keep readmission risk current, understand how it changes after discharge, and turn that shared picture into more connected follow-up and oversight.">
 <meta name="twitter:image" content="https://www.centralstatz.com/lab/projects/readmission-risk-pool-platform/architecture.svg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.centralstatz.com/lab/projects/readmission-risk-pool-platform/">
@@ -145,10 +145,10 @@ Open-source hospital readmission management · Active development
 <section id="readmission-risk-pool-platform" class="level1">
 <h1>Readmission Risk Pool Platform</h1>
 <p class="project-deck">
-A practical starting point for keeping risk current after discharge, helping care teams focus follow-up, and connecting individual patient work to the hospital’s larger readmission picture.
+A hospital-controlled platform for understanding who remains at risk after discharge, how that risk changes over time, and how a current patient-level picture can support more connected readmission work.
 </p>
 <div class="project-hero-actions">
-<p><a class="lab-button lab-button-primary" href="https://github.com/centralstatz/readmission-risk-pool-hospital-implementation">Explore the Hospital Implementation</a> <a class="lab-button lab-button-secondary" href="https://github.com/centralstatz/readmission-risk-pool-platform">View the Platform source</a></p>
+<p><a class="lab-button lab-button-primary" href="https://github.com/centralstatz/readmission-risk-pool-platform">Follow 1.0 development</a> <a class="lab-button lab-button-secondary" href="https://github.com/centralstatz/readmit">See the planned R interface</a></p>
 </div>
 </section>
 </div>
@@ -156,96 +156,124 @@ A practical starting point for keeping risk current after discharge, helping car
 <div class="notebook-preview">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="architecture.svg" class="img-fluid figure-img" alt="Diagram connecting a current patient picture to care-team action and hospital leadership insight, followed by four incremental implementation steps"></p>
-<figcaption>Diagram connecting a current patient picture to care-team action and hospital leadership insight, followed by four incremental implementation steps</figcaption>
+<p><img src="architecture.svg" class="img-fluid figure-img" alt="Concept diagram connecting a current patient picture to care-team action and hospital leadership insight, followed by four incremental adoption steps"></p>
+<figcaption>Concept diagram connecting a current patient picture to care-team action and hospital leadership insight, followed by four incremental adoption steps</figcaption>
 </figure>
 </div>
-<p><span>Project-direction diagram · explanatory concept, not a clinical interface</span></p>
+<p><span>Project-direction diagram · intended practical value, not a current clinical interface</span></p>
 </div>
 <div class="notebook-grid">
 <div class="notebook-main">
 <section id="the-problem-this-is-trying-to-solve" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem-this-is-trying-to-solve">The problem this is trying to solve</h2>
-<p>This is a problem I have been thinking about for several years. Hospitals may have a readmission score when a patient leaves, but that score quickly becomes stale. Care teams then struggle to assemble what has happened after discharge, while quality and executive leaders often see a separate, delayed set of aggregate measures.</p>
-<p>Those are not three independent problems. They are different views of the same work.</p>
-<p>The <strong>readmission risk pool</strong> is the group of recently discharged patients who have not yet been readmitted and can still benefit from follow-up. Managing that pool well means knowing who is in it now, what has changed, where attention may be most useful, and how the collective picture affects hospital performance.</p>
-<p>The idea began as a proposed way to connect patient-level follow-up with a hospital-wide view. <a href="https://www.zajichekstats.com/post/managing-the-readmission-risk-pool/">Read the original 2024 article</a>.</p>
+<p>Hospitals often begin follow-up with a readmission score calculated around discharge. But the patient’s situation does not stop changing when that score is produced. Appointments happen or are missed. New barriers emerge. The patient may be readmitted, die, or simply move closer to the end of the follow-up period. A static score can quickly stop describing the decision in front of the care team.</p>
+<p>At the same time, the information needed for follow-up is often spread across systems and teams. Care managers assemble a day-to-day picture, analysts maintain separate methods and reports, and quality or executive leaders review measures that may be delayed or disconnected from the work underneath them.</p>
+<p>The <strong>readmission risk pool</strong> is the group of discharge episodes still within the follow-up window and not yet ended by readmission or death. Managing that pool means being able to answer a practical question repeatedly: given what is known now, who remains at risk, how has that picture changed, and what does the collective picture show?</p>
+<p>This project began as a way to connect those views rather than treat them as separate problems. <a href="https://www.zajichekstats.com/post/managing-the-readmission-risk-pool/">Read the original 2024 article</a>.</p>
 </section>
-<section id="one-connected-working-picture" class="level2">
-<h2 class="anchored" data-anchor-id="one-connected-working-picture">One connected working picture</h2>
-<p>The platform is meant to support a shared readmission “command center” without forcing every audience into the same screen or level of detail.</p>
+<section id="the-practical-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-practical-idea">The practical idea</h2>
+<p>RRP is being built as a hospital-owned foundation for a connected readmission workflow.</p>
 <ul>
-<li><strong>Care teams</strong> need a current view of which patients remain at risk, what has happened since discharge, and who may need attention today.</li>
-<li><strong>Hospital analysts and modelers</strong> need room to use local data, existing discharge scores, and methods that reflect the hospital’s population and reasons for readmission.</li>
-<li><strong>Quality and executive leaders</strong> need the individual patient picture to roll into trustworthy measures of volume, trends, expected readmissions, and operational impact.</li>
+<li><strong>Care-management teams</strong> should eventually be able to work from a current picture instead of relying on a discharge-era score or reconstructing the story across disconnected tools.</li>
+<li><strong>Analysts and modelers</strong> should be able to map approved local data and use a risk method that fits their hospital, while producing one clearly defined quantity the rest of the system can understand.</li>
+<li><strong>Quality and operational leaders</strong> should be able to see patient-level changes roll into an attributable system picture rather than receive a separate metric with no visible connection to day-to-day work.</li>
 </ul>
-<p>The practical value is the connection between those views. A patient-level risk update should not live in a standalone model, and an executive metric should not be detached from the day-to-day work that produced it.</p>
+<p>The current 1.0 development application establishes the analytical center of that idea: a Current Risk Pool, actual accepted risk trajectories over time, and a direct Overview of the selected operational scope. It does <strong>not</strong> yet provide a care-management queue, intervention workflow, clinical recommendations, or executive performance system. Those practical extensions must be designed deliberately from real operational needs rather than implied by the presence of a risk score.</p>
 </section>
 </div>
 <section id="project-state" class="level3 notebook-aside">
 <h3 class="anchored" data-anchor-id="project-state">Project state</h3>
-<p><strong>What it is</strong><br>
-A free, open-source starting point for a hospital-owned readmission management system.</p>
-<p><strong>Available now</strong><br>
-Public v0.1.0 Platform and Hospital Implementation releases, a complete fictional example, a working web application, documented human operations, and a validated Posit Connect Cloud repository generator.</p>
-<p><strong>Stage</strong><br>
-Validation of the software, replacement points, and implementation path—not clinical validation.</p>
-<p><strong>Not yet established</strong><br>
-Clinical performance, production approval, turnkey connection to a hospital’s data, or a supported container deployment.</p>
-<p><strong>Next experiment</strong><br>
-A container-based path for hospital-controlled deployment.</p>
-<p><strong>Useful participation</strong><br>
-Feedback on the care-management, quality, analytical, and leadership decisions the product should support.</p>
+<p><strong>What it is</strong></p>
+<p>An open-source platform in active 1.0 development for a hospital-controlled readmission-risk system.</p>
+<p><strong>Working in development now</strong></p>
+<p>Local installation, the <code>rrp</code> command-line interface, a complete fictional reference project, hospital-owned data and model boundaries, durable history, logical products, and a local supplied application.</p>
+<p><strong>Stage</strong></p>
+<p>Software validation and completion of the 1.0 product path—not clinical validation or production approval.</p>
+<p><strong>Not available yet</strong></p>
+<p>A published 1.0 release, public installation path, deployable product-only artifacts, independent-adopter qualification, or an approved production deployment.</p>
+<p><strong>Next experiment</strong></p>
+<p>Portable product-only deployment builds for Posit-compatible environments and OCI/Docker.</p>
+<p><strong>Useful participation</strong></p>
+<p>Feedback on the decisions, views, and working relationships a connected hospital readmission system should support.</p>
 </section>
 </div>
-<section id="start-with-something-that-already-works" class="level2">
-<h2 class="anchored" data-anchor-id="start-with-something-that-already-works">Start with something that already works</h2>
-<p>The <a href="https://github.com/centralstatz/readmission-risk-pool-hospital-implementation">Readmission Risk Pool Hospital Implementation</a> is the repository a hospital installs and customizes. It is not itself a fictional project. It includes fictional data and examples so a team can run and inspect a complete working path—from source data through risk updates and history to a web application—before asking for internal approval or connecting sensitive hospital data.</p>
-<p>That makes the early conversation concrete. A developer or analyst can evaluate the workflow, see what the app provides, and identify what the hospital would need to change without starting from a blank repository or committing to a predefined vendor tool.</p>
+<section id="what-is-different-about-the-1.0-direction" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-different-about-the-1.0-direction">What is different about the 1.0 direction</h2>
+<p>The 1.0 line is a simpler product than the earlier public <code>v0.1.0</code> design.</p>
+<p>There is now <strong>one Readmission Risk Pool repository and one installed software product</strong>. Hospitals will not install a separately generated “Hospital Implementation” repository. RRP itself will be built and released from the <a href="https://github.com/centralstatz/readmission-risk-pool-platform">main platform repository</a>. Once installed, it creates an independent, hospital-owned project containing only the local pieces the hospital is responsible for: how approved source data is interpreted, how it is mapped into the shared structure, which local risk method is used, and where hospital-owned state lives.</p>
+<p>The primary human interface is also much clearer. A single <code>rrp</code> command is designed to handle software health, project setup and validation, analytical runs, history, products, and application launch. The underlying R packages still do the work, but operators should not need to manage package internals or repository scripts as their normal workflow.</p>
+<p>Finally, 1.0 no longer treats “baseline risk” as a separate platform concept or product. A hospital may use an existing discharge score inside its own modeling method, but RRP asks every compatible method to return the same current quantity. That keeps the meaning stable even when hospitals choose different models.</p>
 </section>
-<section id="adopt-it-one-piece-at-a-time" class="level2">
-<h2 class="anchored" data-anchor-id="adopt-it-one-piece-at-a-time">Adopt it one piece at a time</h2>
-<p>The platform is intentionally designed for incremental implementation. A hospital can keep a working reference path while replacing one locally owned piece at a time.</p>
+<section id="how-a-hospital-is-intended-to-use-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-a-hospital-is-intended-to-use-it">How a hospital is intended to use it</h2>
+<p>The planned adoption path starts with something inspectable and working, then moves local responsibility into place deliberately.</p>
 <ol type="1">
-<li><strong>Run the complete example.</strong> Install the Hospital Implementation and exercise the fictional source-to-application workflow.</li>
-<li><strong>Choose the deployment path.</strong> The platform can currently generate and validate a repository prepared for Posit Connect Cloud setup. A supported container target is a planned next step for deployment inside hospital-controlled infrastructure.</li>
-<li><strong>Connect hospital data.</strong> Write the local SQL or other extraction and mapping logic needed to populate the shared canonical model. Once that mapping passes validation, the rest of the pipeline is designed to continue working unchanged.</li>
-<li><strong>Make the risk method local.</strong> Begin with an existing discharge score if useful, then update risk throughout follow-up using the hospital’s own data and modeling approach. Use a built-in estimand—the precise quantity a model is asked to estimate—or register another quantity that better matches the hospital’s decisions.</li>
+<li><strong>Install RRP and run the fictional reference.</strong> The current development build already proves this path locally. A future public release will make that the normal starting point rather than requiring a clone of the development repository.</li>
+<li><strong>Inspect the whole workflow.</strong> The fictional project uses the same project, history, product, and application boundaries intended for a real hospital. It provides a concrete way to evaluate the product before using hospital data or seeking broader operational approval.</li>
+<li><strong>Initialize a hospital-owned project.</strong> RRP creates a small editable project for local source mapping, risk calculation, branding, and configuration. It does not create another copy of the platform.</li>
+<li><strong>Connect approved local data.</strong> The hospital writes the narrow mapping from its own sources into RRP’s shared structure. The rest of the platform can then operate without knowing the hospital’s source-system details.</li>
+<li><strong>Use an appropriate local risk method.</strong> The hospital can begin with a transparent example, then select and validate a method that reflects its population, data, and readmission drivers while preserving the common risk meaning.</li>
+<li><strong>Run, review, and deploy deliberately.</strong> The CLI performs explicit risk runs, retains what the platform knew and produced at each point, builds application products, and launches the local application. Portable application deployment is the next development stage and is not available yet.</li>
 </ol>
-<p>The same principle extends to storage, analytical products, and the application: adopt the reference first, then replace a component when there is a concrete reason to do so.</p>
+<p>This is incremental adoption without parallel products: one installed platform, one hospital-owned project, and explicit replacement points.</p>
 </section>
-<section id="current-risk-not-only-discharge-risk" class="level2">
-<h2 class="anchored" data-anchor-id="current-risk-not-only-discharge-risk">Current risk, not only discharge risk</h2>
-<p>The methodological idea is straightforward: risk should reflect what is known <strong>now</strong>, not only what was known when the patient left the hospital.</p>
-<p>A hospital can retain its existing discharge risk score as a useful starting point. During follow-up, its own models can incorporate information such as completed visits, medication access, transportation, or other locally meaningful events. Because different hospitals and patient populations may have different drivers of readmission, the platform does not prescribe one universal model.</p>
-<p>It does insist on clarity about what the model predicts. For example, a care team may need the probability that a patient who has not yet returned will be readmitted during the remaining follow-up window—not a generic score whose meaning changes from one implementation to another. That statistical discipline is built into the workflow while leaving the modeling method under hospital control.</p>
+<section id="one-current-risk-question" class="level2">
+<h2 class="anchored" data-anchor-id="one-current-risk-question">One current risk question</h2>
+<p>The statistical idea behind 1.0 is precise but practical. At a given moment after discharge, RRP asks for the patient’s <strong>remaining probability of a first readmission by 30 elapsed days after discharge</strong>, given that the patient is alive and has not already been readmitted, using only information that was available at that moment.</p>
+<p>In plain language: <em>given where this patient is now, what is the remaining chance of readmission before the follow-up window ends?</em></p>
+<p>That quantity naturally changes as time passes and new information becomes available. It also avoids comparing scores that appear similar but actually answer different questions. RRP defines the question; the hospital controls the method used to answer it. A local method might use survival analysis, machine learning, Bayesian methods, or an existing discharge score as one input. What matters to the platform is that the result has the same stated meaning and is produced from temporally valid information.</p>
+<p>The current application shows accepted estimates that actually occurred. It does not invent daily values, carry a discharge estimate forward as “baseline,” or smooth a trajectory between observations.</p>
+</section>
+<section id="what-the-development-build-can-demonstrate-now" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-development-build-can-demonstrate-now">What the development build can demonstrate now</h2>
+<p>Although 1.0 is not released, its current development line has a tested end-to-end local path:</p>
+<ul>
+<li>a closed development distribution can be verified and installed into a private, versioned location;</li>
+<li>the <code>rrp</code> CLI can initialize and diagnose projects, run the fictional workflow, inspect history, build products, and launch the application;</li>
+<li>software versions can be installed side by side, explicitly activated, checked for project compatibility, rolled back, and safely removed without silently changing hospital project data;</li>
+<li>a hospital project can replace the fictional source mapping and risk provider through small, explicit local files;</li>
+<li>successful runs retain attributable history rather than silently rewriting earlier results;</li>
+<li>coherent application products can be rebuilt from that history; and</li>
+<li>the local supplied application presents the Current Risk Pool, actual episode trajectories, and direct scope summaries without reaching back into hospital sources or rerunning a model.</li>
+</ul>
+<p>This is strong implementation evidence, but it is not a public 1.0 release or evidence of clinical effectiveness.</p>
 </section>
 <section id="rigor-in-the-background" class="level2">
 <h2 class="anchored" data-anchor-id="rigor-in-the-background">Rigor in the background</h2>
-<p>There is substantial engineering beneath the working example, but a hospital should not need to understand every internal detail to evaluate or operate it.</p>
+<p>The technical safeguards matter because they make the practical workflow more trustworthy, even when most users never need to inspect their details.</p>
 <ul>
-<li>Validation is built throughout the workflow so incompatible data or configuration can fail early and visibly instead of silently producing a misleading result.</li>
-<li>The normal operator journey is documented through a small set of top-level commands for setup, readiness checks, platform runs, history, product refreshes, application checks, and deployment-artifact generation.</li>
-<li>AI and agent workflows are optional conveniences. Every supported operation has a documented human path, and an agent can only invoke the same predefined operations a person can run directly.</li>
+<li>Data, project, software, and model boundaries are validated so incompatible inputs can fail early and visibly.</li>
+<li>Analytical time is explicit, and the platform is designed to exclude information that was not yet available when a risk estimate was made.</li>
+<li>Operational history is attributable and append-oriented, with explicit correction behavior rather than silent replacement.</li>
+<li>Risk calculation, history, product refresh, and application launch are separate actions, preventing a dashboard visit from quietly changing analytical results.</li>
+<li>The CLI is the documented human path. Automation and future agents may call the same operations, but no AI system owns unique platform logic or is required to operate RRP.</li>
 </ul>
-<p>The backend documentation remains available for teams that need to review the statistical definitions, validation behavior, history, or replacement boundaries in depth.</p>
+<p>The repository contains the detailed contracts, tests, architecture, and operator documentation for technical reviewers.</p>
 </section>
-<section id="open-source-and-hospital-owned" class="level2">
-<h2 class="anchored" data-anchor-id="open-source-and-hospital-owned">Open source and hospital owned</h2>
-<p>The Platform and Hospital Implementation are released under the Apache-2.0 license. There is no proprietary platform license required to use, inspect, or adapt the software; a hospital still bears its own implementation, infrastructure, security, and operating costs.</p>
-<p>The hospital owns its data connections, model choices, infrastructure, workflows, and local modifications. CentralStatz provides an inspectable foundation rather than a closed tool that dictates how readmission risk must be modeled everywhere.</p>
+<section id="open-source-and-hospital-controlled" class="level2">
+<h2 class="anchored" data-anchor-id="open-source-and-hospital-controlled">Open source and hospital controlled</h2>
+<p>RRP is licensed under Apache-2.0. The intended public product does not require a proprietary platform license, CentralStatz service, private model, or AI agent to operate.</p>
+<p>The platform supplies the common software, shared risk meaning, validation, history, products, application, and operating interface. The hospital retains responsibility for its data access and interpretation, source mapping, selected model and model evidence, infrastructure, security, privacy, monitoring, clinical governance, and operational adoption.</p>
+<p>That boundary is central to the project: the hospital can start from a coherent working reference without surrendering control of the parts that must reflect its own environment.</p>
 </section>
 <section id="where-it-stands-today" class="level2">
 <h2 class="anchored" data-anchor-id="where-it-stands-today">Where it stands today</h2>
-<p>The current release demonstrates a complete, runnable implementation using synthetic data and an intentionally nonclinical reference risk method. It includes durable risk history, analytical products, a web application, strong validation, and generation of deployable application artifacts.</p>
-<p>It is not yet a clinically validated or production-approved hospital system. Real use requires local source mapping, development and validation of an appropriate risk method, approved infrastructure, privacy and security controls, workflow design, monitoring, and clinical governance. Posit Connect Cloud preparation is implemented; a supported container target and turnkey inside-the-firewall deployment are not.</p>
+<p>The repository identifies the current product as <code>1.0.0-dev</code> and explicitly marks it <strong>not released</strong>. The installation and operator foundation is complete, including the CLI and a fully exercised fictional local path. The next planned work is to create closed product-only deployment artifacts so the application can move into an approved environment without carrying source connections, model code, or writable analytical history with it.</p>
+<p>Independent-adopter testing, broader platform qualification, final release validation, and publication still follow. Until those steps are complete, RRP should be treated as active development—not software available for hospital use or patient care.</p>
+<p>The longer-term vision remains larger than the current application: a connected view that can inform care-management work and make hospital-level oversight traceable to the patient-level analytical picture. Those workflow and leadership capabilities are direction, not claims about what the current 1.0 development build already provides.</p>
+</section>
+<section id="the-planned-role-of-readmit" class="level2">
+<h2 class="anchored" data-anchor-id="the-planned-role-of-readmit">The planned role of <code>readmit</code></h2>
+<p>The <a href="https://github.com/centralstatz/readmit"><code>readmit</code></a> R package is being repurposed as an optional R interface to RRP. That integration is not implemented yet.</p>
+<p>Its intended role is to help R users work with supported RRP interfaces—for example, constructing, testing, or operating hospital model providers—without becoming the platform itself. RRP will remain usable without <code>readmit</code>, and <code>readmit</code> will not redefine the common risk question or replace the CLI.</p>
 </section>
 <section id="participate" class="level2">
 <h2 class="anchored" data-anchor-id="participate">Participate</h2>
-<p>The most useful feedback now is practical: what questions should care managers be able to answer each morning, what context do analysts need to trust a changing risk estimate, and which connected measures help quality and executive leaders act rather than merely review performance after the fact?</p>
+<p>The most useful feedback now is both practical and methodological: what should a care-management team be able to understand each morning, what evidence would help analysts trust a changing risk estimate, and which summaries would help operational and executive leaders connect system performance to the work happening patient by patient?</p>
 <ul>
-<li><a href="https://github.com/centralstatz/readmission-risk-pool-hospital-implementation">Install or review the Hospital Implementation</a></li>
-<li><a href="https://github.com/centralstatz/readmission-risk-pool-platform">Review the underlying Platform</a></li>
+<li><a href="https://github.com/centralstatz/readmission-risk-pool-platform">Follow active 1.0 development</a></li>
+<li><a href="https://github.com/centralstatz/readmit">Review the planned <code>readmit</code> R interface</a></li>
 <li><a href="https://www.zajichekstats.com/post/managing-the-readmission-risk-pool/">Read the original practical framework</a></li>
 <li><a href="mailto:alex@centralstatz.com?subject=Readmission%20Risk%20Pool%20Platform">Discuss the project</a></li>
 </ul>

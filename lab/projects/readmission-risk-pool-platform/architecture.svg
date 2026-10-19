@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
   <title id="title">A connected view of hospital readmission management</title>
-  <desc id="description">A practical flow from a current patient picture to care-team action and hospital leadership insight, followed by four incremental implementation steps.</desc>
+  <desc id="description">A conceptual flow from a current patient picture to care-team action and hospital leadership insight, followed by four incremental adoption steps.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#111310"/>
@@ -27,7 +27,7 @@
   <g font-family="Avenir Next, Avenir, Segoe UI, sans-serif">
     <text x="88" y="88" fill="#d8bc5a" font-size="22" font-weight="700" letter-spacing="5">READMISSION RISK POOL</text>
     <text x="88" y="144" fill="#e8e6df" font-size="46" font-weight="600">One connected readmission picture</text>
-    <text x="88" y="187" fill="#a8aca3" font-size="21">Keep risk current · focus follow-up · connect daily work to hospital performance</text>
+    <text x="88" y="187" fill="#a8aca3" font-size="21">See risk change · inform follow-up · connect daily work to the hospital picture</text>
 
     <path d="M498 397H574M1026 397H1102" fill="none" stroke="url(#path)" stroke-width="3" marker-end="url(#arrow)"/>
 
@@ -39,8 +39,8 @@
         <path d="M76 95V129M59 112H93" stroke="#75aadb" stroke-width="2"/>
         <text x="126" y="107" fill="#e8e6df" font-size="24" font-weight="600">What has changed</text>
         <text x="126" y="138" fill="#e8e6df" font-size="24" font-weight="600">since discharge?</text>
-        <text x="30" y="196" fill="#a8aca3" font-size="17">Starting risk + follow-up events + time remaining</text>
-        <text x="30" y="224" fill="#a8aca3" font-size="17">Patients who can still benefit from action</text>
+        <text x="30" y="196" fill="#a8aca3" font-size="17">Current evidence + events + time remaining</text>
+        <text x="30" y="224" fill="#a8aca3" font-size="17">Patients still within the 30-day follow-up window</text>
       </g>
 
       <g transform="translate(574 272)">
@@ -51,8 +51,8 @@
         <path d="M54 127C58 116 80 116 84 127M94 93H133M94 110H133M94 127H121" fill="none" stroke="#75aadb" stroke-width="2"/>
         <text x="158" y="107" fill="#e8e6df" font-size="24" font-weight="600">Who may need</text>
         <text x="158" y="138" fill="#e8e6df" font-size="24" font-weight="600">attention today?</text>
-        <text x="30" y="196" fill="#a8aca3" font-size="17">Current risk + relevant context + shared priorities</text>
-        <text x="30" y="224" fill="#a8aca3" font-size="17">A practical view for day-to-day follow-up</text>
+        <text x="30" y="196" fill="#a8aca3" font-size="17">Current risk + relevant context + coordinated follow-up</text>
+        <text x="30" y="224" fill="#a8aca3" font-size="17">The intended future view for day-to-day work</text>
       </g>
 
       <g transform="translate(1102 272)">
@@ -61,19 +61,19 @@
         <path d="M44 137V92M68 137V111M92 137V75M116 137V99" fill="none" stroke="#75aadb" stroke-width="8"/>
         <text x="154" y="107" fill="#e8e6df" font-size="24" font-weight="600">What is happening</text>
         <text x="154" y="138" fill="#e8e6df" font-size="24" font-weight="600">across the system?</text>
-        <text x="30" y="196" fill="#a8aca3" font-size="17">Volume + trends + expected readmissions</text>
-        <text x="30" y="224" fill="#a8aca3" font-size="17">Measures connected back to the patient picture</text>
+        <text x="30" y="196" fill="#a8aca3" font-size="17">Current pool + trajectories + operational scope</text>
+        <text x="30" y="224" fill="#a8aca3" font-size="17">A traceable foundation for broader oversight</text>
       </g>
     </g>
 
     <g transform="translate(88 626)">
       <rect width="1442" height="154" rx="7" fill="#151916" stroke="#d8bc5a" stroke-opacity=".42"/>
-      <text x="30" y="40" fill="#d8bc5a" font-size="16" font-weight="700" letter-spacing="3">START COMPLETE. ADAPT ONE PIECE AT A TIME.</text>
+      <text x="30" y="40" fill="#d8bc5a" font-size="16" font-weight="700" letter-spacing="3">START WITH THE REFERENCE. ADAPT ONE PIECE AT A TIME.</text>
 
       <g transform="translate(30 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">1</text>
-        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Run the example</text>
+        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Run the reference</text>
         <text x="50" y="43" fill="#a8aca3" font-size="15">See the full workflow</text>
       </g>
 
@@ -87,15 +87,15 @@
       <g transform="translate(738 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">3</text>
-        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Add local methods</text>
-        <text x="50" y="43" fill="#a8aca3" font-size="15">Use the right risk question</text>
+        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Add a local model</text>
+        <text x="50" y="43" fill="#a8aca3" font-size="15">Answer the shared risk question</text>
       </g>
 
       <g transform="translate(1082 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">4</text>
-        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Choose deployment</text>
-        <text x="50" y="43" fill="#a8aca3" font-size="15">Operate in an approved home</text>
+        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Build deployment</text>
+        <text x="50" y="43" fill="#a8aca3" font-size="15">Planned next: portable app artifacts</text>
       </g>
     </g>
 
