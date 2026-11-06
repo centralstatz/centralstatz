@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
-  <title id="title">A connected view of hospital readmission management</title>
-  <desc id="description">A conceptual flow from a current patient picture to care-team action and hospital leadership insight, followed by four incremental adoption steps.</desc>
+  <title id="title">How Readmission Risk Pool connects changing risk to a usable view</title>
+  <desc id="description">A conceptual flow from the current risk pool to recorded episode trajectories and an operational summary, followed by four steps: install readmit, map hospital data, add a local risk method, and refresh and explore the results.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#111310"/>
@@ -26,79 +26,81 @@
 
   <g font-family="Avenir Next, Avenir, Segoe UI, sans-serif">
     <text x="88" y="88" fill="#d8bc5a" font-size="22" font-weight="700" letter-spacing="5">READMISSION RISK POOL</text>
-    <text x="88" y="144" fill="#e8e6df" font-size="46" font-weight="600">One connected readmission picture</text>
-    <text x="88" y="187" fill="#a8aca3" font-size="21">See risk change · inform follow-up · connect daily work to the hospital picture</text>
+    <text x="88" y="144" fill="#e8e6df" font-size="46" font-weight="600">A changing risk pool, made visible</text>
+    <text x="88" y="187" fill="#a8aca3" font-size="21">Assess at chosen times · retain the history · explore the current picture</text>
 
     <path d="M498 397H574M1026 397H1102" fill="none" stroke="url(#path)" stroke-width="3" marker-end="url(#arrow)"/>
 
     <g filter="url(#shadow)">
       <g transform="translate(70 272)">
         <rect width="428" height="250" rx="8" fill="#1e211d" stroke="#75aadb" stroke-opacity=".65"/>
-        <text x="30" y="42" fill="#75aadb" font-size="15" font-weight="700" letter-spacing="2.4">CURRENT PATIENT PICTURE</text>
+        <text x="30" y="42" fill="#75aadb" font-size="15" font-weight="700" letter-spacing="2.4">CURRENT RISK POOL</text>
         <circle cx="76" cy="112" r="32" fill="none" stroke="#75aadb" stroke-width="2"/>
         <path d="M76 95V129M59 112H93" stroke="#75aadb" stroke-width="2"/>
-        <text x="126" y="107" fill="#e8e6df" font-size="24" font-weight="600">What has changed</text>
-        <text x="126" y="138" fill="#e8e6df" font-size="24" font-weight="600">since discharge?</text>
-        <text x="30" y="196" fill="#a8aca3" font-size="17">Current evidence + events + time remaining</text>
-        <text x="30" y="224" fill="#a8aca3" font-size="17">Patients still within the 30-day follow-up window</text>
+        <text x="126" y="107" fill="#e8e6df" font-size="24" font-weight="600">Who remains</text>
+        <text x="126" y="138" fill="#e8e6df" font-size="24" font-weight="600">at risk now?</text>
+        <text x="30" y="196" fill="#a8aca3" font-size="17">Eligible episodes + current estimates</text>
+        <text x="30" y="224" fill="#a8aca3" font-size="17">A fixed 30-day window after discharge</text>
       </g>
 
       <g transform="translate(574 272)">
         <rect width="452" height="250" rx="8" fill="#1e211d" stroke="#d8bc5a" stroke-opacity=".65"/>
-        <text x="30" y="42" fill="#d8bc5a" font-size="15" font-weight="700" letter-spacing="2.4">CARE-TEAM ACTION</text>
-        <circle cx="77" cy="111" r="30" fill="none" stroke="#d8bc5a" stroke-width="2"/>
-        <circle cx="69" cy="103" r="7" fill="#d8bc5a"/>
-        <path d="M54 127C58 116 80 116 84 127M94 93H133M94 110H133M94 127H121" fill="none" stroke="#75aadb" stroke-width="2"/>
-        <text x="158" y="107" fill="#e8e6df" font-size="24" font-weight="600">Who may need</text>
-        <text x="158" y="138" fill="#e8e6df" font-size="24" font-weight="600">attention today?</text>
-        <text x="30" y="196" fill="#a8aca3" font-size="17">Current risk + relevant context + coordinated follow-up</text>
-        <text x="30" y="224" fill="#a8aca3" font-size="17">The intended future view for day-to-day work</text>
+        <text x="30" y="42" fill="#d8bc5a" font-size="15" font-weight="700" letter-spacing="2.4">RECORDED TRAJECTORIES</text>
+        <path d="M45 135H128M45 135V78M51 118L75 104L98 110L124 80" fill="none" stroke="#75aadb" stroke-width="3"/>
+        <circle cx="51" cy="118" r="5" fill="#d8bc5a"/>
+        <circle cx="75" cy="104" r="5" fill="#d8bc5a"/>
+        <circle cx="98" cy="110" r="5" fill="#d8bc5a"/>
+        <circle cx="124" cy="80" r="5" fill="#d8bc5a"/>
+        <text x="158" y="107" fill="#e8e6df" font-size="24" font-weight="600">How has risk</text>
+        <text x="158" y="138" fill="#e8e6df" font-size="24" font-weight="600">changed?</text>
+        <text x="30" y="196" fill="#a8aca3" font-size="17">Accepted estimates at actual assessment times</text>
+        <text x="30" y="224" fill="#a8aca3" font-size="17">Earlier results remain inspectable</text>
       </g>
 
       <g transform="translate(1102 272)">
         <rect width="428" height="250" rx="8" fill="#1e211d" stroke="#75aadb" stroke-opacity=".65"/>
-        <text x="30" y="42" fill="#75aadb" font-size="15" font-weight="700" letter-spacing="2.4">HOSPITAL LEADERSHIP</text>
+        <text x="30" y="42" fill="#75aadb" font-size="15" font-weight="700" letter-spacing="2.4">OPERATIONAL SUMMARY</text>
         <path d="M44 137V92M68 137V111M92 137V75M116 137V99" fill="none" stroke="#75aadb" stroke-width="8"/>
-        <text x="154" y="107" fill="#e8e6df" font-size="24" font-weight="600">What is happening</text>
-        <text x="154" y="138" fill="#e8e6df" font-size="24" font-weight="600">across the system?</text>
-        <text x="30" y="196" fill="#a8aca3" font-size="17">Current pool + trajectories + operational scope</text>
-        <text x="30" y="224" fill="#a8aca3" font-size="17">A traceable foundation for broader oversight</text>
+        <text x="154" y="107" fill="#e8e6df" font-size="24" font-weight="600">What was</text>
+        <text x="154" y="138" fill="#e8e6df" font-size="24" font-weight="600">assessed?</text>
+        <text x="30" y="196" fill="#a8aca3" font-size="17">Accepted + ineligible + failed assessments</text>
+        <text x="30" y="224" fill="#a8aca3" font-size="17">A shared account of each run</text>
       </g>
     </g>
 
     <g transform="translate(88 626)">
       <rect width="1442" height="154" rx="7" fill="#151916" stroke="#d8bc5a" stroke-opacity=".42"/>
-      <text x="30" y="40" fill="#d8bc5a" font-size="16" font-weight="700" letter-spacing="3">START WITH THE REFERENCE. ADAPT ONE PIECE AT A TIME.</text>
+      <text x="30" y="40" fill="#d8bc5a" font-size="16" font-weight="700" letter-spacing="3">INSTALL THE PACKAGE. OWN THE LOCAL INPUTS.</text>
 
       <g transform="translate(30 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">1</text>
-        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Run the reference</text>
-        <text x="50" y="43" fill="#a8aca3" font-size="15">See the full workflow</text>
+        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Install readmit</text>
+        <text x="50" y="43" fill="#a8aca3" font-size="15">Available on CRAN</text>
       </g>
 
       <g transform="translate(374 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">2</text>
         <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Map hospital data</text>
-        <text x="50" y="43" fill="#a8aca3" font-size="15">Keep the pipeline working</text>
+        <text x="50" y="43" fill="#a8aca3" font-size="15">Use an organization-owned project</text>
       </g>
 
       <g transform="translate(738 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">3</text>
-        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Add a local model</text>
-        <text x="50" y="43" fill="#a8aca3" font-size="15">Answer the shared risk question</text>
+        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Add a risk method</text>
+        <text x="50" y="43" fill="#a8aca3" font-size="15">Evaluate it for local use</text>
       </g>
 
       <g transform="translate(1082 67)">
         <circle cx="18" cy="22" r="18" fill="#75aadb" fill-opacity=".18" stroke="#75aadb"/>
         <text x="18" y="28" text-anchor="middle" fill="#75aadb" font-size="16" font-weight="700">4</text>
-        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Build deployment</text>
-        <text x="50" y="43" fill="#a8aca3" font-size="15">Planned next: portable app artifacts</text>
+        <text x="50" y="18" fill="#e8e6df" font-size="19" font-weight="600">Explore the results</text>
+        <text x="50" y="43" fill="#a8aca3" font-size="15">Refresh products for the app</text>
       </g>
     </g>
 
-    <text x="88" y="842" fill="#a8aca3" font-size="17">Open source · hospital owned · human operable · AI optional</text>
+    <text x="88" y="842" fill="#a8aca3" font-size="17">Open source · organization owned · illustrative diagram, not a clinical interface</text>
   </g>
 </svg>
